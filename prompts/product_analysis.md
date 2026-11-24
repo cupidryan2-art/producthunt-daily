@@ -48,13 +48,16 @@
 - 最难的一步是什么，有哪些现成的开源项目/API 能降低难度（附 URL，不确定就不列）
 
 ## ⑥ 基于这个灵感的个人项目（STAR 法则）
+【选题】（已统一分配以避免雷同，不得更换）
+{plan}
+
 下面带粗体的标签（如 `**S (Situation)**：`）必须原样照抄，包括两边的星号，每个单独成行。
 
 设计 1 个**偏数据分析/数据科学方向**的衍生项目（借灵感，不要求复刻），能写进简历、能在面试里讲：
 - **项目名 + 一句话描述**
-- **S (Situation)**：真实存在的背景/问题
+- **S (Situation)**：真实存在的背景/问题，并用一句话说清它借了这个产品的哪个思路
 - **T (Task)**：具体、可衡量的目标，必须有明确数字，禁止写“提升到可测量水平”这类空话
-- **A (Action)**：数据从哪来（必须是学生能合法、免费、无需审批获取的公开数据或 API，附你确定存在的完整 URL，指向具体的数据集或 API 文档页，不能只给网站首页；不要爬 Product Hunt 等禁止抓取的网站；不要用自己编造或自己网站产生的数据充当主数据。优先选与产品同领域、自带标签或数值字段的数据。可选来源举例：App 评论 https://huggingface.co/datasets/sealuzh/app_reviews 、学生成绩 https://archive.ics.uci.edu/dataset/320/student+performance 、电商交易 https://archive.ics.uci.edu/dataset/352/online+retail 、环境声音分类（含狗叫） https://github.com/karolpiczak/ESC-50 、问答 SQuAD https://huggingface.co/datasets/rajpurkar/squad 、GH Archive https://www.gharchive.org/ 、Hacker News 搜索 API https://hn.algolia.com/api （官方 firebase API 不能按关键词搜，别用）、Stack Exchange 数据 https://archive.org/details/stackexchange 、arXiv API https://info.arxiv.org/help/api/index.html 、Wikimedia 访问量 https://dumps.wikimedia.org/other/pageviews/readme.html ，也可用你确定存在的其他数据集；必须现在就定下一个具体数据集，禁止写“需先核实”“自行检索”；先想清楚问题再选最匹配的来源，只能依赖你确定该数据里真有的字段）、怎么清洗、用什么方法/模型（要体现 DA/DS 核心能力：提出可检验的问题、探索分析、统计检验或预测模型、解释业务含义）、怎么展示
+- **A (Action)**：数据从哪来（必须是学生能合法、免费、无需审批获取的公开数据或 API，附你确定存在的完整 URL，指向具体的数据集或 API 文档页，不能只给网站首页；不要爬 Product Hunt 等禁止抓取的网站；不要用自己编造或自己网站产生的数据充当主数据。只能用上面【选题】指定的数据集作主数据，只能依赖那里列出的真实字段，缺的标签或字段不许编）、怎么清洗、用什么方法/模型（要体现 DA/DS 核心能力：提出可检验的问题、探索分析、统计检验或预测模型、解释业务含义）、怎么展示
 - **R (Result)**：以“预期目标：”开头，写带具体数字的预期结果及如何测量（如“准确率从 baseline X 提升到 Y”），不能写成已经达成
 - **可行性打分**（1–5）：数据可得性、技术难度、时间成本、简历加分程度，各一句理由；最后单独一行给总分（格式固定为 `项目可行性：4/5`）
 - **两周执行计划**：按阶段列出，每天 2–3 小时、共约 35 小时能完成；范围要小：一个数据集、一个核心问题、最多一个 baseline 加一个模型，人工标注不超过 60 条且只用于抽查（训练模型必须用数据自带的标签）

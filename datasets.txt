@@ -1,0 +1,39 @@
+# URL | 内容与真实字段（练手项目只能从这里选；可自行增删，每行一个）
+https://huggingface.co/datasets/sealuzh/app_reviews | 安卓 App 评论：包名、评论文本、日期、1–5 星评分
+https://archive.ics.uci.edu/dataset/320/student+performance | 中学生成绩：家庭背景、学习时间、缺勤、三次成绩
+https://archive.ics.uci.edu/dataset/349/open+university+learning+analytics+dataset | 在线课程学习行为：每日点击、作业提交与成绩、是否退课
+https://archive.ics.uci.edu/dataset/352/online+retail | 电商订单：发票号、商品、数量、时间、单价、客户号、国家
+https://archive.ics.uci.edu/dataset/468/online+shoppers+purchasing+intention+dataset | 网站会话：浏览页数、停留、跳出率、流量来源、是否购买
+https://archive.ics.uci.edu/dataset/222/bank+marketing | 银行电话营销：客户属性、联系次数、上次活动结果、是否成交
+https://archive.ics.uci.edu/dataset/563/iranian+churn+dataset | 电信客户流失：通话时长、投诉、套餐、客户价值、是否流失
+https://archive.ics.uci.edu/dataset/275/bike+sharing+dataset | 共享单车每小时租借量：时间、天气、节假日、注册/临时用户
+https://archive.ics.uci.edu/dataset/332/online+news+popularity | 新闻文章：标题词数、图片/视频数、发布日、分享量
+https://archive.ics.uci.edu/dataset/228/sms+spam+collection | 短信文本，标签为垃圾/正常
+https://archive.ics.uci.edu/dataset/235/individual+household+electric+power+consumption | 家庭用电：每分钟功率、电压、三个分区用电量
+https://archive.ics.uci.edu/dataset/477/real+estate+valuation+data+set | 房产估值：房龄、离地铁距离、便利店数、经纬度、单价
+https://archive.ics.uci.edu/dataset/240/human+activity+recognition+using+smartphones | 手机传感器特征，标签为六种人体动作
+https://archive.ics.uci.edu/dataset/350/default+of+credit+card+clients | 信用卡客户：额度、账单、还款记录、是否违约
+https://archive.ics.uci.edu/dataset/498/incident+management+process+enriched+event+log | IT 事故工单流水：状态变更、优先级、改派次数、开单与解决时间
+https://github.com/karolpiczak/ESC-50 | 环境声音：2000 条 5 秒音频，50 类各 40 条（含狗叫，没有情绪标签）
+https://huggingface.co/datasets/PolyAI/banking77 | 银行客服提问文本，77 种意图标签
+https://huggingface.co/datasets/stanfordnlp/imdb | 电影长评文本，正面/负面标签
+https://huggingface.co/datasets/rajpurkar/squad | 阅读理解：文章段落、问题、标准答案
+https://huggingface.co/datasets/openai/gsm8k | 小学数学应用题与逐步解答
+https://huggingface.co/datasets/openai/openai_humaneval | 164 道 Python 编程题：题干、参考解、单元测试
+https://huggingface.co/datasets/abisee/cnn_dailymail | 新闻正文与人工要点摘要
+https://grouplens.org/datasets/movielens/ | 电影评分：用户、电影、评分、时间、类型、标签
+https://www.gharchive.org/ | GitHub 公开事件流水：事件类型、账号、仓库、时间（体量大，只取几小时到几天）
+https://archive.org/details/stackexchange | 各问答社区全量帖子：标题、正文、标签、得分、时间、采纳答案（选小型子站）
+https://hn.algolia.com/api | Hacker News 搜索：标题、点数、评论数、时间、作者（无话题标签）
+https://survey.stackoverflow.co/ | 开发者年度问卷：工具使用、薪资、学习方式、AI 使用态度
+https://info.arxiv.org/help/api/index.html | 论文元数据：标题、摘要、作者、分类、时间
+https://docs.openalex.org/ | 学术论文：引用数、机构、主题、合作关系
+https://dumps.wikimedia.org/other/pageviews/readme.html | 维基百科每小时页面浏览量：语言、页面、次数
+https://pypistats.org/api/ | Python 包的下载量：按日、版本、系统
+https://www.nyc.gov/site/tlc/about/tlc-trip-record-data.page | 纽约出租车行程：上下车时间地点、距离、车费、小费
+https://insideairbnb.com/get-the-data/ | 各城市民宿：房源描述、价格、评论、可订日历
+https://open-meteo.com/en/docs | 历史与预报天气：温度、降水、风速，按经纬度
+https://github.com/logpai/loghub | 系统日志：多种真实系统的日志文本，部分带异常标签
+https://datasets.imdbws.com/ | 影视作品：类型、年份、时长、评分、投票数、演职员
+https://musicbrainz.org/doc/MusicBrainz_Database | 音乐元数据：艺人、专辑、曲目、发行时间与地区
+https://world.openfoodfacts.org/data | 食品：成分、营养值、品牌、包装、评级

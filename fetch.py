@@ -16,9 +16,9 @@ API = "https://api.producthunt.com/v2/api/graphql"
 FEED = "https://www.producthunt.com/feed"
 UA = {"User-Agent": "ph-daily-digest/1.0 (personal study project)"}
 
-POSTS_QUERY = """query($a:DateTime!,$b:DateTime!,$n:Int!){
- posts(first:$n, order:RANKING, featured:true, postedAfter:$a, postedBefore:$b){nodes{
-  id name slug tagline description votesCount commentsCount dailyRank featuredAt
+POSTS_QUERY = """query($a:DateTime!,$b:DateTime!,$n:Int!,$o:PostsOrder!){
+ posts(first:$n, order:$o, featured:true, postedAfter:$a, postedBefore:$b){nodes{
+  id name slug tagline description votesCount commentsCount dailyRank weeklyRank featuredAt
   website url userId makers{id} topics(first:8){nodes{name}}
   comments(first:20, order:VOTES_COUNT){nodes{userId body} pageInfo{endCursor hasNextPage}}}}}"""
 COMMENTS_QUERY = """query($id:ID!,$c:String){post(id:$id){
@@ -59,10 +59,10 @@ def graphql(query, variables, retries=2):
             time.sleep(2 * 2 ** attempt)
 
 
-def day_window(date, tz):
+def day_window(date, tz, days=1):
     start = datetime.combine(date, datetime.min.time(), ZoneInfo(tz))
     # 用“次日零点”而不是 +24h，换夏令时那天也正确
-    end = datetime.combine(date + timedelta(days=1), datetime.min.time(), ZoneInfo(tz))
+    end = datetime.combine(date + timedelta(days=days), datetime.min.time(), ZoneInfo(tz))
     return start, end
 
 
@@ -147,20 +147,22 @@ def add_website(p, cfg, html):
     log.info("官网抓取跳过 %s: %s", p["name"], p["website_status"])
 
 
-def fetch_api(date, cfg):
-    start, end = day_window(date, cfg["timezone"])
+def fetch_api(date, cfg, days=1):
+    start, end = day_window(date, cfg["timezone"], days)
+    # 跨多天时 RANKING 会按天分组（实测先出最后一天），所以周榜先按票数取回，再按官方 weeklyRank 排
+    key, order = ("weeklyRank", "VOTES") if days == 7 else ("dailyRank", "RANKING")
     # postedBefore 是闭区间：若传次日零点，会混进次日 00:00 发布的产品，所以减 1 秒
-    data = graphql(POSTS_QUERY, {"a": start.isoformat(), "n": 20,
+    data = graphql(POSTS_QUERY, {"a": start.isoformat(), "n": 20, "o": order,
                                  "b": (end - timedelta(seconds=1)).isoformat()})
     nodes = [n for n in data["posts"]["nodes"] if n["featuredAt"] and
              start <= datetime.fromisoformat(n["featuredAt"].replace("Z", "+00:00")) < end]
     if not nodes:
         raise RuntimeError("API 没有返回该日的产品")
-    nodes.sort(key=lambda n: n["dailyRank"] or 10 ** 6)
+    nodes.sort(key=lambda n: n[key] or 10 ** 6)
     products = []
     for i, n in enumerate(nodes[:cfg["top_n"]], 1):
         comments, html = maker_comments(n, cfg)
-        p = {"rank": i, "daily_rank": n["dailyRank"], "id": n["id"], "name": n["name"],
+        p = {"rank": i, "official_rank": n[key], "id": n["id"], "name": n["name"],
              "slug": n["slug"], "tagline": n["tagline"], "description": n["description"] or "",
              "votes": n["votesCount"], "comments": n["commentsCount"],
              "topics": [t["name"] for t in n["topics"]["nodes"]],
@@ -171,10 +173,10 @@ def fetch_api(date, cfg):
     return products
 
 
-def fetch_rss(date, cfg):
+def fetch_rss(date, cfg, days=1):
     r = requests.get(FEED, timeout=20, headers=UA)
     r.raise_for_status()
-    start, end = day_window(date, cfg["timezone"])
+    start, end = day_window(date, cfg["timezone"], days)
     products = []
     for e in BeautifulSoup(r.content, "xml").find_all("entry"):
         if not start <= datetime.fromisoformat(e.published.text) < end:
@@ -183,7 +185,7 @@ def fetch_rss(date, cfg):
         first = content.find("p")
         link = next((a["href"] for a in content.find_all("a") if a.text.strip() == "Link"), "")
         url = e.link["href"]
-        p = {"rank": len(products) + 1, "daily_rank": None, "id": e.id.text.rsplit("/", 1)[-1],
+        p = {"rank": len(products) + 1, "official_rank": None, "id": e.id.text.rsplit("/", 1)[-1],
              "name": e.title.text.strip(), "slug": url.rsplit("/", 1)[-1],
              "tagline": html_text(str(first)) if first else "", "description": "", "votes": None,
              "comments": None, "topics": [], "website": clean_url(link), "url": clean_url(url),
@@ -197,23 +199,26 @@ def fetch_rss(date, cfg):
     return products
 
 
-def get_day(date, cfg):
-    path = ROOT / "data" / "raw" / f"{date}.json"
+def get_period(key, date, cfg, days=1):
+    path = ROOT / "data" / "raw" / f"{key}.json"
     cached = read_json(path)
     if cached and cached["source"] == "api":   # RSS 的不完整数据不算缓存命中
         log.info("使用缓存 %s", path.name)
         return cached
     note = ""
     try:
-        source, products = "api", fetch_api(date, cfg)
+        source, products = "api", fetch_api(date, cfg, days)
     except Exception as e:
         log.warning("API 不可用，改用 RSS: %s", redact(e))
-        source, products = "rss", fetch_rss(date, cfg)
+        source, products = "rss", fetch_rss(date, cfg, days)
         note = ("Product Hunt API 不可用，本报告改用官方 RSS：没有票数、评论和最终排名，"
                 "顺序不代表名次，数据不完整。")
     if len(products) < cfg["top_n"]:
-        note += f"当天只取到 {len(products)} 个产品。"
-    day = {"date": str(date), "source": source, "note": note,
+        note += f"只取到 {len(products)} 个产品。"
+    ranks = [p["official_rank"] for p in products]
+    if source == "api" and ranks != list(range(1, len(ranks) + 1)):
+        note += f"官方名次不连续（{ranks}），可能有产品缺失。"
+    day = {"date": key, "start": str(date), "end": str(date + timedelta(days=days - 1)), "source": source, "note": note,
            "fetched_at": datetime.now(ZoneInfo("UTC")).isoformat(timespec="seconds"),
            "products": products}
     write_json(path, day)

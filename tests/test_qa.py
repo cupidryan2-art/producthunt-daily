@@ -305,3 +305,40 @@ def test_logistic_regression_is_its_own_term():
 def test_catalog_homepage_is_not_a_data_source():
     assert run(GOOD.replace("https://example.com/data", "https://huggingface.co/datasets"))["checks"]["data_source"]
     assert run(GOOD)["checks"]["data_source"] == []
+
+
+def test_week_window_is_seven_days():
+    start, end = fetch.day_window(datetime(2026, 11, 16).date(), "America/Los_Angeles", 7)
+    assert (end.date() - start.date()).days == 7
+
+
+PLAN = {"rank": 2, "dataset_url": "https://grouplens.org/datasets/movielens/", "method": "聚类分群",
+        "question": "q", "relevance": "r"}
+
+
+class PlanLLM:
+    def __init__(self, plans):
+        self.plans = plans
+
+    def call(self, prompt, check=None, **k):
+        o = {"plans": self.plans}
+        check(o)
+        return o
+
+
+def test_plan_assigns_distinct_datasets():
+    prods = [{**FULL, "id": "1", "rank": 2}, {**FULL, "id": "2", "rank": 3}]
+    other = {**PLAN, "rank": 3, "dataset_url": "https://www.gharchive.org/"}
+    ok = analyze.plan_projects(PlanLLM([PLAN, other]), prods, {}, "k")
+    assert set(ok) == {"1", "2"} and ok["1"]["fields"]
+    assert analyze.plan_projects(PlanLLM([PLAN, {**PLAN, "rank": 3}]), prods, {}, "k") == {}
+
+
+def test_plan_avoids_previous_issue():
+    prods = [{**FULL, "id": "1", "rank": 2}]
+    assert analyze.plan_projects(PlanLLM([PLAN]), prods, {"2026-W46": [PLAN["dataset_url"]]}, "2026-W47") == {}
+
+
+def test_assigned_dataset_must_be_used():
+    assert qa.check_data_source(GOOD, PLAN)
+    assert qa.check_data_source(GOOD.replace("https://example.com/data", PLAN["dataset_url"]), PLAN) == []

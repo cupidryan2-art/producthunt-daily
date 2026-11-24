@@ -7,6 +7,11 @@ from common import ROOT, write_text
 STARS = {n: "★" * n + "☆" * (5 - n) for n in range(1, 6)}
 
 
+def _label(day):
+    start, end = day.get("start", day["date"]), day.get("end", day["date"])
+    return start if start == end else f"{day['date']}（{start} 至 {end}）"
+
+
 def cell(s):
     return re.sub(r"\s+", " ", str(s)).replace("|", "\\|")
 
@@ -60,27 +65,27 @@ def _product(p, r):
 def render(day, results, over, stats):
     by_rank = {p["rank"]: p for p in day["products"]}
     n = len(by_rank)
-    out = [f"# Product Hunt 每日 Top {n} 解读 · {day['date']}", "",
+    out = [f"# Product Hunt {'周榜' if 'W' in day['date'] else '日榜'} Top {n} 解读 · {_label(day)}", "",
            f"> 日期按洛杉矶时区；票数抓取于 {day['fetched_at']}（UTC）。"
            "`[已知]` 表示资料里有依据，`[推测]` 表示模型推断。"]
     if day["note"]:
         out += [f">\n> **⚠️ {day['note']}**"]
     if stats.get("incomplete"):
         out += [f">\n> **⚠️ 运行中 DeepSeek {stats['incomplete']}，本报告不完整，请重跑。**"]
-    out += ["", "## 今日一览", "",
+    out += ["", "## 本期一览", "",
             "| 排名 | 产品名 | 一句话 | 票数 | 复现难度 | 项目可行性 | 质检分 |",
             "|---|---|---|---|---|---|---|"]
     out += [_row(p, results[p["id"]]) for p in day["products"]]
-    out += ["", "## 今日趋势", ""]
+    out += ["", "## 本期趋势", ""]
     out += [f"- **{t['label']}**：{n} 个里有 {len(t['ranks'])} 个（"
             + "、".join(by_rank[r]["name"] for r in t["ranks"]) + f"）。{t['insight']}"
-            for t in over["trends"]] or ["- 今日未能归纳出趋势。"]
-    out += ["", "## 今日最值得我动手的 1 个项目", ""]
+            for t in over["trends"]] or ["- 本期未能归纳出趋势。"]
+    out += ["", "## 本期最值得我动手的 1 个项目", ""]
     if over["pick"]:
         p = by_rank[over["pick"]["rank"]]
         out += [f"**来自 [{p['name']}](#p-{p['id']})**：{over['pick']['reason']}"]
     else:
-        out += ["今天没有通过质检的产品，不做推荐。"]
+        out += ["本期没有通过质检的产品，不做推荐。"]
     out += ["", "---", ""]
     for p in day["products"]:
         out += _product(p, results[p["id"]]) + ["---", ""]
@@ -107,7 +112,7 @@ def render(day, results, over, stats):
 
 
 def write_index():
-    files = sorted((f for f in (ROOT / "reports").glob("*.md") if re.fullmatch(r"\d{4}-\d\d-\d\d", f.stem)),
+    files = sorted((f for f in (ROOT / "reports").glob("*.md") if re.fullmatch(r"\d{4}-(?:W\d\d|\d\d-\d\d)", f.stem)),
                    reverse=True)
     write_text(ROOT / "reports" / "index.md",
                "# 全部报告\n\n" + "\n".join(f"- [{f.stem}]({f.name})" for f in files) + "\n")

@@ -1,6 +1,6 @@
-# Product Hunt 每日 Top 10 解读器
+# Product Hunt 每周 Top 10 解读器
 
-每天抓取 Product Hunt 前一天（洛杉矶时区）的前 10 名，用 DeepSeek 写成零基础也能看懂的中文解读，自动质检后输出到 [reports/](reports/index.md)。
+每周一抓取 Product Hunt 上一整周（周一到周日，洛杉矶时区）的周榜前 10 名，用 DeepSeek 写成零基础也能看懂的中文解读，自动质检后输出到 [reports/](reports/index.md)。
 
 ## 本地运行
 
@@ -18,28 +18,32 @@ copy .env.example .env
 | `PH_TOKEN` | Product Hunt → API Dashboard → 你的应用 → Developer Token |
 | `DEEPSEEK_API_KEY` | platform.deepseek.com → API keys（账户需有余额） |
 
-参数：`--limit N` 只试跑前 N 个并打印费用；`--date YYYY-MM-DD` 补跑某天；`--dry-run` 只抓数据；`--skip-review` 跳过 LLM 审稿。
+参数：`--limit N` 只试跑前 N 个并打印费用；`--week YYYY-MM-DD` 补跑该日期所在的周；`--date YYYY-MM-DD` 跑某一天的日榜；`--dry-run` 只抓数据；`--skip-review` 跳过 LLM 审稿。
 测试：`.venv\Scripts\python -m pytest`
 
 ## GitHub Actions
 
 仓库 Settings → Secrets and variables → Actions → New repository secret，添加 `PH_TOKEN` 和 `DEEPSEEK_API_KEY`。
-`GITHUB_TOKEN` 由 Actions 自动提供，不用配置。工作流在 [daily.yml](.github/workflows/daily.yml)，每天 UTC 08:30（北京 16:30）运行，也可在 Actions 页手动运行并填补跑日期。
+`GITHUB_TOKEN` 由 Actions 自动提供，不用配置。工作流在 [weekly.yml](.github/workflows/weekly.yml)，每周一 UTC 10:17（北京 18:17）运行，也可在 Actions 页手动运行并填该周任意一天。
 
 注意：
 - GitHub 定时任务可能晚几分钟到几十分钟。
-- 工作日 UTC 06–10 点是 DeepSeek 高峰价（平时的 2 倍）。改成 UTC 10:05（`5 10 * * *`）能省一半费用，数据不受影响。
+- 工作日 UTC 01–04、06–10 点是 DeepSeek 高峰价（平时的 2 倍），改时间时避开。
+- 公开仓库 60 天没有活动，GitHub 会停掉定时任务；每周有新提交就不会。
 
 ## 修改
 
-- 费用上限：`config.yaml` 的 `max_usd_per_run`，超过就停。2026-11-25 平价时段实测每次约 $0.04（¥0.3）。
+- 练手项目的数据集：`datasets.txt`。每期先由模型统一分配“数据集 + 方法”（`prompts/plan.md`），程序保证同一期数据集不重复、同一方法最多 2 次、不与上一期重复（记录在 `data/datasets_used.json`）。
+- 费用上限：`config.yaml` 的 `max_usd_per_run`，超过就停。2026-11-25 平价时段实测每次约 $0.04–0.07（¥0.3–0.5）。
 - prompt：直接改 `prompts/*.md`。`{xxx}` 占位符要保留；六个二级标题如要改，同步改 `qa.py` 的 `SECTIONS`。
 - 质检阈值、模型、并发、重试、价格：`config.yaml`。
 - 术语表：`glossary.txt`，每行 `术语 | 解释`。
 
 ## 排名怎么来的
 
-用 API 的 `order: RANKING` 加 `featured: true`，再按官方字段 `dailyRank` 排序。2026-11-25 对 11-21 至 11-23 三天做了比对：
+**周榜**：`order: VOTES` 加 `featured: true` 取整周前 20，再按官方字段 `weeklyRank` 排序。多天范围用 RANKING 会先返回最后一天的产品，不能直接用；名次不连续时报告会注明。
+
+**日榜**（`--date`）：用 API 的 `order: RANKING` 加 `featured: true`，再按官方字段 `dailyRank` 排序。2026-11-25 对 11-21 至 11-23 三天做了比对：
 
 - RANKING 去掉未精选产品后，前 10 与 `dailyRank` 1–10 逐条一致。
 - `order: VOTES` 与 `dailyRank` 不完全一致（11-23 和 11-22 的第 6、7 名票数与名次相反），说明最终排名不等于票数排序，所以没有用票数。

@@ -1,7 +1,7 @@
 # 所有可调参数；密钥只放环境变量，绝不写在这里。
 schedule:
   # 仅作记录：GitHub Actions 不能读取本文件，改时间要同步改 .github/workflows/daily.yml
-  cron_utc: "30 8 * * *"
+  cron_utc: "17 10 * * 1"
 fetch:
   top_n: 10
   timezone: America/Los_Angeles

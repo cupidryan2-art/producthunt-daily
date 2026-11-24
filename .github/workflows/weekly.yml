@@ -1,17 +1,18 @@
-name: daily
+name: weekly
 on:
   schedule:
-    # UTC 08:30 = 北京时间 16:30。Product Hunt 按洛杉矶时间算一天，
-    # 洛杉矶零点是 UTC 08:00（冬令时）或 07:00（夏令时），08:30 时“前一天”必定已结束。
-    - cron: "30 8 * * *"
+    # 每周一 UTC 10:17 = 北京时间周一 18:17，跑上一整周（周一到周日）的周榜。
+    # 洛杉矶的周日在周一 UTC 08:00（夏令时 07:00）结束，此时上一周已收官；
+    # DeepSeek 工作日高峰价到 UTC 10:00 为止，之后是平价；避开整点减少 GitHub 排队。
+    - cron: "17 10 * * 1"
   workflow_dispatch:
     inputs:
       date:
-        description: "补跑日期 YYYY-MM-DD（留空 = 昨天）"
+        description: "补跑：填该周任意一天 YYYY-MM-DD（留空 = 上一周）"
         required: false
 permissions:
   contents: write
-concurrency: daily
+concurrency: weekly
 jobs:
   run:
     runs-on: ubuntu-latest
@@ -31,7 +32,7 @@ jobs:
           GITHUB_TOKEN: ${{ github.token }}   # 只用于查询仓库 star 数，自动提供，无需配置
           RUN_DATE: ${{ inputs.date }}
         run: |
-          if [ -n "$RUN_DATE" ]; then python main.py --date "$RUN_DATE"; else python main.py; fi
+          if [ -n "$RUN_DATE" ]; then python main.py --week "$RUN_DATE"; else python main.py; fi
       - name: Commit report
         if: always()
         run: |

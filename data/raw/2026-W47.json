@@ -1,0 +1,250 @@
+{
+  "date": "2026-W47",
+  "start": "2026-11-16",
+  "end": "2026-11-22",
+  "source": "api",
+  "note": "",
+  "fetched_at": "2026-11-24T18:06:01+00:00",
+  "products": [
+    {
+      "rank": 1,
+      "official_rank": 1,
+      "id": "1316291",
+      "name": "RankSpot",
+      "slug": "rankspot-2",
+      "tagline": "Pay-as-you-go SEO and AI Search execution layer for agents",
+      "description": "RankSpot is the SEO and AI Search execution layer for agents. Connect the MCP to Claude or ChatGPT in 2 minutes and your agent does the work: it writes articles from what already ranks on Google in 100+ languages, publishes them, and pitches ranking sites from your mailbox for backlinks. Run every client or business from one chat. No subscription: $3 an article, $0.004 a prompt check, reading your data free. Start with $1 of credit and a free article.",
+      "votes": 471,
+      "comments": 126,
+      "topics": [
+        "Productivity",
+        "Marketing",
+        "SEO"
+      ],
+      "website": "https://www.producthunt.com/r/ZXC3TLTUHNL3JP",
+      "url": "https://www.producthunt.com/products/rankspot",
+      "maker_comments": [
+        "Hey Product Hunt 👋 Dan here, co-founder of RankSpot. Last time we launched, RankSpot only generated content on autopilot. Since then we've onboarded 1,000+ customers, and their feedback shaped our improved product. So we set out to build something no other SEO tool could do, and focused on these things: 1️⃣ Execution → Most SEO tools stop at the data . RankSpot reads Google's top 5 for your keyword and writes the page that beats them, in 100+ languages, then publishes and indexes it. It also finds the editors of pages already ranking and pitches them from your own mailbox, then tracks every link and your Domain Rating. 2️⃣ Agent first → We run the infrastructure : rank and AI answer tracking, competitor share of voice, writing, publishing, email finding and outreach for backlinks. You control it all from Claude or ChatGPT through our MCP. Setup takes 2 minutes, no API key. Ask \"Where are we missing in Google and AI search?\" and your agent pulls the gaps and starts on the fixes. 3️⃣ Pay as you go → No subscription. Per output pricing at $3 an article, $0.004 a prompt check, $0.09 a pitch, and reading your data is free. You start with $1 of credit (that's 250 prompt checks) and one free article to see the quality. Set a spend cap and put tasks on a schedule. 4️⃣ Everything under one roof → Agencies and people running several businesses keep every client in one chat. Type \"Run this week's fixes for every client\" and approve what goes out. 🎁 Launch deal: we'll match your first top-up up to $50 until Thursday 19 November, 08:00 UK (midnight PT). What SEO task would you start on first? I'll answer every comment below so feel free to be upfront with your feedback! 👉 https://rankspot.ai",
+        "For any GTA 6 fans out here - this is the GTA 6 analogy of without RankSpot vs with P.s. please support so that @danshipit let's me have a day off to play it on Thursday"
+      ],
+      "website_resolved": "https://www.rankspot.ai/",
+      "website_text": "Works with your agent Claude, ChatGPT, Cursor, Codex, n8n, Grok, Hermes and any MCP client Before and after Hundreds of tools, a team of specialists and hours every week. Or… one agent that just does it. Before Dozens of tools, and you in the middle Your data sits in dozens of tools. Then someone has to do the work, either you or a person you hire. 3 D DataForSEO Minimum top-up $50.00 9 SF Screaming Frog License, per year ÷ 12 $23.25 1 Premium, per year ÷ 12 $9.90 You Export CSV Chase the editor Paste into the sheet Write the pitch Renewal due Seat limit reached 11 subscriptions $560 a month plus the team Hundreds of tools Hours every week $560+ a month After You, your preferred AI chat and RankSpot RankSpot pulls in data from hundreds of sources and suggests the actions with the biggest impact. When you’re happy, it gets on with the work. Claude ChatGPT Cursor Codex n8n Claude RankSpot · MCP connected What should we do this week to get more customers from search? Pulling your data hundreds of sources done RANKED BY IMPACT, THEN DONE FOR YOU 1 Publish 3 comparison pages Researched, scored, published to WordPress · Impact 94 Published 2 Pitch 6 listicles AI cites Editors found and verified, sent for you · Impact 86 Sent 3 Reply to 4 Reddit threads The threads ChatGPT and AI Mode quote · Impact 72 Ready for you You’re in control Ask for anything, or let it check in Nothing goes live without your OK Pay for what you use No subscription Or paste the MCP link into your agent https://mcp.rankspot.ai Copy AI sources AI answers draw on many sources. Get named in more of them. RankSpot finds the sources AI cites, then writes the pitch, reply or article that gets you named there. Sources Where AI gets its answers, and what RankSpot does about each Identify, draft, act 1 Content Articles, page updates and replies written for the questions AI is answering. What you get More pages worth citing Google, your own pages, Reddit, Quora and LinkedIn Source RankSpot identifies RankSpot drafts You approve, it acts Google and AI Overviews Keywords you can win You rank #14 for a keyword with 6.6K searches a month. AI quotes three listicles. Article: 7 best screen recorders for Mac Approve Published and sent for indexing Your own pages Pages that are slipping /features/auto-zoom is #6. The top 3 all add a comparison table. Page refresh with the comparison table Approve Updated in your CMS Reddit and Quora Threads AI quotes r/macapps thread cited by ChatGPT. The competition is recommended 11 times. Reply that answers the question and says you work there Open thread You post it as yourself LinkedIn Posts AI cites in your market Posts cited for your prompts, and who wrote them. Post in your voice Open draft You post it as yourself 2 Backlink outreach Pitches to the pages AI already cites, sent from your mailbox with follow-ups. What you get Named on the pages AI quotes Roundups, listings and their editors Source RankSpot identifies RankSpot drafts You approve, it acts Roundups and listings The pages AI cites most zapier.com ’s Mac roundup is cited 98× by ChatGPT, Perplexity and AI Overviews. You’re not on it. Pitch to the page’s editor, with two follow-ups Approve Sends from your mailbox Editors and authors The person behind each page The editor’s name and email, found for you. Reply when they answer, in your voice Approve Link tracked once it’s live 3 Tracking and data Rankings, AI citations and backlinks tracked for you, so every action has a result you can see. What you get Proof of what worked AI answers, Google rankings, backlinks and YouTube AI answers Which prompts name you, which name the competition, and the pages each answer cites. Google rankings Your position for every keyword, with clicks from Search Console. Backlinks Every link you have, and every link outreach wins. YouTube The videos AI cites for your prompts, so you know which to make. What it does Get more customers from search. The full suite of SEO and AI search data, inside your AI chat. RankSpot does most of the work too, and you approve every step. Rank tracking See where you rank against the competition Your agent asks ChatGPT, Claude, Perplexity, Gemini and Google what your buyers ask and compares you with your competition. Every gap becomes a plan, ranked by impact. Your agent asks ChatGPT, Claude, Perplexity, Gemini and Google what your buyers ask. Every gap becomes a plan. See rank tracking Claude RankSpot · MCP connected Where do we rank against our competition? Asking 5 AI engines and Google your tracked prompts done Rank tracking AI visibility Prompts Competition You Top competitor Named in AI answers Named in 2 / 6 Share of voice 18% Google avg #18.4 ChatGPT RankSpot · MCP connected Write a comparison page vs Competitor A Reading the top 5 on Google 5 pages, 12 sources done Research Research · the top 5 on Google 5 steps · 1:31 Searched Google “screen recorder for mac” 10 results 1 Best screen recorders for Mac in 2026 screentoolshub.com 2 7 screen recorders for product demos makerstack.io 3 Screen recording on a Mac: the full guide macworkflows.net +2 more from the top 5 › Score 86 /100 SEO score · top 5 avg 71 · best 82 ✓ Ready to publish Content Publish valuable content RankSpot reads the top 5 Google results and the sources AI quotes for your keyword, then writes something more useful, in one of 100+ languages. It scores each draft against those top 5 before it ships, then publishes it to WordPress, Shopify, Webflow, Ghost, Framer, Wix, HubSpot or any webhook and sends it for indexing. Written from the top 5 Google results and the sources AI quotes, scored before it ships, then published to your CMS. See content Backlinks Approve the pitch. Watch your domain rating climb. For the prompts you want to rank for, RankSpot picks the pages Google and AI cite most, finds the editor and drafts the pitch. You approve it, and it sends from a mailbox already warmed up. RankSpot picks the pages Google and AI cite most, finds the editor and",
+      "website_status": "ok"
+    },
+    {
+      "rank": 2,
+      "official_rank": 2,
+      "id": "1310455",
+      "name": "Creatify Max",
+      "slug": "creatify-max",
+      "tagline": "Your ad teammate, from strategy to creation to launch",
+      "description": "Max is your teammate for paid ads. Share a product URL or brief and Max makes video ads, sets up campaigns on Meta and TikTok, and watches results 24/7, flagging what to fix next. You make the calls: nothing goes live without your approval.",
+      "votes": 437,
+      "comments": 141,
+      "topics": [
+        "Social Media",
+        "Marketing",
+        "Advertising"
+      ],
+      "website": "https://www.producthunt.com/r/NWW6YNL6LTJ6TX",
+      "url": "https://www.producthunt.com/products/creatify",
+      "maker_comments": [
+        "As a Paid Ads Growth Manager at Creatify, I work across Google Ads, Meta, TikTok, and other channels. A huge part of my week goes into pulling reports, comparing performance, figuring out what to test next, and turning those insights into campaigns. That’s why I’m excited to share Creatify Max today. It’s an AI teammate that connects the work we usually spread across multiple tools: creating video ads, setting up campaigns on Meta and TikTok, monitoring performance, and turning winning ads into briefs for the next creative round. For me, the most valuable part is the connection between understanding what happened and deciding what to do next . A report is useful, but being able to discuss the results, develop a new creative direction, and prepare the next campaign in the same workflow makes those insights much easier to act on. I’ve been involved since the early days, helping refine the advertising strategies behind Max. Seeing it become part of our internal workflow has been especially rewarding. It remembers our playbook, incorporates feedback, and keeps us in control— no campaign goes live without our approval. I’m excited to spend more time on strategy and creative decisions, with Max helping handle the repetitive work in between. Fellow marketers: which part of your advertising workflow would you hand over first? I’d love to hear what you’d want Max to help with. Huge congratulations to everyone on the team who helped bring Max to life! 🚀"
+      ],
+      "website_resolved": "",
+      "website_text": "",
+      "website_status": "跳过：www.producthunt.com: HTTP 403"
+    },
+    {
+      "rank": 3,
+      "official_rank": 3,
+      "id": "1257199",
+      "name": "TheBold",
+      "slug": "thebold",
+      "tagline": "Turn execution into meetings with investors",
+      "description": "TheBold turns startup execution into direct investor access. 🎉 Launch Fast Track (Nov 17–27): pass one AI investor-readiness interview, land in the deal flow of investors who match your startup, and unlock direct meeting access. TheBold helps founders understand investor criteria, track and verify execution and traction, practice investor-specific AI simulations, and book meetings once qualified.",
+      "votes": 439,
+      "comments": 79,
+      "topics": [
+        "Venture Capital",
+        "Social Networking",
+        "Fundraising"
+      ],
+      "website": "https://www.producthunt.com/r/C7KPFSSB5AHOYX",
+      "url": "https://www.producthunt.com/products/thebold",
+      "maker_comments": [
+        "Hey Product Hunt! 👋 I’m Julia, founder of TheBold . I’ve spent the last few years working with early-stage founders and investors, and reviewed around 1,000 startup pitches along the way. Again and again, I saw the same thing happen. An investor would say: “Interesting — come back in a few months.” But almost nobody tells the founder what exactly needs to change during those months. And even when founders do make progress, getting back in front of that investor is another problem. The email gets buried, the LinkedIn message goes unread, and the investor has already seen hundreds of other startups. At some point, I got frustrated enough to ask investors in my network a slightly unusual question: \" What if you gave me a few slots in your calendar every month, and I only put startups there that actually meet your investment criteria?\" To my surprise, they said yes. But they added something important: metrics aren’t enough. Metrics show what a founder has already achieved. Investors also want to understand how that founder thinks, learns, executes, and whether they’re likely to turn new capital into future results. That conversation became TheBold. 👉 How it works 1. See what unlocks investors. TheBold shows you the metrics and execution signals specific investors want to see — and which ones you’re closest to qualifying for. 2. Turn the gap into commitments. Pick a goal. Regular AI syncs turn it into focused commitments for each cycle, then track what you did, learned, changed, and achieved. 3. Build your execution track record. As you complete commitments and move your metrics, TheBold builds a verified history of your traction and execution — and checks it against investor criteria. 4. Rehearse the investor’s first call. Once you qualify, you unlock an AI simulation based on that specific investor’s thesis, criteria, and questions. 5. Meet. Pass the simulation and book directly on the investor’s calendar. Investors can also discover qualified founders and invite them first. 👉 And there’s something special for today’s launch For the next 10 days (Nov 17–27), we’re opening a Fast Track to VC funds on TheBold. Instead of pitching funds one by one, you take one AI investor-readiness interview. Pass it, and you land in the deal flow of every fund on TheBold that matches your startup, all at once. Then use your 3 meeting requests on your strongest matches. Pass the AI screening interview → Get auto-added to matching investors’ pipelines → Pick who you want to meet. Fast Track closes Nov 27. I’ll be here all day answering questions today 💬"
+      ],
+      "website_resolved": "https://thebold.vc/",
+      "website_text": "TheBold: Build traction. Get VC meetings. How it works Hub FAQ Log in For early-stage startups Build traction Get VC meetings See what specific investors are looking for, build that traction week by week, practice the conversation, and book the meeting on their calendar. Get started Watch 60-sec teaser Watch teaser Get your investor matches and their criteria in 5 min Top matches 46 funds O Onemore Fund $2M–$8M 94 Book call Booked ✓ S Spire Ventures $1M–$5M 88 View thesis V Verdant Partners $500K–$3M 82 View thesis Investor insights Funds that published their criteria on TheBold: check size, stage and the traction they expect. Norwest $500K–$70M Flashpoint VC $1M–$5M Plug and Play Middle East $25K–$3M TMT Investments $300K–$3M AltaIR Capital $100K–$3M Investible $175K–$2M 7BC Venture Capital $100K–$2M Outlander VC $500K–$2.5M Momenta $1M–$5M Quanta Ventures Fund $10K–$5M Catalpa Ventures $300K–$1.5M Yellow Rocks! $200K–$2M Somersault Ventures $100K–$1M AMM Ventures $10K–$500K Pre-seed to Succeed (P2S) $300K–$500K 1406 Park Lane Partners $25K–$250K Velocity Digital $50K–$100K Norwest $500K–$70M Flashpoint VC $1M–$5M Plug and Play Middle East $25K–$3M TMT Investments $300K–$3M AltaIR Capital $100K–$3M Investible $175K–$2M 7BC Venture Capital $100K–$2M Outlander VC $500K–$2.5M Momenta $1M–$5M Quanta Ventures Fund $10K–$5M Catalpa Ventures $300K–$1.5M Yellow Rocks! $200K–$2M Somersault Ventures $100K–$1M AMM Ventures $10K–$500K Pre-seed to Succeed (P2S) $300K–$500K 1406 Park Lane Partners $25K–$250K Velocity Digital $50K–$100K Without TheBold Guessing what investors want? 01 / 03 With TheBold · Step 01 Know their criteria. Build the track record they want. On TheBold, you see exactly what each investor looks for. Turn their criteria into long-term goals, make short-term commitments, and build a verifiable execution history through regular AI check-ins. 01 / 03 Execution history Last 26 weeks 112 days On platform High Commitments kept Fast Learning speed 94 % Syncs done Without TheBold Not sure you're ready to face an investor? 02 / 03 With TheBold · Step 02 Meet their criteria. Practice their questions. Once you meet an investor's criteria, you unlock a simulation built around their questions. Practice your answers, get feedback, and retake it until you're ready. Only your passing result is shared with the investor. 02 / 03 Onemore Fund · Simulation Question 3 of 5 Speak to answer Julia G. · Partner If I called your largest customer tomorrow without you on the line, what would they tell me? Without TheBold Still trying to get an investor's attention? 03 / 03 With TheBold · Step 03 Prove you're ready. Book the meeting directly. Meet the criteria and pass the simulation to unlock the investor's calendar. Book directly on TheBold, without chasing introductions or sending cold emails. Qualified founders also appear in the investor's pipeline, so they can reach out first. 03 / 03 Simulation passed Onemore Fund 92 /100 Calendar unlocked Your score Julia's bar · 80 Meeting booked 30 min NOV 12 Onemore Fund · Julia G. Wed · 3:30 PM Behind the yes Drive Mindset Resourcefulness Qualities many investors associate with exceptional founders. TheBold uses evidence-based behavioural science frameworks to help you build the habits that lead to consistent execution. Primal drive , the force that gets a founder out of bed when everything goes wrong. Marc Andreessen a16z A determinate mindset : a specific, bold view of the future. Peter Thiel Founders Fund The quality we're looking for is being relentlessly resourceful . Paul Graham Y Combinator From the founder Why I built TheBold For founders For investors Julia's message to founders Product Hunt Business Insider IBTimes Canvas Rebel Indie Hackers CEO Weekly TheBold Hub · Learning and community Learn from the people who build and fund Talks, interviews and breakdowns from founders and investors, picked for early-stage teams. Free to watch, with notes and comments from the community. Open the Hub → Start growing in the right direction You're already doing the work. We turn it into the signal investors read. Is this pay-to-pitch? No. Investors don't pay to see you and you don't pay for a meeting. You pay for the tools that get you ready. The meeting is earned by clearing the investor's own bar. What if I'm too early to fundraise? That's when the weekly sync helps most. You see what your target investors expect and build toward it, so the track record exists by the time you raise. Why practice before booking the meeting? Most founders get one shot with a fund. The simulation uses the investor's own questions, so you find the weak answers before they do. What if I don't pass the simulation? You can retake it. And you don't have to pass it to get noticed: once you meet an investor's criteria, you join their pool. They see you in their weekly digest as a new founder worth a look, and they can invite you to a meeting before you pass the simulation. How is this different from asking ChatGPT? A chatbot answers what you ask. TheBold knows what specific investors require, tracks your progress against it every week, and opens their calendar when you meet it. Three minutes. No forms The onboarding agent fills your startup profile from what you already have: a deck, a doc, a voice note. Continue with Google Continue with GitHub Are you an investor? Message us on LinkedIn By continuing you agree to the Terms and Privacy Policy . Pricing Terms Privacy Cookie settings Support X LinkedIn Product Hunt TheBold is the infrastructure layer between early-stage founders and investors — turning investor criteria into founder milestones, verified progress, and direct access when founders are ready. © 2026 TheBold VC",
+      "website_status": "ok"
+    },
+    {
+      "rank": 4,
+      "official_rank": 4,
+      "id": "1317562",
+      "name": "S.Space",
+      "slug": "s-space",
+      "tagline": "Your team and everyone's AI agents, in one workspace",
+      "description": "Everyone on your team has an AI agent, and none of them work together, so you copy, paste and re-explain all day. S.Space is one workspace for your team and everyone's agents. Bring the ones you already use, like Claude Code and Codex, from any vendor. Agents reach out, hand work to each other and bring you finished results, with shared memory so you explain things once. Agents act, you approve what matters. Free to start. Built by the team behind AutoGen.",
+      "votes": 389,
+      "comments": 123,
+      "topics": [
+        "Productivity",
+        "Developer Tools",
+        "Artificial Intelligence"
+      ],
+      "website": "https://www.producthunt.com/r/3NGQFAYB2FLK2V",
+      "url": "https://www.producthunt.com/products/s-space",
+      "maker_comments": [],
+      "website_resolved": "",
+      "website_text": "",
+      "website_status": "跳过：www.producthunt.com: HTTP 403"
+    },
+    {
+      "rank": 5,
+      "official_rank": 5,
+      "id": "1314645",
+      "name": "TestSprite 4.0",
+      "slug": "testsprite-4-0",
+      "tagline": "Fix one thing, break another? This agent checks it all",
+      "description": "Your coding agent fixes one thing and breaks another. TestSprite 4.0 is a brand-new testing agent that remembers what your app should do and checks all of it, every time. Tell it in plain words what to test. It explores your running app, writes and runs the end-to-end tests, tells you which failures are real bugs, and keeps checking every change from the web, your terminal or your pull requests.",
+      "votes": 380,
+      "comments": 55,
+      "topics": [
+        "Software Engineering",
+        "Developer Tools",
+        "Artificial Intelligence",
+        "GitHub"
+      ],
+      "website": "https://www.producthunt.com/r/7TKIXW445YMK2C",
+      "url": "https://www.producthunt.com/products/testsprite",
+      "maker_comments": [],
+      "website_resolved": "",
+      "website_text": "",
+      "website_status": "跳过：www.producthunt.com: HTTP 403"
+    },
+    {
+      "rank": 6,
+      "official_rank": 6,
+      "id": "1322672",
+      "name": "Saparo",
+      "slug": "saparo-2",
+      "tagline": "Muse for shopping with deals stacks",
+      "description": "Saparo is a personal shopping agent that stacks every deal. Tell it what you want, and it searches U.S. stores for the same item in your size, combining promo codes, cash back, and eligible card offers that work together. It ranks options by estimated total cost, including shipping and tax, so you skip the legwork. With your approval, Saparo applies selected offers and gets checkout ready. You review the order and make the final payment yourself.",
+      "votes": 346,
+      "comments": 72,
+      "topics": [
+        "Productivity",
+        "E-Commerce",
+        "Tech"
+      ],
+      "website": "https://www.producthunt.com/r/CGUN3ORBJWPLHU",
+      "url": "https://www.producthunt.com/products/saparo",
+      "maker_comments": [
+        "Hey Product Hunt 👋 I'm Silicon, COO at Saparo. I've spent my career taking products from zero to real traction. At Saparo, I work on growth and partnerships, and I spend a lot of time talking with our shoppers. Svin told you why we built Saparo, and Anson explained how it works. I want to share what we learned from the people who used it first. What early shoppers taught us: - \"Just help me understand what I'll pay.\" People didn't want a dozen coupon codes. They wanted to see what they'd expect to pay at checkout and what they could get back later, with shipping and estimated tax clearly accounted for. So we make that breakdown easy to review. - \"Don't buy anything without asking me.\" That's why Saparo gets checkout ready only after you give it the go-ahead. You review the order and make the final payment yourself. - \"If someone found it cheaper, why didn't I?\" When a shopper flags a price as too high, Saparo keeps digging, and the next person starts from the better deal. We share prices and codes, never your personal data. A few things we hold ourselves to: - Make the estimated savings clear, including when cash back or savings from eligible card offers arrive later rather than at checkout. - Remember your sizes, cards, and preferences to make shopping more useful for you. - Read every piece of feedback. A lot of what's in Saparo today started as a message from a user. 🎁 A little extra for the PH community Sign up through the link below during our launch and get 600 welcome credits—double the usual 300. Use them to try Saparo on something you're shopping for. 👉 Get your 600 welcome credits and try Saparo One honest ask 🙏 Saparo is still early, and it isn't perfect yet. If it didn't find the exact item you wanted, or a deal didn't stack the way it should, please send the details to support@saparo.ai . I'll work through it with you directly. Your feedback really does help us make Saparo better for the next shopper. And if Saparo helped you save, we'd love to hear what you bought in the comments 😄 Thanks for checking us out. I'll be here all day ❤️"
+      ],
+      "website_resolved": "",
+      "website_text": "",
+      "website_status": "跳过：www.producthunt.com: HTTP 403"
+    },
+    {
+      "rank": 7,
+      "official_rank": 7,
+      "id": "1306148",
+      "name": "Yoroll",
+      "slug": "yoroll",
+      "tagline": "Build playable stories without a game engine",
+      "description": "Yoroll lets anyone turn stories into playable, cinematic games without coding or a game engine. Start with a script, image, or video clip, then direct the scenes, add player choices, and create branching storylines with different outcomes. AI helps bring everything together into an interactive experience you can share. It's more like directing your own interactive movie than programming a game.",
+      "votes": 365,
+      "comments": 34,
+      "topics": [
+        "Artificial Intelligence",
+        "Games",
+        "No-Code"
+      ],
+      "website": "https://www.producthunt.com/r/XKLWN5SDJ5RSLW",
+      "url": "https://www.producthunt.com/products/yoroll",
+      "maker_comments": [
+        "Yoroll is doing something pretty interesting with AI video. Instead of generating clips that people just watch, it lets you turn them into interactive games with choices, different endings, and playable moments. You can start with a prompt, image, or video, then build and publish the experience without a traditional game engine. They've already got a playable version of The Odyssey with 140+ AI-generated scenes and 11 endings. Worth trying if you've ever wanted to turn a story into a game.",
+        "Hi guys! 👋 We are the LinearGame team, and we’re launching Yoroll on Product Hunt today. When we showed Yoroll at GDC and NVIDIA GTC, we kept hearing some version of “I’ve always wanted to make a game, but I never knew how to start.” That stuck with us. If you write short dramas or make AI videos, you might already know exactly where you’d let the audience take the story in a different direction. Getting that one choice to work on screen is where things get fiddly. We built Yoroll so you can start with whatever you’ve got. Got a story in mind? Bring a premise, a script, or a few reference images into Yoroll Agent. You can work out where each choice leads, review the storyboard, and pick which shots to turn into video. Then play it through and see how the story feels from the other side of the screen. Open Yoroll Agent Got a game idea? With Yoroll Code, you can build a standalone mini-game or a playable moment inside a story. Say the player has to pick a lock before a guard comes back. Try it in your browser, tweak the timer, and play it again. You’ve got Tripo 3D, Seedance video, sound effects, and the game engine in the same workspace. Try Yoroll Code Already shot a short drama? Say your lead signs a deal in the original cut. What if the audience could make her walk away? Keep the footage you shot, generate the walkout scene, and choose where that path rejoins the original story. Try the interactive drama tool For Black Friday, members can save up to 60% on Claude Fable 5.2 in Yoroll Code！ Thanks for giving Yoroll a look. If you try it, we’d love to hear what felt good, what got in your way, or what you wish it could do. And if you just want to talk about the product or kick around an idea you’re working on, we’re here for that too. 🙌"
+      ],
+      "website_resolved": "https://app.yoroll.ai/",
+      "website_text": "Yoroll APP - Create Interactive Film Games with AI | Engine-Free Creator Home Games Assets Skill Hub Create Yoroll Agent Yoroll Code Tools More Gameplay Atlas Quick tutorial Search English Create interactive narrative games Yoroll Agent Workflow Midnight Invitation Witch's Secret Whispers of the Elves Stellar Expedition Midnight Hospital Neon Pursuit Explore More All All Interactive Film Interactive Film Mini Games Mini Games Short Drama Short Drama Puzzle Games Puzzle Games",
+      "website_status": "ok"
+    },
+    {
+      "rank": 8,
+      "official_rank": 8,
+      "id": "1320414",
+      "name": "Verse Engine by Ctruh",
+      "slug": "verse-engine-by-ctruh",
+      "tagline": "Blender, Unity or Unreal to a live 3D link in one click",
+      "description": "Verse Engine by Ctruh is a browser-native 3D and XR engine that turns any 3D into one link. Bring files, scans and floor plans, or publish straight from Blender, Unity and Unreal. The link opens in any browser with no app and no download. Built for developers, 3D artists, game studios, architects, real estate teams and e-commerce brands. A scene streams only what the viewer sees, so a 10.3 billion triangle city opens from a link on a laptop. Embeds, API and SDK included. Free 14-day Pro trial.",
+      "votes": 332,
+      "comments": 62,
+      "topics": [
+        "Developer Tools",
+        "Augmented Reality",
+        "3D Modeling"
+      ],
+      "website": "https://www.producthunt.com/r/CBNSNOACCLEF75",
+      "url": "https://www.producthunt.com/products/verse-engine-by-ctruh",
+      "maker_comments": [
+        "Hey Product Hunt @product I'm excited to introduce Verse Engine by Ctruh, something our team has been working hard to bring to life.One challenge we've consistently seen with 3D is that creating an experience is only part of the problem. Sharing it, making it accessible, and getting it to run smoothly in a browser can be just as challenging. Large files, software dependencies and deployment complexity often get in the way.That's what we're working to simplify with Verse Engine. Verse Engine by Ctruh is a browser-native 3D and XR engine that brings 3D content from creation to deployment. You can bring supported 3D files, scans, floor plans and projects from tools like Blender, Unity and Unreal Engine, and turn them into interactive browser experiences that can be shared through a link. No separate application installation is required for viewers. One of the demonstrations we're particularly excited about is our Lyon City experience, built around a scene with approximately 10.3 billion triangles and a 556 GB source file, explored through the browser. We're building Verse Engine towards a larger vision: making 3D and XR experiences easier to create, stream and deploy across the web. I'd love for you to try it: https://verse.ctruh.com If you're a 3D artist, developer, architect, game developer or someone working with large 3D environments, we'd love to hear your feedback. A few things we'd especially like to learn from the community: How do you currently share and deploy large 3D experiences? What is the biggest bottleneck in your 3D workflow? What would you like to see us build next?We're here to listen, learn and keep improving. Thanks for checking out Verse Engine! Best, Somesh"
+      ],
+      "website_resolved": "https://verse.ctruh.com/",
+      "website_text": "What is Verse? Verse by Ctruh is the streaming layer for 3D. You upload a 3D file, send a floor plan, or publish from Blender, Unity or Unreal, and get a link that opens in the browser with nothing to install. Video to walkthrough is in private beta, by invitation. Do viewers need an app or a plug-in? No. A Verse link opens in the browser. Viewers never pay: every published scene opens for everyone. Which tools can publish to Verse? Plug-ins for Blender, Unity and Unreal (on Mac and Windows) publish a scene with one button, and Substance 3D Painter, Revit, SketchUp and Rhino are in beta. Plug-ins for 3ds Max, Archicad, Maya, Cinema 4D, Houdini, SolidWorks, Figma and Spline are coming soon, and a BIM model arrives through IFC today. You can also upload a 3D file in the app or use the API. Is Verse free? Yes. The Free plan lets you try Verse on your own models, and a trial with Pro features starts with a creator code or a card. Starter, Pro, Scale and Enterprise add storage, bandwidth, Verse Homes, films and seats; see the pricing page. Can viewers see a product in AR? Yes, for product-sized scenes. On a handheld device, View in AR places the product in the room from its link. On a desktop, a QR code opens it on your device. How View in AR works What if an upload has a problem? Verse watches every upload. If a step fails it retries and recovers on its own, and a bad file gets a plain explanation of what to change. How is it different from a 3D library? A library gives you parts to assemble: loading, streaming, compression, hosting, sharing and analytics are yours to build. Verse ships those as one product, so a scene goes from file to link without a build project.",
+      "website_status": "ok"
+    },
+    {
+      "rank": 9,
+      "official_rank": 9,
+      "id": "1323002",
+      "name": "Rankhog",
+      "slug": "rankhog",
+      "tagline": "Get customers from Reddit on autopilot",
+      "description": "Rankhog finds people on Reddit asking for what you sell. It reads each subreddit's rules, writes a reply that helps, and posts it from your own account at a human pace. Say yes to each reply, or turn on autopilot. No Reddit account? Rankhog warms up a new one, and you own it. Run it from the app, or from Claude, ChatGPT, Cursor and any MCP client. 7 days free.",
+      "votes": 354,
+      "comments": 41,
+      "topics": [
+        "Marketing",
+        "Artificial Intelligence",
+        "reddit"
+      ],
+      "website": "https://www.producthunt.com/r/HVFQNHONLRBAJZ",
+      "url": "https://www.producthunt.com/products/rankhog",
+      "maker_comments": [
+        "Hey Product Hunt 👋 I'm Anthony, and I build Rankhog on my own. People ask Reddit what to buy all day. \"What do you use for X?\" is a customer raising their hand in public. But doing Reddit well is a full time job. Every subreddit has its own rules, new accounts get removed, and one lazy promo comment can get you banned. So I built Rankhog to do the boring parts for me: Radar watches the subreddits your buyers hang out in and finds people asking for what you sell, while the post is still fresh. Replies that help first. Rankhog reads the subreddit's rules, writes a reply in its style, then checks it like a strict mod. It names your product only when it fits. You say yes, or autopilot does. Replies go out from your own Reddit account, at a human pace. Warm-up. No account? Make a fresh one and Rankhog grows it with real, helpful comments. You own it, not us. Works with your AI. Run all of it from Claude, ChatGPT, Cursor or any MCP client. What it is not: a spam bot. No mass comments, no bought accounts, no posting where the rules say no. You can start with a free Reddit audit of your product, and there are free tools too (shadowban checker, post checker, best time to post). The plan is $99 a month per product with a 7 day free trial. I would love to hear it straight: what has Reddit done for your product so far, good or bad? I'm here all day to answer."
+      ],
+      "website_resolved": "",
+      "website_text": "",
+      "website_status": "跳过：www.producthunt.com: HTTP 403"
+    },
+    {
+      "rank": 10,
+      "official_rank": 10,
+      "id": "1316478",
+      "name": "Bluedot Phone Calls",
+      "slug": "bluedot-phone-calls",
+      "tagline": "AI note taker for phone calls",
+      "description": "Bluedot now covers phone calls, not just meetings. Dial from the web or mobile app, keep your own caller ID, and get a transcript, summary and action items automatically.",
+      "votes": 321,
+      "comments": 46,
+      "topics": [
+        "Android",
+        "iOS",
+        "Productivity"
+      ],
+      "website": "https://www.producthunt.com/r/ULWYTTAYG5XTLI",
+      "url": "https://www.producthunt.com/products/bluedot-2",
+      "maker_comments": [
+        "Hey Product Hunt! Dima here, co-founder of Bluedot. Bluedot started as a note taker for online meetings that records without a bot joining the call. Then we added in-person meetings. That left one obvious gap: phone calls. A lot of real work still happens there (a follow-up with a client, a candidate screen, a quick check-in with a supplier), and those are the conversations nobody writes down. So we built phone call recording into Bluedot: Verify your number once, then call from Bluedot on web or mobile The call is recorded and transcribed, and you get a summary and action items when you hang up Call notes sit in the same workspace as your meeting notes An optional announcement tells the other person the call is being recorded Two honest limits: it’s outbound calls only for now, and we’re still adding countries. I’d love your feedback on: Would you use inbound call recording, and how would you expect it to work? Which countries should we add next? What do you do with call notes afterwards: CRM, follow-up email, something else? I’ll be here all day answering questions. Thanks for checking it out!",
+        "Really excited to see phone calls finally added. This closes a pretty obvious gap for teams that already use Bluedot for meetings. Check it out and let us know if you have any questions!"
+      ],
+      "website_resolved": "",
+      "website_text": "",
+      "website_status": "跳过：www.producthunt.com: HTTP 403"
+    }
+  ]
+}

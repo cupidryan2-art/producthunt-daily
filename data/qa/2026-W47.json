@@ -1,0 +1,554 @@
+{
+  "stats": {
+    "date": "2026-W47",
+    "analyzed": 8,
+    "passed": 8,
+    "failed": 0,
+    "revised": 2,
+    "avg_score": 88.2,
+    "tokens": 146030,
+    "usd": 0.04977,
+    "seconds": 165.3,
+    "models": {
+      "review:deepseek-flash": {
+        "calls": 11,
+        "cache_hit": 4608,
+        "cache_miss": 33948,
+        "output": 45869,
+        "usd": 0.032627423999999995
+      },
+      "analysis:deepseek-flash": {
+        "calls": 11,
+        "cache_hit": 12416,
+        "cache_miss": 27567,
+        "output": 21622,
+        "usd": 0.017145498
+      }
+    },
+    "incomplete": "",
+    "note": "Creatify Max 的 data_source 原判为误报，按修正后的规则重新计算"
+  },
+  "report_check": [],
+  "products": {
+    "RankSpot": {
+      "terms_autofixed": [
+        "SEO"
+      ],
+      "score": 81,
+      "must_fix": [],
+      "unclear": [
+        "对想做 DA / DS 的学生 → DA、DS 是缩写，零基础读者不知道指数据分析师/数据科学家，应展开一次。",
+        "接一个 CMS 的发布接口 → CMS（内容管理系统）在文中始终未解释，前面罗列 WordPress/Shopify 等也未点明它们就是 CMS。",
+        "若做显著性检验，高被引机构与随机机构的集中度差异 p 值小于 0.05 → p 值和显著性水平未做任何解释，零基础读者不知道 0.05 意味着什么。"
+      ],
+      "relabel": [
+        {
+          "quote": "这一整套动作分散在五六个工具里，中间全靠人手动搬运 [已知]",
+          "reason": "资料里没有“五六个工具”这一数量：官网对比图写的是 dozens of tools / hundreds of tools、11 subscriptions、$560+ a month，以及“Dozens of tools, and you in the middle”。改成“十几个甚至几十个工具、11 个订阅”才与资料一致。"
+        },
+        {
+          "quote": "在 6 个问题里你被提到 2 次就是 18% [已知]",
+          "reason": "资料同时出现“Named in 2 / 6”和“Share of voice 18%”，但从未说明两者是直接相除关系；2/6 本身约等于 33%，所以“提到 2 次就是 18%”是把两个数字强行画等号，属无依据的推断。应改为“资料显示某示例被 6 个提示中的 2 个提及，声量份额显示 18%（具体口径资料未说明）”。"
+        }
+      ],
+      "relabel_applied": 2,
+      "relabel_missed": [],
+      "review_error": "",
+      "checks": {
+        "structure": [],
+        "length": [],
+        "labels": [],
+        "fields": [],
+        "data": [],
+        "result_tense": [],
+        "data_source": [],
+        "links": [],
+        "terms": []
+      },
+      "issues": [],
+      "links": {
+        "https://scrapy.org/": {
+          "status": "ok",
+          "code": 200
+        },
+        "https://developer.wordpress.org/rest-api/": {
+          "status": "ok",
+          "code": 200
+        },
+        "https://docs.openalex.org/": {
+          "status": "ok",
+          "code": 200
+        }
+      },
+      "dead_links": [],
+      "unexplained_terms": [],
+      "passed": true,
+      "revisions": 0,
+      "first_draft": null,
+      "plan": {
+        "rank": 1,
+        "dataset_url": "https://docs.openalex.org/",
+        "method": "网络/关系分析",
+        "question": "用 OpenAlex 论文的 referenced_works 与作者机构字段构建机构级引用网络，哪些机构处于高被引中心位置、它们的引用是集中在少数枢纽机构还是分散？",
+        "relevance": "RankSpot 的核心是找高权重站点换外链，这里把引用当作链接、把引用网络当作外链图谱，迁移的是“先定位权威节点再决定投向哪里”的资源分配思路。",
+        "fields": "学术论文：引用数、机构、主题、合作关系"
+      },
+      "fields": {
+        "difficulty": 4,
+        "feasibility": 4,
+        "one_liner": "让 AI 助手帮你写文章、发文章、找网站换外链的按次付费工具"
+      }
+    },
+    "Creatify Max": {
+      "terms_autofixed": [],
+      "score": 88,
+      "must_fix": [],
+      "unclear": [
+        "再用卡方检验或逻辑回归（估计某件事发生概率的方法，常用来分类）检验“联系次数”和“poutcome 分组”这两个因素是否互相影响成交率 → 括号只解释了逻辑回归，卡方检验是什么、为什么能用来判断“交互”没解释；而且卡方检验通常测的是两个分类变量的关联，不是“一个因素的影响随另一个因素而变”的交互效应，零基础读者会误以为两者等价。建议直接写明“用带交互项的逻辑回归为主，卡方只做初步关联性检查”。",
+        "目标是用统计检验判断各组曲线形状是否存在显著差异（显著性水平取 0.05），并给出每组“建议最多联系次数”的具体数值 → “显著差异”“显著性水平 0.05”以及后文 R 里的“检验 p 值”都没解释，零基础读者不知道 0.05 和 p 值在说什么。建议加一句“p 值小于 0.05 表示‘纯属巧合’的可能性低于 5%，我们就认为差异不是偶然”。",
+        "按上次活动结果 poutcome 分成成功/失败/未知等组 → 该数据集 poutcome 只有 failure / nonexistent / success 三类，第三类是 nonexistent（此前没被联系过），并没有 unknown 这个取值；unknown 是 job、marital 等别的字段的取值。初学者照着写 poutcome=='unknown' 会筛出空表。建议改成“成功/失败/无历史活动（nonexistent）三组，并说明 unknown 只出现在其他字段、需单独处理”。",
+        "T 里写“定位每组边际成交率下降最明显的联系次数区间”，R 里却改成“以某组在联系次数超过 k 次后，每增加一次联系成交率的提升低于 1 个百分点作为拐点判定标准” → 前面用“下降最明显”（相对比较），后面用“低于 1 个百分点”（绝对阈值），两个定义不一致，读者不知道最终按哪个算拐点。建议在 T 里就写死用绝对阈值 k，并说明为什么选 1 个百分点。"
+      ],
+      "relabel": [],
+      "relabel_applied": 0,
+      "relabel_missed": [],
+      "review_error": "",
+      "checks": {
+        "structure": [],
+        "length": [],
+        "labels": [],
+        "fields": [],
+        "data": [],
+        "result_tense": [],
+        "data_source": [],
+        "links": [],
+        "terms": []
+      },
+      "issues": [],
+      "links": {
+        "https://archive.ics.uci.edu/dataset/222/bank+marketing": {
+          "status": "ok",
+          "code": 200
+        }
+      },
+      "dead_links": [],
+      "unexplained_terms": [],
+      "passed": true,
+      "revisions": 1,
+      "first_draft": {
+        "score": 84,
+        "issues": [
+          "A 部分必须以指定数据集为主数据并写出完整 URL：https://archive.ics.uci.edu/dataset/222/bank+marketing"
+        ],
+        "must_fix": [],
+        "unclear": [
+          "并定位每组边际成交率下降最明显的联系次数区间 → “边际成交率”是术语，零基础读者首次读到会不明其意（后文 R 段虽有操作性定义，但此处未解释）。",
+          "检验“联系次数×poutcome 分组”对成交的交互效应 → “交互效应/交互项”未加解释，零基础读者无法理解这一步在检验什么。"
+        ],
+        "relabel": [
+          {
+            "quote": "比如周一早上要交上周投放复盘，得先登录 Meta 后台导数据，再登录 TikTok 后台导数据，把两份表格拼在一起对比哪条视频广告表现好，然后想下一轮该拍什么新素材，最后再去两个后台分别建广告计划。这套动作分散在多个工具里，来回切换 [已知]。",
+            "reason": "资料只说工作“分散在多个工具中”、作者花大量时间拉报告、比表现、想下一步测什么；而“周一早上交复盘”“分别登录 Meta/TikTok 后台导数据”“拼两份表格”等具体流程细节为分析自行补出的场景，非原文所有。"
+          },
+          {
+            "quote": "数据方面，它积累的是每个客户自己的投放反馈和打法手册 [已知]",
+            "reason": "原文是作者所在团队（Creatify 内部）使用，提到“It remembers our playbook, incorporates feedback”，并未说明是按“每个客户”分别积累反馈与 playbook，属对外推到全体客户的过度外推。"
+          }
+        ]
+      },
+      "plan": {
+        "rank": 2,
+        "dataset_url": "https://archive.ics.uci.edu/dataset/222/bank+marketing",
+        "method": "转化漏斗与分群",
+        "question": "按上次活动结果（poutcome）分群后，本次 campaign 的联系次数与成交率 y 的曲线形状是否不同，哪一段联系次数之后边际成交率明显下降？",
+        "relevance": "Creatify Max 要持续看投放结果并提示“下一步该改什么”，这里迁移的是按历史表现分群、找触达频次边际收益拐点来指导下一轮投放的思路。",
+        "fields": "银行电话营销：客户属性、联系次数、上次活动结果、是否成交"
+      },
+      "fields": {
+        "difficulty": 4,
+        "feasibility": 4,
+        "one_liner": "帮投广告的人做视频、盯数据、提下一步建议的 AI 助手"
+      }
+    },
+    "TheBold": {
+      "terms_autofixed": [],
+      "score": 89,
+      "must_fix": [],
+      "unclear": [
+        "痛点有多“痛”：融资对早期公司是低频但高 stakes 的事 → “high stakes”是未解释的英文术语，零基础读者不一定理解（指风险高、后果重）。建议改为“发生频率低但每次代价很大”。",
+        "S (Situation)：还款记录有六个月的滞后状态，不知道重点看哪几个月 → 与后文 PAY_0–PAY_6“七列”自相矛盾（实际是 7 期还款状态），且没有说明 PAY_0 是最近一期、PAY_6 是六个月前，读者无法判断“哪个月”具体指哪一期。建议统一为“七期还款状态”并标注月份对应关系。"
+      ],
+      "relabel": [
+        {
+          "quote": "谁在用：正在找第一笔机构资金的早期创业者，尤其是第一次融资、没有投资人脉的创始人 [已知]。",
+          "reason": "资料只说到 early-stage startups / early-stage founders，以及“Instead of pitching funds one by one”“without chasing introductions or sending cold emails”；并没有说用户是“第一次融资”或“没有投资人脉”，这两点属于额外推断。"
+        }
+      ],
+      "relabel_applied": 1,
+      "relabel_missed": [],
+      "review_error": "",
+      "checks": {
+        "structure": [],
+        "length": [],
+        "labels": [],
+        "fields": [],
+        "data": [],
+        "result_tense": [],
+        "data_source": [],
+        "links": [],
+        "terms": []
+      },
+      "issues": [],
+      "links": {
+        "https://streamlit.io": {
+          "status": "ok",
+          "code": 200
+        },
+        "https://fastapi.tiangolo.com": {
+          "status": "ok",
+          "code": 200
+        },
+        "https://platform.openai.com/docs": {
+          "status": "ok",
+          "code": 200
+        },
+        "https://archive.ics.uci.edu/dataset/350/default+of+credit+card+clients": {
+          "status": "ok",
+          "code": 200
+        }
+      },
+      "dead_links": [],
+      "unexplained_terms": [],
+      "passed": true,
+      "revisions": 0,
+      "first_draft": null,
+      "plan": {
+        "rank": 3,
+        "dataset_url": "https://archive.ics.uci.edu/dataset/350/default+of+credit+card+clients",
+        "method": "回归与因素解释",
+        "question": "在控制信用额度 LIMIT_BAL 与账单金额后，最近六个月还款状态 PAY_0–PAY_6 中哪些月份的逾期记录对下月违约概率的解释力最强？",
+        "relevance": "TheBold 先用 AI 面试筛出“够格进入投资人 deal flow”的创始人，这里迁移的是用历史行为记录做准入资格打分、并说清是哪几条行为指标决定结果的思路。",
+        "fields": "信用卡客户：额度、账单、还款记录、是否违约"
+      },
+      "fields": {
+        "difficulty": 4,
+        "feasibility": 4,
+        "one_liner": "帮早期创业者按投资人标准攒执行记录，达标后直接约到投资人"
+      }
+    },
+    "S.Space": {
+      "terms_autofixed": [],
+      "score": 94,
+      "must_fix": [],
+      "unclear": [
+        "第 10 天做显著性检验…改派次数与总耗时的相关性检验 p 值小于 0.05 → p 值是统计术语，零基础读者不知道它是什么、小于 0.05 代表什么，需加一句解释（如“p 值表示‘纯属偶然’的概率，小于 0.05 通常认为差异不是巧合”）",
+        "回归模型对总耗时的解释度 R² 从 baseline 的约 0.05 提升到 0.25 以上 → R² 未解释，零基础读者不知其含义与取值范围，建议补一句（如“R² 取值 0–1，越高表示模型解释的总耗时差异越多”）"
+      ],
+      "relabel": [],
+      "relabel_applied": 0,
+      "relabel_missed": [],
+      "review_error": "",
+      "checks": {
+        "structure": [],
+        "length": [],
+        "labels": [],
+        "fields": [],
+        "data": [],
+        "result_tense": [],
+        "data_source": [],
+        "links": [],
+        "terms": []
+      },
+      "issues": [],
+      "links": {
+        "https://github.com/microsoft/autogen": {
+          "status": "ok",
+          "code": 200,
+          "repo": "microsoft/autogen",
+          "stars": 61970,
+          "pushed_at": "2026-11-12",
+          "stale": false
+        },
+        "https://archive.ics.uci.edu/dataset/498/incident+management+process+enriched+event+log": {
+          "status": "ok",
+          "code": 200
+        }
+      },
+      "dead_links": [],
+      "unexplained_terms": [],
+      "passed": true,
+      "revisions": 1,
+      "first_draft": {
+        "score": 89,
+        "issues": [
+          "① 有 31 字，应为 1–30 字"
+        ],
+        "must_fix": [],
+        "unclear": [
+          "“会一门后端语言、懂基本的 API 调用和消息队列概念，大约 60–100 小时” → “后端语言”“消息队列”对零基础读者是未解释的术语，建议各加半句白话解释（如“消息队列＝让程序之间排队传消息的中间件”）。",
+          "“这正是流程挖掘和耗时分析的套路” → “流程挖掘”首次出现且无解释，零基础读者不知其含义，建议补一句（如“流程挖掘＝从系统的事件日志里还原业务流程、找卡点”）。",
+          "“学生做 MVP 需要……” → “MVP”未展开，建议写成“最小可演示原型（MVP）”。"
+        ],
+        "relabel": [
+          {
+            "quote": "一个同事的 AI 助手写完了代码，另一个同事的 AI 助手要接着做测试或改文档，但两个助手彼此看不见对方，人只能把前一个的输出复制出来、粘贴给后一个，再重新解释一遍背景 [已知]。",
+            "reason": "资料只说“每个人的 agent 互不协作，所以你整天复制、粘贴、反复解释”，并举例 Claude Code / Codex；并没有描述“A 写完代码→B 接着做测试或改文档”这一具体交接流程。该编码场景是从工具类型推断出来的举例，不应标 [已知]，应改为 [推测] 或明确写成“举例说明”。"
+          }
+        ]
+      },
+      "plan": {
+        "rank": 4,
+        "dataset_url": "https://archive.ics.uci.edu/dataset/498/incident+management+process+enriched+event+log",
+        "method": "耗时与流程分析",
+        "question": "事故工单从开单到解决的总耗时中，各状态阶段的停留时长占比如何，改派次数和优先级分别把总耗时拉长了多少？",
+        "relevance": "S.Space 要让多个 agent 互相交接任务并把结果收回来，这里迁移的是把“任务在谁手里、交接几次”量化成流程耗时瓶颈的分析思路。",
+        "fields": "IT 事故工单流水：状态变更、优先级、改派次数、开单与解决时间"
+      },
+      "fields": {
+        "difficulty": 4,
+        "feasibility": 4,
+        "one_liner": "把团队各自的 AI 助手放进同一空间，让它们互相交接任务、共享信息"
+      }
+    },
+    "TestSprite 4.0": {
+      "terms_autofixed": [
+        "Agent"
+      ],
+      "score": 94,
+      "must_fix": [],
+      "unclear": [
+        "用统计检验比较窗口内外的频率差异 → “统计检验”是未解释的术语，零基础读者不知道指的是什么检验、为什么能判断频率差异不是随机波动，建议补一句直白说明（如“用卡方检验或比例检验判断这个模板在故障前的出现频率是否显著高于平时，还是只是随机浮动”）",
+        "说明用了统计检验控制显著性、按时间切分避免信息泄漏 → “控制显著性”“信息泄漏”两个术语都没有解释，读者不明白为什么按时间切分能防止作弊，建议改成“用统计检验确认频率升高不是偶然，并且只用过去的数据预测未来，不把未来数据混进训练”"
+      ],
+      "relabel": [],
+      "relabel_applied": 0,
+      "relabel_missed": [],
+      "review_error": "",
+      "checks": {
+        "structure": [],
+        "length": [],
+        "labels": [],
+        "fields": [],
+        "data": [],
+        "result_tense": [],
+        "data_source": [],
+        "links": [],
+        "terms": []
+      },
+      "issues": [],
+      "links": {
+        "https://playwright.dev/": {
+          "status": "ok",
+          "code": 200
+        },
+        "https://github.com/logpai/loghub": {
+          "status": "ok",
+          "code": 200,
+          "repo": "logpai/loghub",
+          "stars": 2924,
+          "pushed_at": "2026-11-24",
+          "stale": false
+        }
+      },
+      "dead_links": [],
+      "unexplained_terms": [],
+      "passed": true,
+      "revisions": 0,
+      "first_draft": null,
+      "plan": {
+        "rank": 5,
+        "dataset_url": "https://github.com/logpai/loghub",
+        "method": "异常检测",
+        "question": "在带异常标签的系统日志里，哪些日志模板及其出现顺序在故障发生前的窗口内频率显著升高，可用来提前报警？",
+        "relevance": "TestSprite 每天跑全量检查并判断哪些失败是真 bug、哪些是噪声，这里迁移的是从大量正常行为中只把真正偏离的模式挑出来的判别思路。",
+        "fields": "系统日志：多种真实系统的日志文本，部分带异常标签"
+      },
+      "fields": {
+        "difficulty": 4,
+        "feasibility": 4,
+        "one_liner": "用大白话告诉它测什么，它自己点开你的软件逐项检查并报告哪里坏了"
+      }
+    },
+    "Saparo": {
+      "terms_autofixed": [
+        "Streamlit"
+      ],
+      "score": 84,
+      "must_fix": [],
+      "unclear": [
+        "这是一种\"人在环内\"的产品设计 [推测] → \"人在环内\"（human-in-the-loop）未做任何解释，零基础读者不知道指的是用户需人工确认这一层含义。",
+        "这是一种用户反馈驱动的价格情报积累，越用越准，属于数据飞轮 [推测] → \"数据飞轮\"是行业黑话，没有解释它指\"用户越多→数据越好→体验越好→用户更多\"的循环。"
+      ],
+      "relabel": [
+        {
+          "quote": "谁在用：在美国网店买东西、习惯用优惠码和返现的普通消费者，尤其是买鞋服这类要选尺码、又爱比价的人 [已知]。",
+          "reason": "资料只说搜索\"the same item in your size\"，从未提及鞋服品类，也没有给出用户画像或\"爱比价\"的行为特征；这句紧接着下一行自己也承认\"资料没有说明具体用户画像\"，前后矛盾。"
+        },
+        {
+          "quote": "用户用自然语言告诉它想买什么，它在多家美国商店里搜同一件商品 [已知]。",
+          "reason": "资料原文只有\"Tell it what you want\"，没有说明输入方式是自然语言（也可能是表单/关键词），\"自然语言\"是把推测写成了 [已知]。"
+        }
+      ],
+      "relabel_applied": 2,
+      "relabel_missed": [],
+      "review_error": "",
+      "checks": {
+        "structure": [],
+        "length": [],
+        "labels": [],
+        "fields": [],
+        "data": [],
+        "result_tense": [],
+        "data_source": [],
+        "links": [],
+        "terms": []
+      },
+      "issues": [],
+      "links": {
+        "https://archive.ics.uci.edu/dataset/352/online+retail": {
+          "status": "ok",
+          "code": 200
+        }
+      },
+      "dead_links": [],
+      "unexplained_terms": [],
+      "passed": true,
+      "revisions": 0,
+      "first_draft": null,
+      "plan": {
+        "rank": 6,
+        "dataset_url": "https://archive.ics.uci.edu/dataset/352/online+retail",
+        "method": "推荐或检索排序",
+        "question": "在同一 CustomerID 的多张发票中，哪些 StockCode 经常共同出现，按组合的 Quantity×UnitPrice 合计金额排序后哪些组合最适合作为凑单推荐？",
+        "relevance": "Saparo 把多个优惠叠加后按估算总价给选项排序，这里迁移的是把候选商品按真实成交金额与共现关系排序、而不是按单一标价排序的思路。",
+        "fields": "电商订单：发票号、商品、数量、时间、单价、客户号、国家"
+      },
+      "fields": {
+        "difficulty": 4,
+        "feasibility": 4,
+        "one_liner": "帮你在美国网店买东西时自动叠加各种优惠，算出真实到手价"
+      }
+    },
+    "Yoroll": {
+      "again": {
+        "date": "2026-11-22",
+        "name": "Yoroll"
+      }
+    },
+    "Verse Engine by Ctruh": {
+      "terms_autofixed": [],
+      "score": 84,
+      "must_fix": [],
+      "unclear": [
+        "痛点那条“录视频只能看不能转” → “转”指什么没交代（不能旋转视角？不能交互？），零基础读者读不出意思，建议改成“只能被动观看、不能自己转动视角和交互”。",
+        "③“AR 查看方面，产品级大小的场景可以在手机上手持查看” → “产品级大小”容易被读成“产品级别的质量”，实际指“一个小商品那么大的场景”，建议写成“商品大小的场景（如一件家具）”。",
+        "⑥“先从探索分析画日内曲线”“统计日内周期与峰值出现的时段规律” → “日内周期/日内曲线”是专业术语，未解释，建议补一句“即一天 24 小时里访问量按小时的固定起伏规律”。",
+        "⑥“用留出集评估 MAPE”“在最后若干天的留出数据上计算两种方法的 MAPE” → “留出集/留出数据”未解释，建议写成“留出集（把最后几天数据留出来不参与训练，只用来打分）”。"
+      ],
+      "relabel": [
+        {
+          "quote": "本项目借的是 Verse Engine“只加载观众下一秒会看到的内容”这一思路：先预测需求，再决定准备什么 （思路对应产品描述）[已知]",
+          "reason": "资料只写了场景“只流式传输观众当前看得到的内容”（streams only what the viewer sees），并未提到“预测下一秒会看到什么”；“先预测再准备”属于选题方的延伸解读，不能标为 [已知]。"
+        }
+      ],
+      "relabel_applied": 1,
+      "relabel_missed": [],
+      "review_error": "",
+      "checks": {
+        "structure": [],
+        "length": [],
+        "labels": [],
+        "fields": [],
+        "data": [],
+        "result_tense": [],
+        "data_source": [],
+        "links": [],
+        "terms": []
+      },
+      "issues": [],
+      "links": {
+        "https://dumps.wikimedia.org/other/pageviews/readme.html": {
+          "status": "ok",
+          "code": 200
+        }
+      },
+      "dead_links": [],
+      "unexplained_terms": [],
+      "passed": true,
+      "revisions": 0,
+      "first_draft": null,
+      "plan": {
+        "rank": 8,
+        "dataset_url": "https://dumps.wikimedia.org/other/pageviews/readme.html",
+        "method": "时间序列预测",
+        "question": "某个语言下访问量最高的若干页面，其每小时浏览量的日内周期和突发峰值有什么规律，用前 24 小时序列能在多大误差内预测下一小时？",
+        "relevance": "Verse Engine 只流式传输观众当前看得到的内容，这里迁移的是按“观众实际看到什么、下一秒会看到什么”去预估需求并只加载这部分数据的思路。",
+        "fields": "维基百科每小时页面浏览量：语言、页面、次数"
+      },
+      "fields": {
+        "difficulty": 4,
+        "feasibility": 4,
+        "one_liner": "把大体积 3D 场景变成一条网页链接，点开就能看"
+      }
+    },
+    "Rankhog": {
+      "again": {
+        "date": "2026-11-22",
+        "name": "Rankhog"
+      }
+    },
+    "Bluedot Phone Calls": {
+      "terms_autofixed": [],
+      "score": 92,
+      "must_fix": [],
+      "unclear": [
+        "前端：网页端加 iOS、Android 原生或跨平台 App [已知] → “原生”和“跨平台”是未解释的技术概念，零基础读者不知道区别；且“原生或跨平台”等于两种都猜，对读者没有信息量，建议删掉或补一句解释（如“原生 = 分别为 iOS/Android 单独开发；跨平台 = 一套代码两端跑”）。"
+      ],
+      "relabel": [
+        {
+          "quote": "光有转写稿是原材料，摘要和待办才是能直接用的东西 [已知]",
+          "reason": "资料只说产品会同时给出转写、摘要和待办，并未对转写稿与摘要的价值高低作比较；这是分析者的价值判断，不是资料里的事实。"
+        }
+      ],
+      "relabel_applied": 1,
+      "relabel_missed": [],
+      "review_error": "",
+      "checks": {
+        "structure": [],
+        "length": [],
+        "labels": [],
+        "fields": [],
+        "data": [],
+        "result_tense": [],
+        "data_source": [],
+        "links": [],
+        "terms": []
+      },
+      "issues": [],
+      "links": {
+        "https://huggingface.co/datasets/PolyAI/banking77": {
+          "status": "ok",
+          "code": 200
+        }
+      },
+      "dead_links": [],
+      "unexplained_terms": [],
+      "passed": true,
+      "revisions": 0,
+      "first_draft": null,
+      "plan": {
+        "rank": 10,
+        "dataset_url": "https://huggingface.co/datasets/PolyAI/banking77",
+        "method": "文本分类",
+        "question": "只用客服提问原文，能否把它准确归入 77 个 intent 之一，哪些 intent 之间混淆最严重？",
+        "relevance": "Bluedot 把通话转写后自动生成摘要与待办事项，这里迁移的是先判断“这通电话在说什么事”再决定要记下什么行动项的意图识别前置步骤。",
+        "fields": "银行客服提问文本，77 种意图标签"
+      },
+      "fields": {
+        "difficulty": 4,
+        "feasibility": 4,
+        "one_liner": "用网页或手机打电话，挂断后自动给你文字记录、摘要和待办"
+      }
+    }
+  }
+}

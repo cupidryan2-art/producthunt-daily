@@ -124,7 +124,7 @@ def check_data(text, product):
     for m in re.finditer(r"(\d[\d,]*)\s*(?:张)?(?:票|个?投票|upvotes?|votes?)(?!制)", body, re.I):
         if int(m[1].replace(",", "")) != product["votes"]:
             out.append(f"票数与原始数据不符：“{m[0]}”，应为 {product['votes']}")
-    for m in re.finditer(r"(?:今日|当日|日榜|榜单|Product Hunt|PH)[^。\n]{0,10}第\s*(\d+)", body):
+    for m in re.finditer(r"(?:今日|当日|日榜|周榜|本周|榜单|Product Hunt|PH)[^。\n]{0,10}第\s*(\d+)", body):
         if int(m[1]) != product["rank"]:
             out.append(f"排名与原始数据不符：“{m[0]}”，应为第 {product['rank']}")
     return out
@@ -141,10 +141,13 @@ def check_result_tense(text):
 CATALOG_RE = re.compile(r"https?://(?:www[.])?(?:huggingface[.]co(?:/datasets)?|kaggle[.]com(?:/datasets)?|archive[.]ics[.]uci[.]edu(?:/datasets)?|github[.]com|zenodo[.]org)/?$")
 
 
-def check_data_source(text):
+def check_data_source(text, plan=None):
     part = star_part(text, "A")
+    if plan and plan["dataset_url"].rstrip("/") not in [
+            u.rstrip("/") for u in extract_urls(section(text, "⑥"))]:
+        return [f"⑥ 必须以指定数据集为主数据并写出完整 URL：{plan['dataset_url']}"]
     urls = extract_urls(part)
-    if not [u for u in urls if not CATALOG_RE.match(u)]:
+    if not plan and not [u for u in urls if not CATALOG_RE.match(u)]:
         return ["A 部分没有给出具体数据集/API 的 URL（只有目录首页或没有链接），请选定一个确定存在的具体来源"]
     return []
 
@@ -307,7 +310,7 @@ def annotate_links(text, links):
 
 
 # ---------- 汇总 ----------
-def program_check(text, product, cfg, checker):
+def program_check(text, product, cfg, checker, plan=None):
     links = checker.check(extract_urls(text))
     terms = unexplained_terms(text, product["name"], cfg["term_window"])
     dead = [u for u, r in links.items() if r["status"] == "dead"]
@@ -315,7 +318,7 @@ def program_check(text, product, cfg, checker):
         "structure": check_structure(text), "length": check_length(text, cfg),
         "labels": check_labels(text), "fields": check_fields(text),
         "data": check_data(text, product), "result_tense": check_result_tense(text),
-        "data_source": check_data_source(text),
+        "data_source": check_data_source(text, plan),
         "links": [f"链接失效（{links[u]['code']}）：{u}" for u in dead],
         "terms": [f"术语首次出现时未解释：{t}" for t in terms]}
     return {"checks": checks, "issues": [i for v in checks.values() for i in v],
