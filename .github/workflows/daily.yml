@@ -1,0 +1,43 @@
+name: daily
+on:
+  schedule:
+    # UTC 08:30 = 北京时间 16:30。Product Hunt 按洛杉矶时间算一天，
+    # 洛杉矶零点是 UTC 08:00（冬令时）或 07:00（夏令时），08:30 时“前一天”必定已结束。
+    - cron: "30 8 * * *"
+  workflow_dispatch:
+    inputs:
+      date:
+        description: "补跑日期 YYYY-MM-DD（留空 = 昨天）"
+        required: false
+permissions:
+  contents: write
+concurrency: daily
+jobs:
+  run:
+    runs-on: ubuntu-latest
+    timeout-minutes: 45
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+          cache: pip
+      - run: pip install -r requirements.txt
+      - run: pytest -q
+      - name: Generate report
+        env:
+          PH_TOKEN: ${{ secrets.PH_TOKEN }}
+          DEEPSEEK_API_KEY: ${{ secrets.DEEPSEEK_API_KEY }}
+          GITHUB_TOKEN: ${{ github.token }}   # 只用于查询仓库 star 数，自动提供，无需配置
+          RUN_DATE: ${{ inputs.date }}
+        run: |
+          if [ -n "$RUN_DATE" ]; then python main.py --date "$RUN_DATE"; else python main.py; fi
+      - name: Commit report
+        if: always()
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add reports data
+          git diff --cached --quiet || git commit -m "report: $(date -u +%F)"
+          git pull --rebase
+          git push

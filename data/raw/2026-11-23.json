@@ -1,0 +1,241 @@
+{
+  "date": "2026-11-23",
+  "source": "api",
+  "note": "",
+  "fetched_at": "2026-11-24T17:01:52+00:00",
+  "products": [
+    {
+      "rank": 1,
+      "daily_rank": 1,
+      "id": "1326030",
+      "name": "Letter Visitors",
+      "slug": "letter-visitors",
+      "tagline": "See website visitors on your website itself",
+      "description": "Know who’s on your website: the people, their companies, and the AI agents reading your pages. See them on your own site, and replay their sessions.",
+      "votes": 401,
+      "comments": 63,
+      "topics": [
+        "Marketing",
+        "Developer Tools"
+      ],
+      "website": "https://www.producthunt.com/r/D6BRBNLRH7WD47",
+      "url": "https://www.producthunt.com/products/visitors",
+      "maker_comments": [],
+      "website_resolved": "",
+      "website_text": "",
+      "website_status": "跳过：www.producthunt.com: HTTP 403"
+    },
+    {
+      "rank": 2,
+      "daily_rank": 2,
+      "id": "1316202",
+      "name": "Motionflare",
+      "slug": "motionflare",
+      "tagline": "Turn your website into a stunning launch video in minutes",
+      "description": "Motionflare turns your website into a ready-to-share marketing video and brand film in minutes. Paste a URL and it uses your real product screenshots, logo, colors, and copy to create branded motion graphics with music and optional narration. Or switch to Film mode to generate a live-action commercial. Refine the result by chat and export in up to 4K.",
+      "votes": 338,
+      "comments": 47,
+      "topics": [
+        "Marketing",
+        "Artificial Intelligence",
+        "Video"
+      ],
+      "website": "https://www.producthunt.com/r/AM4QLKUSKUV34E",
+      "url": "https://www.producthunt.com/products/motionflare",
+      "maker_comments": [
+        "Hi Product Hunt, I’m Joey, the founder of Motionflare. Before this, I was an engineer at Google and Tesla, and co-founded two startups as CTO. Building the products was never the hard part. The launch video was. The first one took me a week of keyframes, and it still didn’t look like what I’d made. The alternative was an agency: about $10k and a few weeks for one video. So most founders I know skip it, and the video is the first thing to go. Marketing teams hit the same wall every week. Motionflare is the video team you couldn’t hire: your writer, designer, director, animator and editor. Paste your URL and it reads your site, writes the story, takes your real logo, colors, copy and screenshots, and animates the whole thing. You get a finished video in under 10 minutes, for $29 a month instead of $10k a video. It makes two kinds: Motion : motion graphics built from your brand, up to 90 seconds Film : a live-action style ad with people, voiceover and sound, 5 to 45 seconds, up to 4K No avatars, no stock footage. When something feels off, tell your editor in plain words and only that part changes . Then export in 1080p or 4K. Your first video is free to make and preview, no card needed . You shouldn't have to pay just to see if it looks right. It's also Black Friday week, so through Dec 1, Pro and Max are 50% off your first month . That's $14.50 instead of $29 for Pro. No code needed. The discount is applied at checkout."
+      ],
+      "website_resolved": "",
+      "website_text": "",
+      "website_status": "跳过：www.producthunt.com: HTTP 403"
+    },
+    {
+      "rank": 3,
+      "daily_rank": 3,
+      "id": "1324531",
+      "name": "Gauth Personal Study Agent",
+      "slug": "gauth-personal-study-agent",
+      "tagline": "An AI study agent that remembers where you struggle",
+      "description": "Gauth Personal Study Agent connects the questions you snap, the quizzes you take, and the topics you study into one ongoing picture of how you learn. Instead of starting from scratch each session, it spots the gap behind a mistake, builds a short daily plan around it, and adjusts that plan when you miss a review or master a topic early. Practice comes as flashcards, guided step-by-step walkthroughs, and quizzes, with topic mastery and streaks to show progress. Built into the Gauth app.",
+      "votes": 309,
+      "comments": 53,
+      "topics": [
+        "Android",
+        "Education",
+        "Artificial Intelligence",
+        "Online Learning"
+      ],
+      "website": "https://www.producthunt.com/r/UYCH2W5E56E2XN",
+      "url": "https://www.producthunt.com/products/gauth-ai-course",
+      "maker_comments": [
+        "Excited to hunt Gauth Personal Study Agent today. Most AI study apps, Gauth included until now, are reactive: you ask, it answers, and the next session starts from zero. Personal Study Agent connects the questions you snap, your quiz results, and your study tasks into one memory of how you learn, and then acts on it. What stood out: Spots the gap behind a mistake and adds a quick drill before your next quiz Gives you a short list of what to study today Re-plans automatically when you miss a review or master a topic early, while keeping your exam date fixed Mixes flashcards, guided step-by-step walkthroughs, and quizzes Shows topic mastery and streaks, so progress is visible It lives inside the Gauth app on iOS and Android, so the questions you already ask feed straight into it. Curious to hear from students and parents: what would make an AI study agent genuinely useful for you?"
+      ],
+      "website_resolved": "",
+      "website_text": "",
+      "website_status": "跳过：www.producthunt.com: HTTP 403"
+    },
+    {
+      "rank": 4,
+      "daily_rank": 4,
+      "id": "1305567",
+      "name": "Dog Translator SuperTranslator",
+      "slug": "dog-translator-supertranslator",
+      "tagline": "Dogs talking in English (real)",
+      "description": "What if your dog could tell you what they're feeling? SuperTranslator uses AI to read your dog's body language, vocalizations and interactions with their surroundings, and turns those signals into plain English. Instead of random phrases from barks, it looks at several behavioral cues at once to help you understand what your dog might be communicating. According to our benchmarks, this is the most accurate dog translation in history.",
+      "votes": 221,
+      "comments": 30,
+      "topics": [
+        "Pets",
+        "Artificial Intelligence",
+        "Science"
+      ],
+      "website": "https://www.producthunt.com/r/ORWSMEJ2HYDXEB",
+      "url": "https://www.producthunt.com/products/dog-translator-supertranslator",
+      "maker_comments": [
+        "Hey Product Hunt, I'm Jim, co-founder of SuperTranslator. I dreamed of turning science fiction into reality, since I was a kid. 🐶 Talking animals appeared more than 3000 years ago in literature, and only today in 2026 this became possible! 🕗 My team and I worked for 11 years (!) on this. And today is the day we're unveiling it to the world! 📓 We included 100,000 scientific studies, we used AI + science + mathematics + logic + mapping to get the basics of dog translation. We added to the team a Stanford Linguistics professor Dr. King. 🐕 Please be patient with us, this is our first unveiling to the word of 11 years of work: translation is very basic, but real! ❤️ If you love pets, as we do, give your pet a voice!"
+      ],
+      "website_resolved": "",
+      "website_text": "",
+      "website_status": "跳过：www.producthunt.com: HTTP 403"
+    },
+    {
+      "rank": 5,
+      "daily_rank": 5,
+      "id": "1225286",
+      "name": "Modem",
+      "slug": "modem",
+      "tagline": "Find, fix, and follow up on every customer concern",
+      "description": "Modem monitors your customer channels (support tickets, group chat, sales calls) and alerts you to problems within minutes. It can automatically open an issue, spin up a coding agent, or escalate to the right team. When the fix ships, it closes the loop with your customers. Never lose track of a request again.",
+      "votes": 211,
+      "comments": 30,
+      "topics": [
+        "Customer Success",
+        "Developer Tools",
+        "Artificial Intelligence"
+      ],
+      "website": "https://www.producthunt.com/r/CEZ34BGBUK2Q27",
+      "url": "https://www.producthunt.com/products/modem",
+      "maker_comments": [],
+      "website_resolved": "",
+      "website_text": "",
+      "website_status": "跳过：www.producthunt.com: HTTP 403"
+    },
+    {
+      "rank": 6,
+      "daily_rank": 6,
+      "id": "1327037",
+      "name": "Inkling 2 Mini",
+      "slug": "inkling-2-mini",
+      "tagline": "26B looped model for coding on your laptop",
+      "description": "Inkling 2 Mini is Thinking Machines' 26.4B open-weight model built for local agentic work. Its middle transformer layers run three times per token, adding reasoning depth without extra weights. It runs on 32GB Macs through Ollama.",
+      "votes": 135,
+      "comments": 4,
+      "topics": [
+        "Open Source",
+        "Artificial Intelligence",
+        "Development"
+      ],
+      "website": "https://www.producthunt.com/r/SG2HQWZE7PXLKB",
+      "url": "https://www.producthunt.com/products/tinker-2",
+      "maker_comments": [
+        "Hi everyone! Two weeks after calling a 594B model \" Small \", TML shipped one that fits on a 32GB Mac. Inkling 2 Mini is a 26B model that runs its middle layers three times for every token. Looping won't help a small model memorize the internet, so it leans on search and tools for facts. It's aimed at coding and multi-step agent work, with a memory footprint of about 20GB. The weights are on @Hugging Face , with @Ollama support for local use and @Tinker for inference and fine-tuning. There's also a variable-loop research model for anyone studying how looping affects chain-of-thought monitoring."
+      ],
+      "website_resolved": "",
+      "website_text": "",
+      "website_status": "跳过：www.producthunt.com: HTTP 403"
+    },
+    {
+      "rank": 7,
+      "daily_rank": 7,
+      "id": "1324692",
+      "name": "Polylane Swarms",
+      "slug": "polylane-swarms",
+      "tagline": "A team of AI agents on your roughest production incidents",
+      "description": "Put a swarm of agents on your massive production incidents. Agents investigate possible causes in parallel, share evidence and check each other's findings. You get one answer with the root cause, the evidence and a proposed fix.",
+      "votes": 136,
+      "comments": 14,
+      "topics": [
+        "Developer Tools",
+        "Artificial Intelligence"
+      ],
+      "website": "https://www.producthunt.com/r/32EVX2QO6UY7TY",
+      "url": "https://www.producthunt.com/products/polylane",
+      "maker_comments": [],
+      "website_resolved": "",
+      "website_text": "",
+      "website_status": "跳过：www.producthunt.com: HTTP 403"
+    },
+    {
+      "rank": 8,
+      "daily_rank": 8,
+      "id": "1325086",
+      "name": "Chat with Work",
+      "slug": "chat-with-work",
+      "tagline": "AI bots in Europe. They work. You decide.",
+      "description": "Create a bot with a single sentence. It works for you. Create as many as you need. They start by themselves and work across 1,920+ integrations with your laptop closed. When there's a decision to take, they ask you. Every question and approval from all your bots lands in one place. You just decide. Claude Duet: US only. ChatGPT's dots: not on Pro or Plus in Europe. Gemini's Tasks: not in Europe. Not us. Chat with Work's bots run in the EU, on every plan. 300 trial credits, no card.",
+      "votes": 123,
+      "comments": 11,
+      "topics": [
+        "Productivity",
+        "Artificial Intelligence",
+        "Bots"
+      ],
+      "website": "https://www.producthunt.com/r/N4OOSBHZF6Z4DD",
+      "url": "https://www.producthunt.com/products/chat-with-work",
+      "maker_comments": [
+        "Hi Product Hunt, I'm Carmine. I make Chat with Work, and RubyLLM, the Ruby AI framework it's built on. A dozen bots run my own companies. They answer customers at Chat with Work's and Solco's front desks, fix small bugs with Claude Code and open the pull request, triage issues on my open source projects, find prospects, and list what's unpaid in Odoo every morning. I still merge the pull requests. That's what Chat with Work is for: Write one sentence, or pick one of 116 recipes, and you have a bot. No workflow to build. It starts by itself: on a time, an email, a new GitHub issue, a Slack or Discord message. It asks before it changes anything, unless you let it run. Everything waiting for you is in one place, on the web, your phone, or your computer. It runs in Europe on every plan: the app in Germany, every model in the EU. Or on your own servers. A bot can also: Create documents, presentations and spreadsheets, and edit them beside you in Google Workspace and Microsoft 365. Scan paper and print. Code on your computer, use your browser, and work with the folders you share. Answer in Slack, Teams, Discord and Campfire. Use GPT, Gemini or Claude models, your pick. It starts with 300 trial credits, no card. If you pick a plan by 31 December, this link adds 500 credits to it: https://chatwithwork.com/c/launch I'm answering all day. Tell me which chore you'd hand to a bot first!"
+      ],
+      "website_resolved": "https://chatwithwork.com/",
+      "website_text": "Chat with Work Nuremberg EU models Azure, Germany West Central AI bots in Europe. They work. You decide. illustrative By itself Reading Dana's request Read Dana's request Searching HubSpot Found Northwind in HubSpot Checking your calendar Found three free times You decide To Dana Reyes, Northwind Hi Dana, thanks for asking. Would Tuesday at 10:00, Wednesday at 14:30, or Thursday at 9:00 work for a demo? 1,920 integrations 1,955 triggers 116 bot recipes Free to start: 300 trial credits once, for every model. No card. Sales and CRM 13 Support 12 Operations 10 Finance 10 Marketing and content 16 People and recruiting 5 Just for you 12 Engineering 22 Communities and open source 7 Home and office 9 Invoice chaser Drafts reminders for overdue invoices in your accounting each Monday. On a schedule Any accounting tool Any mailbox Bank reconciliation suggestions Matches new bank lines with invoices and bills in Odoo. On a schedule Receipts by email Turns receipts you forward into draft bills in your accounting. Mail to its address Any accounting tool Vendor bills from a mail folder Files bills from a folder of your mailbox in your accounting. New mail Any mailbox Any accounting tool Stripe payouts to Odoo Explains each Stripe payout so the bank line reconciles in Odoo. On a schedule Failed payment follow-up Drafts a friendly note when a payment fails in your billing tool. On a schedule Any billing tool Any mailbox Any helpdesk See all 10 Release to blog post Drafts a blog post in your docs for each notable release. GitHub repository events Any wiki or docs Release announcer Drafts posts on X, LinkedIn, and Reddit for each GitHub release. GitHub repository events Newsletter draft Drafts the monthly newsletter in your newsletter tool from what shipped. On a schedule Any wiki or docs Any newsletter tool SEO content gaps Drafts briefs for the queries you nearly rank for. On a schedule Any SEO tool Monthly SEO report Reports last month's search clicks and rankings, and what moved them. On a schedule Any Search Console tool Any SEO tool Ranking drop alert Tells you when a page or keyword you care about drops in Google. On a schedule Any SEO tool See all 16 Issue triage Labels new issues in your issue tracker, links duplicates, asks what's missing. New issues Any issue tracker Pull request reviewer Checks each pull request against your contribution rules. GitHub repository events Engineering standup Writes your standup from what you did yesterday. On a schedule Any issue tracker Issue fixer with Claude Code Has Claude Code fix small bugs from new issues and open a pull request. Codes on your computer with your own subscription or API key: credits pay only for the bot's own model. GitHub repository events Issue fixer with Codex Has Codex fix small bugs from new issues and open a pull request. Codes on your computer with your own subscription or API key: credits pay only for the bot's own model. GitHub repository events Product funnel analyst Reads each week's funnel and proposes one change for its biggest drop. Codes on your computer with your own subscription or API key: credits pay only for the bot's own model. GitHub repository events See all 22 Morning home check Tells you each morning what's on, open, or running low at home. On a schedule Left on at night Checks at night for lights left on and doors open, and offers to fix them. On a schedule Batteries and offline devices Lists each week the sensors running low on battery and devices gone offline. On a schedule Weekly energy report Compares this week's electricity and gas use with last week's. On a schedule Room climate check Flags rooms that ran too hot, cold, damp, or dry, or had stale air yesterday. On a schedule House sitter Checks on the house while you're away, and tells you only if something's wrong. On a schedule See all 9 Bots A bot for every team. illustrative Sales Dana Reyes, Northwind Question 40 seats: which plan? 1 Pro 2 Team New lead Quote for Acme, 25 seats? Needs you Create a quote for Acme Deny Approve Quote request Call with Sam Ortiz Needs you Add Sam Ortiz to HubSpot Deny Approve New booking All 116 recipes 100 bots at work 5 waiting for you illustrative Renewal prep 1 Which price should Acme's renewal quote use? Question Acme renewal · 12 minutes GitHub issue triage 1 Add labels bug, billing to acme/app#812 Change acme/app#812 · 14 minutes Release notes drafter 1 Post a message to #releases Change v2.4 · 9 minutes Demo requests 1 Send “Re: Demo request” to Dana Reyes Change Dana Reyes via Outlook · 5 minutes Chatwoot front desk 1 Send this reply Draft Jonas Berg via Chatwoot · 2 minutes 1 of 5 Acme order form Acme deal in HubSpot Price list 2026 1 Old price +5%, all 64 seats Recommended Then: a quote at €21 a seat. It asks you before changing anything. 2 The 2026 list price Then: a quote at €21.60 a seat. It asks you before changing anything. 3 Two years at the old price Then: a two-year quote at €20 a seat. It asks you before changing anything. Recommended because the order form caps a yearly rise at 5%. Decline Snooze Z Skip S Open chat O Tuesday 27 October 9:41 Acme 3 steps A change is waiting for your approval. 0:32 Approve a change in Slack Waiting 0:42 Review Acme now 5 decisions are waiting for you. illustrative No workflow Instead of writing workflows by hand, just write them in English. Chat with Work illustrative Every Monday at 9, list overdue invoices in Odoo and draft a polite reminder to each customer in Outlook. GPT-6 Luna When Every Monday at 9:00, Europe/Berlin Works with Odoo and Outlook as you Changes Ask first Approve one card, and it works out the steps each time. Integrations 1,920 integrations From files, mail and calendar, and chat to CRM, finance, legal, design and media, and travel and property. Plus any MCP server you add and your own computers. One question, every tool you connect, and the answer with its sources. How chats work See all integrations Not one more tab Everywhere you work. Your documen",
+      "website_status": "ok"
+    },
+    {
+      "rank": 9,
+      "daily_rank": 9,
+      "id": "1096678",
+      "name": "Hydrilla",
+      "slug": "hydrilla",
+      "tagline": "Generate production-ready 3D assets with AI",
+      "description": "Hydrilla AI generates high-quality 3D assets from simple prompts. Designed for game developers, animation studios, and XR creators, it helps teams create production-ready models in minutes instead of days. Build faster pipelines for games, films, and immersive worlds.",
+      "votes": 115,
+      "comments": 16,
+      "topics": [
+        "Developer Tools",
+        "Artificial Intelligence",
+        "3D Modeling"
+      ],
+      "website": "https://www.producthunt.com/r/YLLJRDLS4IHATL",
+      "url": "https://www.producthunt.com/products/hydrilla",
+      "maker_comments": [
+        "Hey Product Hunt 👋 I'm Tharak, Co-Founder of Hydrilla AI. Creating 3D assets is still one of the most time-consuming parts of game development and animation. Artists spend hours modeling, texturing, and refining assets, often repeating the same workflows across multiple tools. My Co-Founders, Dharani, and I started building Hydrilla after experiencing this ourselves while developing a game. We spent more time creating 3D assets than actually building the game. After speaking with 120+ professional artists, we realized we weren't the only ones facing this problem. So we built Hydrilla AI , an AI-powered 3D generator that works directly within the tools artists already use. Think of it as bringing AI-powered 3D creation and Cursor-like agents into your existing 3D pipeline. With Hydrilla, you can: Generate textured 3D assets from text or images using BlueFox, our own 3D model. Create and edit 3D scenes using natural language with Hydrilla Agent. Bring AI into Blender, Maya, Unity, Unreal Engine, and more through plugins. Connect Claude Code, Cursor, or Codex through MCP to work with your 3D tools. Integrate 3D generation into custom pipelines through our API. Our goal isn't to replace artists or the tools they love. It's to remove repetitive work so they can focus on creating. Now it's your turn: https://hydrilla.ai We'd love to hear what you think! 🚀"
+      ],
+      "website_resolved": "https://www.hydrilla.ai/",
+      "website_text": "Hydrilla | Production-Ready 3D Assets, Generated Fast Product Solutions Resources Company Community Pricing Create 3D Assets AI-powered 3D generation for creators, studios, and platforms. Trusted by artists at the world's leading studios Our mission is to build intelligent workflows that accelerate animation and 3D production. Drag to swing · Tap to twirl Because every idea deserves a third dimension. Turn a prompt or a single image into production‑ready 3D, without waiting weeks in a modeling queue. Book a demo Free plan · No credit card required Made for every 3D pipeline Game studios, film teams, architects and product designers go from idea to production-ready asset in minutes, not weeks. 01 Game Development Assets built for real-time production Game-engine compatible models Generate characters, props, and environments with clean geometry suitable for Unreal Engine, Unity, and other real-time pipelines. Consistent asset iteration Create multiple variations of models while maintaining consistent style and scale across your game world. Explore Game Development 02 Film & Animation 03 Architecture & Interiors 04 AR / VR & XR 05 Product Visualization Game Development Film & Animation Architecture & Interiors AR / VR & XR Product Visualization Assets built for real-time production Explore Game Development Game-engine compatible models Generate characters, props, and environments with clean geometry suitable for Unreal Engine, Unity, and other real-time pipelines. Consistent asset iteration Create multiple variations of models while maintaining consistent style and scale across your game world. How it works Describe your asset. Type a prompt or drop a reference image. BlueFox 1 takes either. Generate with BlueFox 1. BlueFox 1 produces a segmented mesh with PBR maps — base color, metalness, roughness, and normals. Refine and export. Inspect materials in the browser, then export GLB, FBX, OBJ, or USDZ into your engine or DCC. From first prompt to production. Generate, refine, and export production-ready 3D assets for games, film, architecture, and digital products. Text to 3D and image to 3D with BlueFox Start from a text prompt or a reference image. BlueFox returns a 3D model you can preview, refine, and ship into game, film, and product pipelines. Generate with BlueFox → Ship assets with production PBR maps Get base color, roughness, metalness, and normals with every mesh. Preview under lighting in Hydrilla, then export maps ready for real-time engines. Explore PBR texturing → Edit logical parts in Hydrilla Studio Meshes arrive split into selectable components. Isolate parts, adjust materials, and refine structure without rebuilding the whole asset. Open Hydrilla Studio → Run BlueFox generation in your stack Call text-to-3D and image-to-3D from your apps, tools, and pipelines. Same BlueFox model, delivered over REST for production workflows. Explore the API → Generate inside your Blender scene Run BlueFox from Blender and import results into the viewport. Stay in your DCC while you generate, edit, and assemble assets. Get the Blender plugin → Export for Unity, Unreal, and Blender Download GLB, FBX, OBJ, or USDZ and drop assets into the engines and DCCs your team already uses—including AR workflows with USDZ. Explore export formats → Build scenes with Hydrilla Agent Describe a prop set or a scene in chat and Hydrilla Agent builds it in Blender. Bring your own key and pick the model that powers each run. Build with Hydrilla Agent → Production-ready assets. Hydrilla generates production-ready 3D assets like BlueFox 1 with clean topology, PBR materials, multi-format export, and real-time preview so teams ship without cleanup. Fast From a prompt or a picture to a 3D model. Try image to 3D 10× Clean Mesh Segmented meshes with UVs and PBR textures. See features PBR Materials Quad Mesh In-house model BlueFox 1 BlueFox, Hydrilla's 3D model, turns a prompt or a picture into a segmented 3D model with UVs and PBR textures. Meet BlueFox 3D Models Blender Blender add-on PBR PBR maps come with every mesh. See features 3D Pipeline Send models to Blender, Unity, Unreal, and Godot. Integrations Real-Time Check every result in the browser. See the viewer 3D Assets Build whole scenes with Hydrilla Agent. Hydrilla Agent Text-to-3D Start from a prompt Multi Export See exports Studio Open Studio Pricing Monthly credits for 3D generation. Save 33% when you generate in a daily selected hour. Monthly Hourly 33 % off on Hourly Free Explore the workflow $ 0 per month Always free Start for free 100 credits / month ≈ 3 generations / month Commercial use Generate any time Hydrilla Agent, monthly AI chat included Starter Individual creators $ 5 per month Get started 900 credits / month ≈ 30 generations / month Commercial use Generate any time Hydrilla Agent, 4× Free's AI chat Pro Popular Studios and small teams $ 12 per month Get started 3,000 credits / month ≈ 100 generations / month Commercial use Generate any time Hydrilla Agent, 11× Free's AI chat Monthly · USD · Cancel anytime Questions & answers Who is Hydrilla designed for? Hydrilla AI is an AI 3D workspace for studio and artist pipelines, used across games, film, architecture, XR, and product work. What inputs does Hydrilla support? What is BlueFox? What is Hydrilla Agent? Do generated models still need an artist? Which engines and tools does Hydrilla work with? What formats does Hydrilla export? Is there a free plan available? What does a model cost? How does the 14-day trial work? How do Hourly plans save? Which plan includes the API? Do I own what I generate? What is Hawan Research Labs? Who is Hydrilla designed for? Hydrilla AI is an AI 3D workspace for studio and artist pipelines, used across games, film, architecture, XR, and product work. What inputs does Hydrilla support? A typed prompt or an uploaded picture. In Blender, Hydrilla Agent also takes plain-language requests and reference images, and builds the scene for you. What is BlueFox? BlueFox, Hydrilla",
+      "website_status": "ok"
+    },
+    {
+      "rank": 10,
+      "daily_rank": 10,
+      "id": "1319334",
+      "name": "Journalistic Tech",
+      "slug": "journalistic-tech",
+      "tagline": "Async interviews that get you published on HackerNoon",
+      "description": "Tell us what you do or what just happened. We match you to one of 273 technology interviews. Answer ~13 questions by voice or text, on your own time. Your answers become a bylined draft, an editor reviews and polishes it, then it publishes on HackerNoon and gets distributed around the web.",
+      "votes": 107,
+      "comments": 5,
+      "topics": [
+        "Writing",
+        "Developer Tools",
+        "Tech"
+      ],
+      "website": "https://www.producthunt.com/r/ERXD7JWZGTWCIQ",
+      "url": "https://www.producthunt.com/products/journalistic-tech",
+      "maker_comments": [
+        "Hey Product Hunt, I’m David, founder of HackerNoon. I built journalistic.tech because more people should have the opportunity to share their expertise through an interview. Our editors put together 273 sets of interview questions covering jobs, startups, product launches, milestones and technology. Tell the site what you’re working on and it matches you with an interview. Answer by voice or text, whenever you want. Your answers become a draft with your byline that goes through HackerNoon’s editorial process before publication. Published posts get distributed across HackerNoon’s site, newsletters and social channels. If you’re launching here, we have two interviews for you. Your published interview gets indexed by search engines and links back to your website, so it keeps working long after launch day: Launch Day https://journalistic.tech/interview/launch-day #1 on Product Hunt Club https://journalistic.tech/interview/product-hunt-number-one-club Want to see how a good interview can go? Here’s our Ilya Sutskever interview https://hackernoon.com/an-interview-with-ilya-sutskever-co-founder-of-openai Curious what you think of the experience and what interview categories we’re missing."
+      ],
+      "website_resolved": "https://journalistic.tech/",
+      "website_text": "journalistic.tech journalistic .tech New interview All interviews Example interviews Write from scratch About Suggested interviews Vetted by HackerNoon editors Terms Privacy Async interview ¬∑ questions by HackerNoon editors Editing Protocol Answer a few journalistic questions. Get published on HackerNoon. Tell us what you do or what just happened. We'll match you with one of 273 interviews written by HackerNoon editors. Answer on your own time, by voice or by typing. Answer About 13 questions, by voice or text, whenever you want Draft Your answers land in a Chowa draft with your byline Edit A HackerNoon editor reviews it to the Editing Protocol Distribute Published on HackerNoon and syndicated across the web Type, or tap the mic and talk Nothing is published until a HackerNoon editor approves it. Terms ¬∑ Privacy Back to the chat Curated Technology Interview Templates Each is a set of about 13 questions written by HackerNoon editors. Pick one and answer at your own pace. Back to the chat Interviews worth reading Published interviews from across HackerNoon, from Google and OpenAI to Startups of the Year nominees. Each links to the interview you'd answer to write one like it. Editors' picks first Most read Show more Reads are HackerNoon pageviews as of October 2026. Back to the chat Vetted 01 questions, answered 02 by Googlers, Amazonians, Metamates 03 and builders. 01 Why 02 How 03 Who 04 When 05 Where From the editors of HackerNoon Edited to the Editing Protocol ### 01 WHY INTERVIEWS ‚ÄúInterviews are expertise that wouldn't exist without an interviewer and an interviewee. By documenting your expertise, you're contributing to the internet's accessible knowledge base and growing your reputation, your stake in that expertise. And now you can get published just by talking to your phone. That's pretty cool.‚Äù David Smooke , Founder & CEO, HackerNoon The next person who searches for the problem you solved finds your answer, with your name on it. journalistic.tech supplies the person asking. HackerNoon editors wrote 273 interviews of about 13 questions each, for job titles, company news, milestones, career moves and the events you attend. You answer on your own time, by voice or by typing. Get interviewed Questions written by HackerNoon editors for your role or your news. No pitching a reporter. Share your insight Answer by voice or text into a Chowa draft. The questions draw out the decisions and lessons other builders want to read. Get featured Edited to the Editing Protocol and published on HackerNoon under your byline. Grow your reputation Distributed across the web, so people and search engines find it when they look you up. Browse the example library . ### 02 HOW IT WORKS Journalistic questions, on your schedule. ### STEP ONE Tell us what's going on Your job title, something you shipped, a milestone, a career move, or the conference you're at. We match it to the right interview. ### STEP TWO Answer about 13 questions One at a time, by voice or by typing. Skip what doesn't fit and come back later. ### STEP THREE Review your draft Your answers become a draft in Chowa , HackerNoon's editor. Tighten anything before you submit. ### STEP FOUR An editor reviews it A HackerNoon editor checks it against the Editing Protocol . Nothing is published without that approval. ### STEP FIVE It's published and distributed Your interview goes live on HackerNoon and is distributed across the web. A press interview journalistic.tech Timing On the reporter's schedule Async, whenever you have 20 minutes Questions Chosen for the reporter's angle Written and vetted in advance by HackerNoon editors Your words Quoted in someone else's story Published in full, under your byline Review The outlet's call Edited to a public standard, the Editing Protocol ### 03 WHO HAS ANSWERED Googlers, Amazonians, Metamates, Microsofties, and thousands of builders. People at these companies have been interviewed on HackerNoon, from Google's Head of Data Commons to first-time founders. Each name links to the interview. ### 04 WHEN Whenever you have 20 minutes, and whenever something happens. It's async, so there's no call to schedule. Start answering on your phone from a conference floor and finish at your desk. The best time is right after something happens, while the details are fresh: ### 05 WHERE Drafted in Chowa. Published on HackerNoon. Read across the web. Your answers become a draft in Chowa , HackerNoon's editor. After a HackerNoon editor approves it to the Editing Protocol , it's published on HackerNoon under your byline and distributed across the web. 0 published interviews in our example library 4M+ HackerNoon newsletter readers Find your interview Read example interviews journalistic.tech is run by HackerNoon. Using it is covered by our Terms of Use and Privacy Policy , together with HackerNoon's Terms and Privacy Policy . Voice input uses your browser's built-in speech recognition, which in some browsers sends audio to the browser maker for transcription. Read counts are HackerNoon pageviews as of October 2026. Icons are from HackerNoon's Pixel Icon Library , licensed under CC BY 4.0 ; the microphone icon was drawn to match. Back to the chat Terms of Use Effective November 4, 2026 journalistic.tech (the \"Site\") is operated by ArtMap, Inc., doing business as HackerNoon (\"HackerNoon\", \"we\", \"us\"). By using the Site you agree to these Terms of Use and to HackerNoon's Terms of Service and Privacy Policy , which are part of these terms. If these terms and HackerNoon's Terms of Service conflict, HackerNoon's Terms of Service control. If you don't agree, please don't use the Site. 1. What the Site does The Site helps you find an interview question set written by HackerNoon editors and links you to HackerNoon to answer it. Answering, drafting, editing and publishing all happen on hackernoon.com and are governed by HackerNoon's Terms of Service and editorial standards, including the Editing Protocol . 2. No guarantee of public",
+      "website_status": "ok"
+    }
+  ]
+}

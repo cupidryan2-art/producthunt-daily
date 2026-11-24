@@ -1,0 +1,46 @@
+# 所有可调参数；密钥只放环境变量，绝不写在这里。
+schedule:
+  # 仅作记录：GitHub Actions 不能读取本文件，改时间要同步改 .github/workflows/daily.yml
+  cron_utc: "30 8 * * *"
+fetch:
+  top_n: 10
+  timezone: America/Los_Angeles
+  max_maker_comments: 3
+  max_comment_pages: 3        # 每页 20 条
+  website_timeout: 10
+  website_max_chars: 6000
+llm:
+  base_url: https://api.deepseek.com
+  # 2026-11-25 核对 https://api-docs.deepseek.com/quick_start/pricing
+  analysis_model: deepseek-flash
+  review_model: deepseek-v4-pro
+  temperature: 0.4            # 必须 <= 0.5
+  review_temperature: 0.1
+  # thinking 模式下 temperature 不生效，所以分析关闭
+  analysis_thinking: false
+  review_thinking: true       # 审稿要逐条比对，实测开 thinking 明显更准；此时 temperature 会被服务端忽略
+  review_reasoning_effort: low  # low | high | max；high 实测一次运行审稿输出约 15 万 token，太贵
+  max_tokens: 24000
+  timeout: 400
+  concurrency: 3              # 上限 3
+  retries: 2                  # 首次失败后再试 2 次，指数退避
+  backoff_seconds: 2
+qa:
+  review_threshold: 75
+  min_chars: 1200
+  max_chars: 4000
+  one_liner_max: 30
+  link_timeout: 8
+  link_concurrency: 5         # 上限 5
+  stale_days: 730
+  term_window: 50
+pricing:                      # USD / 1M tokens，来源同上
+  # 工作日 UTC 01-04、06-10 点为高峰价（未扣除中国法定节假日，故为偏高估计）
+  peak_hours_utc: [[1, 4], [6, 10]]
+  models:
+    deepseek-flash:
+      offpeak: {cache_hit: 0.003, cache_miss: 0.15, output: 0.6}
+      peak: {cache_hit: 0.006, cache_miss: 0.3, output: 1.2}
+    deepseek-v4-pro:
+      offpeak: {cache_hit: 0.022, cache_miss: 0.66, output: 1.98}
+      peak: {cache_hit: 0.044, cache_miss: 1.32, output: 3.96}
