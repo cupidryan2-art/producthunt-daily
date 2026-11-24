@@ -1,0 +1,245 @@
+{
+  "date": "2026-11-22",
+  "source": "api",
+  "note": "",
+  "fetched_at": "2026-11-24T17:37:33+00:00",
+  "products": [
+    {
+      "rank": 1,
+      "daily_rank": 1,
+      "id": "1306148",
+      "name": "Yoroll",
+      "slug": "yoroll",
+      "tagline": "Build playable stories without a game engine",
+      "description": "Yoroll lets anyone turn stories into playable, cinematic games without coding or a game engine. Start with a script, image, or video clip, then direct the scenes, add player choices, and create branching storylines with different outcomes. AI helps bring everything together into an interactive experience you can share. It's more like directing your own interactive movie than programming a game.",
+      "votes": 365,
+      "comments": 34,
+      "topics": [
+        "Artificial Intelligence",
+        "Games",
+        "No-Code"
+      ],
+      "website": "https://www.producthunt.com/r/XKLWN5SDJ5RSLW",
+      "url": "https://www.producthunt.com/products/yoroll",
+      "maker_comments": [
+        "Yoroll is doing something pretty interesting with AI video. Instead of generating clips that people just watch, it lets you turn them into interactive games with choices, different endings, and playable moments. You can start with a prompt, image, or video, then build and publish the experience without a traditional game engine. They've already got a playable version of The Odyssey with 140+ AI-generated scenes and 11 endings. Worth trying if you've ever wanted to turn a story into a game.",
+        "Hi guys! 👋 We are the LinearGame team, and we’re launching Yoroll on Product Hunt today. When we showed Yoroll at GDC and NVIDIA GTC, we kept hearing some version of “I’ve always wanted to make a game, but I never knew how to start.” That stuck with us. If you write short dramas or make AI videos, you might already know exactly where you’d let the audience take the story in a different direction. Getting that one choice to work on screen is where things get fiddly. We built Yoroll so you can start with whatever you’ve got. Got a story in mind? Bring a premise, a script, or a few reference images into Yoroll Agent. You can work out where each choice leads, review the storyboard, and pick which shots to turn into video. Then play it through and see how the story feels from the other side of the screen. Open Yoroll Agent Got a game idea? With Yoroll Code, you can build a standalone mini-game or a playable moment inside a story. Say the player has to pick a lock before a guard comes back. Try it in your browser, tweak the timer, and play it again. You’ve got Tripo 3D, Seedance video, sound effects, and the game engine in the same workspace. Try Yoroll Code Already shot a short drama? Say your lead signs a deal in the original cut. What if the audience could make her walk away? Keep the footage you shot, generate the walkout scene, and choose where that path rejoins the original story. Try the interactive drama tool For Black Friday, members can save up to 60% on Claude Fable 5.2 in Yoroll Code！ Thanks for giving Yoroll a look. If you try it, we’d love to hear what felt good, what got in your way, or what you wish it could do. And if you just want to talk about the product or kick around an idea you’re working on, we’re here for that too. 🙌"
+      ],
+      "website_resolved": "https://app.yoroll.ai/",
+      "website_text": "Yoroll APP - Create Interactive Film Games with AI | Engine-Free Creator Home Games Assets Skill Hub Create Yoroll Agent Yoroll Code Tools More Gameplay Atlas Quick tutorial Search English Create interactive narrative games Yoroll Agent Workflow Midnight Invitation Witch's Secret Whispers of the Elves Stellar Expedition Midnight Hospital Neon Pursuit Explore More All All Interactive Film Interactive Film Mini Games Mini Games Short Drama Short Drama Puzzle Games Puzzle Games",
+      "website_status": "ok"
+    },
+    {
+      "rank": 2,
+      "daily_rank": 2,
+      "id": "1323002",
+      "name": "Rankhog",
+      "slug": "rankhog",
+      "tagline": "Get customers from Reddit on autopilot",
+      "description": "Rankhog finds people on Reddit asking for what you sell. It reads each subreddit's rules, writes a reply that helps, and posts it from your own account at a human pace. Say yes to each reply, or turn on autopilot. No Reddit account? Rankhog warms up a new one, and you own it. Run it from the app, or from Claude, ChatGPT, Cursor and any MCP client. 7 days free.",
+      "votes": 354,
+      "comments": 41,
+      "topics": [
+        "Marketing",
+        "Artificial Intelligence",
+        "reddit"
+      ],
+      "website": "https://www.producthunt.com/r/HVFQNHONLRBAJZ",
+      "url": "https://www.producthunt.com/products/rankhog",
+      "maker_comments": [
+        "Hey Product Hunt 👋 I'm Anthony, and I build Rankhog on my own. People ask Reddit what to buy all day. \"What do you use for X?\" is a customer raising their hand in public. But doing Reddit well is a full time job. Every subreddit has its own rules, new accounts get removed, and one lazy promo comment can get you banned. So I built Rankhog to do the boring parts for me: Radar watches the subreddits your buyers hang out in and finds people asking for what you sell, while the post is still fresh. Replies that help first. Rankhog reads the subreddit's rules, writes a reply in its style, then checks it like a strict mod. It names your product only when it fits. You say yes, or autopilot does. Replies go out from your own Reddit account, at a human pace. Warm-up. No account? Make a fresh one and Rankhog grows it with real, helpful comments. You own it, not us. Works with your AI. Run all of it from Claude, ChatGPT, Cursor or any MCP client. What it is not: a spam bot. No mass comments, no bought accounts, no posting where the rules say no. You can start with a free Reddit audit of your product, and there are free tools too (shadowban checker, post checker, best time to post). The plan is $99 a month per product with a 7 day free trial. I would love to hear it straight: what has Reddit done for your product so far, good or bad? I'm here all day to answer."
+      ],
+      "website_resolved": "",
+      "website_text": "",
+      "website_status": "跳过：www.producthunt.com: HTTP 403"
+    },
+    {
+      "rank": 3,
+      "daily_rank": 3,
+      "id": "1325452",
+      "name": "Resurf",
+      "slug": "resurf-3",
+      "tagline": "Personal Knowledge Base & Bookmark Manager for Mac",
+      "description": "A fully local personal context library for Mac, iPhone, and iPad. Save notes, links, images, and documents. Hand off context to AI through MCP or the CLI on Mac.",
+      "votes": 186,
+      "comments": 8,
+      "topics": [
+        "Productivity",
+        "Notes",
+        "Artificial Intelligence"
+      ],
+      "website": "https://www.producthunt.com/r/VXIIBY4W6WDWZU",
+      "url": "https://www.producthunt.com/products/resurf-2",
+      "maker_comments": [
+        "Hey Product Hunt 👋 I’m Deep, a design engineer and the maker of Resurf. As a design engineer, I come across a lot of design references, articles, websites and little details I want to keep. Sometimes it’s an interaction I like, sometimes a useful read, sometimes just something that gives me an idea for a project. I’d save these across browser bookmarks, screenshots, folders and notes. But when I needed a reference again, I often couldn’t remember where I’d put it. So I built Resurf. It started as a small capture widget and grew into a personal library for references, research, notes and ideas. A lot of my taste comes from the things I’ve collected over time and the notes I leave about why I liked them. As AI makes building things faster, I think that personal context becomes more valuable. Through MCP, I can bring those saved references into Claude, Cursor or Codex when I’m working on something. Since the first launch, I’ve rebuilt Resurf from Electron to native Swift and added: Semantic Search and Similar Vibe: find something by describing what you remember, or discover related captures across your library. Both run locally on Mac. Smart Spaces: turn a search or filter into a collection that updates as you save. Custom AI actions: extract details, generate titles and tags, or suggest Spaces using your own AI provider, including Ollama. Better reading and notes: highlight articles, leave comments, search inside PDFs and add images to notes. Quick capture: save from your browser, double-tap Option, or drop things onto your Mac’s notch. Resurf is native on Mac, iPhone and iPad. Your library stays on your devices, with optional sync through your own iCloud. AI features are optional. Try it at resurf.so 🙂"
+      ],
+      "website_resolved": "https://resurf.so/",
+      "website_text": "Black Friday 40% off with BLACKFRIDAY → A Personal Context Library open to your agents. that remembers. in files you own. that works offline. Save notes, bookmarks, screenshots and PDFs in one local library. Find anything, then hand that context to your agents. Play Library Select an image and discover similar references across your library. Image details Every image keeps its colors. Turn on AI for keywords and a summary. Reader Save an article and read it in a clean, distraction-free reader. Notes A real editor with headings, lists, and code, saved as Markdown. Inbox Save now, sort later. Assign, keep for later, or delete with one key. Search Search by words or meaning to rediscover what you saved. Spaces Keep references together around a project, topic, or idea. PDFs Keep research close. Open and read saved PDFs inside Resurf. Assistant Opt-in Ask about anything you’ve saved, with your own AI key. Save, organize, and search your notes, bookmarks, and files. A personal context library for research, visual inspiration, and everyday ideas. Fully local and private by default. Quick Capture Save notes, links, and screenshots with a global shortcut on Mac. Substack Inbox Designing for AI agents in 2026 Inbox First Save now, organize later. Research Writing ml philosophy ideas Spaces & Tags Organize bookmarks, notes, and files by project, research topic, or idea. Visual bookmark library Browse saved bookmarks, images, and screenshots together in a visual library. From Any App Capture from Mac, Chrome, and iPhone into one library. Typography notes ⇧⌘F 24 captures · 6 by meaning Search your saved content Search notes, saved articles, PDF text, and words inside screenshots with local full-text search. 0:42 “Think about the typography, maybe a serif for the headline…” Voice Memos Record thoughts before they disappear. paper.pdf Attention is all you need Highlight & Annotate Highlight articles and annotate PDFs. Keep your notes beside the source. Revisit articles, links, and PDFs faster. Use your own key from OpenAI, Anthropic, Gemini or OpenRouter, or run models locally with Ollama. Use the typography references I saved to draft a type scale for our site. Resurf Claude Your agents, connected Claude, Cursor or Codex can search and read your library over MCP. Fully local Keep your library on your devices. Browse and search offline, with optional private iCloud sync. AI that works with your library. Your agents can read it. AI keeps it organized. Pull what I saved on gradients and draft a style note. resurf_find “gradients” · 32 captures Understanding gradients jakub.kr Beautiful Generative Gradient Avatars for React avatars.outpacestudios.com resurf_read Understanding gradients Works with your agents Claude, Cursor and Codex can search and read it over MCP. New captures get a title, tags and a Space. Articles, PDFs, images, audio, video, code, and more. Every format renders natively. Articles Images Video Tweets GitHub Articles Images Video Tweets GitHub PDFs Audio YouTube Code Notes PDFs Audio YouTube Code Notes Your library on Mac, iPhone, and iPad. Save links from the iPhone share sheet and browse your notes, bookmarks, and files on Mac or iPad. Your library lives on-device , with optional private sync through your own iCloud. No Resurf account required. 100% native Swift Fully local Optional iCloud sync Loved by people who use it “my brain before resurf: 47 tabs, 9 read later apps, zero recall. my brain after resurf: save from mac, iphone, chrome. ask “what did i save about x?” get the exact link, note or highlight in seconds.” “I’ve been looking for an app that lets me capture everything: notes, voice notes, articles, all kinds of media, and quick captures from my desktop—for SO long, and I finally found Resurf! It’s exactly what I’ve been looking for. And the UI makes me love it even more. So much cleaner than mymind!” “Resurf has quickly become a crucial part of my daily workflow as a web designer. I love how quickly I can capture things, how intuitive the UI is, and that it just works offline on my local machine.” Read more from people using Resurf Start building your personal context library. Download for Mac 7-day free trial · macOS 14.3+ (Apple Silicon & Intel) · Free on iPhone & iPad",
+      "website_status": "ok"
+    },
+    {
+      "rank": 4,
+      "daily_rank": 4,
+      "id": "1285780",
+      "name": "Daymaker",
+      "slug": "daymaker",
+      "tagline": "Gifts so personal, your prospects take the meeting.",
+      "description": "Daymaker is known for coldcakes, that ends today. Daymaker is the tool that researches your prospects, finds out their interests, recommends a personalized gift, repackages it in your branding, and sends it to your prospect. Making sure you get your meeting. Want it done for you? We run the campaign and guarantee the meetings.",
+      "votes": 166,
+      "comments": 4,
+      "topics": [
+        "Email",
+        "Sales",
+        "Marketing"
+      ],
+      "website": "https://www.producthunt.com/r/22SNOV53PPMTPX",
+      "url": "https://www.producthunt.com/products/daymaker",
+      "maker_comments": [],
+      "website_resolved": "",
+      "website_text": "",
+      "website_status": "跳过：www.producthunt.com: HTTP 403"
+    },
+    {
+      "rank": 5,
+      "daily_rank": 5,
+      "id": "1325665",
+      "name": "oovi",
+      "slug": "oovi",
+      "tagline": "Your own team of AI on your desktop",
+      "description": "Hand oovi a job and a team of AI bots does it: a leader plans, a researcher digs, a writer drafts, a critic checks. Watch each bot work, and approve anything before it goes out. Free with your own AI key, or from $10/mo with credits that never expire.",
+      "votes": 134,
+      "comments": 24,
+      "topics": [
+        "Artificial Intelligence"
+      ],
+      "website": "https://www.producthunt.com/r/YLKKXHEBGSFA4O",
+      "url": "https://www.producthunt.com/products/oovi",
+      "maker_comments": [
+        "Hey Product Hunt 👋 I'm Oussama, a solo developer from Algeria. I built oovi because running a one-person company means being the researcher, the writer, the marketer and the reviewer at the same time. I wanted a team, not another chat box. How it works: you give one request. A leader bot plans it and hands parts to specialists: a researcher that searches and reads sources, a writer that drafts, a critic that checks the result. You can open any bot's screen and watch it work. Anything that touches the outside world (sending an email, posting, clicking on a site) shows you the exact action and waits for your OK. What I cared about: • Your choice of model. Bring your own key (Claude, GPT, Gemini, Grok, OpenRouter, or a local model) and oovi is free, with nothing added on top. Or use our built-in model from $10/month, and unused credits never expire. • Local-first. Chats, files and keys stay on your computer. • Your phone too. Talk to your team on Telegram, and routines keep running while your computer is off. • Your language. English, French, Arabic, Spanish, German, Turkish, and even Algerian Darija. Version 0.15.0 shipped this week: bots act instead of asking, conversations cost about half as much to start, and big spreadsheets are handled exactly. I'd love your honest feedback"
+      ],
+      "website_resolved": "",
+      "website_text": "",
+      "website_status": "跳过：www.producthunt.com: HTTP 403"
+    },
+    {
+      "rank": 6,
+      "daily_rank": 6,
+      "id": "1324705",
+      "name": "Creavit Studio 4.0",
+      "slug": "creavit-studio-4-0",
+      "tagline": "Screen recording, iPhone camera and cinematic demos for Mac",
+      "description": "Plan, record and turn your screen into a product story. Creavit Studio 4.0 brings QR-paired iPhone portrait capture, camera takes added after recording, Content Planner, Standard and Liquid MultiFocus, cinematic 3D MacBook and iPhone scenes, Smooth Scroll, Smooth Typing, your voice in another language, and Auto FX with your approval at every stage. Built for Mac. Also available on iPhone for recording and editing on the go.",
+      "votes": 121,
+      "comments": 6,
+      "topics": [
+        "Mac",
+        "Productivity",
+        "Video"
+      ],
+      "website": "https://www.producthunt.com/r/DO2TIU7I4GF4GO",
+      "url": "https://www.producthunt.com/products/creavit-studio",
+      "maker_comments": [
+        "Hi Product Hunt! I’m Onur, the maker of Creavit Studio. Creavit Studio 4.0 brings planning, recording and cinematic editing into one Mac app. This launch is about giving you more control over how a product story is told. Creavit Studio is also available on iPhone, so you can record and edit directly on your phone. Here’s what’s new: • Connect your iPhone by QR over Wi-Fi for 1080 × 1920 portrait camera capture. Record the screen and camera together, or add a camera take later while your edit plays. • Build a shot-by-shot plan with Content Planner, write a script for each shot, record takes and return to saved ideas in Library. • Show up to three details at once with MultiFocus: independent Standard cards or Liquid glass lenses. • Turn recordings into 3D MacBook scenes with animated lids and screen glow, or iPhone demos with animated hands, taps and swipes. • Smooth real scrolling and typing with their own editable controls. Translate speech and captions with your own voice sample and a local voice engine. • Work with Auto FX through proposed cuts, an approved scene plan and individual scenes, keeping the creative decisions in your hands. The video shows the new workflow, followed by real captures from the editor. I’d love to hear which part would help most with your next product demo, and what you’d want to control more precisely. Thanks for taking a look!"
+      ],
+      "website_resolved": "",
+      "website_text": "",
+      "website_status": "跳过：www.producthunt.com: HTTP 403"
+    },
+    {
+      "rank": 7,
+      "daily_rank": 7,
+      "id": "1307253",
+      "name": "Webless Agents",
+      "slug": "webless-agents",
+      "tagline": "Agents you want to put in front of customers",
+      "description": "You wouldn’t put most website chatbots in front of a customer. Webless Agents are different: you describe the outcome you want in plain English, and Webless builds the agent on your published content, so it answers only from what you’ve said. You review every instruction and change anything before it goes live. Then it gets to work: answering questions, qualifying buyers, sending quotes, booking meetings and handing off to your team. For Product Hunt: 3 months of our highest plan, free.",
+      "votes": 122,
+      "comments": 23,
+      "topics": [
+        "Marketing",
+        "SaaS",
+        "Artificial Intelligence"
+      ],
+      "website": "https://www.producthunt.com/r/VH6EKEDCE4QLCA",
+      "url": "https://www.producthunt.com/products/webless",
+      "maker_comments": [
+        "Hey Product Hunt 👋 I’m Suyog, co-founder of Webless. You'd never let most website bots near your customers. They are lead gen forms in disguise. They dead-end people with “please choose 1, 2 or 3,” and your best buyers leave. We built Webless Agents to be the opposite: agents you want to put in front of customers. Launching one takes just four steps: Describe it. Tell Webless the outcome you want, in plain English. No flowcharts. Webless builds it. Instructions, skills, guardrails, tools and outcomes, all written from your content. Every agent is grounded in your published content. If the answer is on your site, it finds it. If it isn’t, the agent says so or hands off to your team, instead of guessing. You approve it. Read every instruction, change anything. Nothing goes live until you say so. It goes to work. In the gallery, a Northwind agent asks three discovery questions, builds a 60-seat quote from the price book, books a meeting with Maya, and sends the transcript to Slack. Our customers see 5X conversions and 20% lower CAC. Try our highest plan for free for three months. Product Hunt Exclusive. I’ll be here all day. Tell me the first agent you’d build, and I’ll tell you how I’d set it up."
+      ],
+      "website_resolved": "",
+      "website_text": "",
+      "website_status": "跳过：www.producthunt.com: HTTP 403"
+    },
+    {
+      "rank": 8,
+      "daily_rank": 8,
+      "id": "1325043",
+      "name": "Omi CLI",
+      "slug": "omi-cli",
+      "tagline": "AI coding agents that work while you're away.",
+      "description": "Omi can build anything. Give Omi a coding task: it reads your repo, fixes bugs, runs your type check and tests and fixes what fails (/verify), and checks your app in a real browser. Parallel subagents work in separate worktrees; background and cloud agents keep going while you're away. New in 0.5.2: a redesigned terminal with a live status line, highlighted code and word-level diffs, and faster startup. 13 models or bring your own. Free to start: npm i -g @builditomi/cli",
+      "votes": 98,
+      "comments": 18,
+      "topics": [
+        "Software Engineering",
+        "Developer Tools",
+        "Artificial Intelligence"
+      ],
+      "website": "https://www.producthunt.com/r/GWUUBKQHSYM563",
+      "url": "https://www.producthunt.com/products/omi-cli",
+      "maker_comments": [
+        "Hey Product Hunt! I'm Om, the maker of BuildItOmi. Our idea has always been simple: Omi can build anything. Omi CLI brings that to your terminal. What it does: Reads your repo, makes a plan, and shows every edit as a diff you approve (yes / no / always) Runs your tests and keeps going until they pass Auto picks the model for each turn from 13 models (DeepSeek, Gemini, Gemma, gpt-oss, GLM), so everyday edits stay cheap and hard problems get a stronger model /undo puts back every file the last task changed, even without git One plan in USD with clear 5-hour and weekly limits, and a Free plan to try it New in 0.5.0 (out today on npm): Subagents that edit in parallel, each in its own git worktree, merged back three-way Built-in browser testing: Omi opens your app in headless Chrome, clicks through it and reports console errors and failed requests Background agents (omi bg \"task\") that keep working after you close the terminal Cloud agents (omi cloud \"task\") that run on your repo's GitHub Actions and open a pull request Honest numbers: on our first public benchmark (10 small tasks, judged by hidden tests the agent never saw) Omi CLI solved 10 out of 10. It is a small sample, and the full runs are on cli.builditomi.com/benchmark. Try it: npm i -g @builditomi/cli, then run omi in any project. I would love your feedback: which task should Omi CLI get better at next?"
+      ],
+      "website_resolved": "",
+      "website_text": "",
+      "website_status": "跳过：www.producthunt.com: HTTP 403"
+    },
+    {
+      "rank": 9,
+      "daily_rank": 9,
+      "id": "1320738",
+      "name": "Ulika",
+      "slug": "ulika",
+      "tagline": "Visual editor for sites built with Claude, Cursor, or Codex",
+      "description": "AI can ship a React, Vite, or Next site in a weekend. Then marketing wants a headline change and opens a ticket. Ulika connects the site so anyone can edit copy and images on the page and publish, without touching code. Open beta, free to try at ulika.co.",
+      "votes": 95,
+      "comments": 9,
+      "topics": [
+        "Design Tools",
+        "Developer Tools",
+        "Artificial Intelligence"
+      ],
+      "website": "https://www.producthunt.com/r/RMUGMIHZYR2MRX",
+      "url": "https://www.producthunt.com/products/ulika",
+      "maker_comments": [
+        "Hey everyone. I'm Mau, a product designer in Mexico City, and I made Ulika. The pattern I kept seeing: someone ships a React, Vite, or Next site in a weekend with Claude Code, Cursor, or Codex. Then marketing wants to change a headline or an image, and it turns into a ticket. The site is \"done,\" but only the person who can open the repo can touch it. Ulika is a visual editor for those sites. You connect the project (GitHub + Vercel), Ulika detects it, and anyone on the team can edit copy and images on the page and hit Publish. No CMS migration. No asking engineering for a typo. We're in open beta and it's free to try at ulika.co. It already works on real sites, and we're still smoothing onboarding. If something is confusing or breaks, I want to hear it. The 40 second video walks through the full loop on a real detailing site: connect, edit the hero, add a service, publish. I'd love feedback on two things in particular: If you build sites with AI tools for clients or a marketing team, does this fit how you actually work? What's the most confusing part of connecting a project the first time? Happy to answer anything. Thanks for taking a look."
+      ],
+      "website_resolved": "https://ulika.co/",
+      "website_text": "Ulika — Your website. Built by AI. Editable by everyone. How it works For teams AI assistant Sign in Check your website Works with Claude Code, Codex, Cursor, v0 Your website. Built by AI. Editable by everyone. Previewed before it's live. Editable by everyone. Saved with every edit. Published in one click. Previewed before it's live. Connected to your site. Built your site with AI? Ulika lets your team click any text or image on the live page, change it, and publish. Your site's design and code never change. Check your website See how it works Free · No credit card required Nothing to move or rebuild. Your site stays right where it is. Acme / 4 changes Publish Pages Home / About /about Services /services Blog /blog Contact /contact Acme Product Services Pricing Blog Sign in Start for free New — automations for every workflow The operating system for modern teams Bring your projects, people and workflows together in one place. Start for free Book a walkthrough Free for up to 10 people. No credit card required. Trusted by operations teams at 4,000+ companies Acme The operating system for modern teams. Plan the work, run the work, and always know where it actually stands. Product Features Pricing Integrations Company About Services Contact Resources Blog Help centre System status © 2026 Acme Industries, Inc. All rights reserved. Privacy and terms Headline Hero Hero.tsx Headline home.hero.headline The operating system for modern teams Description home.hero.description Bring your projects, people and workflows together in one place. CTA home.hero.ctaLabel Start for free Link home.hero.ctaHref /contact Save Draft saved See it in action Watch Ulika in 40 seconds in 40 seconds in 40 seconds From a site built with AI to a page your whole team can edit. 0:00 0:00 0.5 x 1 x 1.5 x 2 x How it works Four steps to a website anyone can edit Nothing to move, nothing to rebuild. Ulika works with the site you already have. 01 / 04 Build with AI Build your site with Claude, Codex, Cursor or any AI tool you like. Ulika works with all of them. 02 / 04 Connect your site Link your website in one step. Everything stays right where it is. 03 / 04 Make it editable Ulika finds every headline, image and link on your site. You choose what your team can edit. 04 / 04 Publish Your team edits and publishes without touching code. Every change is saved, so you can go back anytime. Built for modern teams One website, four people who need different things from it Ulika keeps the work apart: some people build the site, others write what it says. website — Hero.tsx Explorer WEBSITE app layout.tsx page.tsx globals.css components Features.tsx Hero.tsx Navbar.tsx .ulika bindings.json content.json package.json Hero.tsx × page.tsx × content.json × 1 import Link from \"next/link\" ; 2 import { Features } from \"./Features\" ; 3 import { Button } from \"@/components/ui\" ; 4 5 // Copy is edited in Ulika. Layout and markup stay here. 6 export function Hero () { 7 return ( 8 <section className = \"hero\" > 9 <h1 data-ulika = \"home.hero.headline\" > 10 Ship pages, not tickets. 11 </h1> 12 <p data-ulika = \"home.hero.description\" > 13 Edit your site without touching code. 14 </p> 15 <Button asChild > 16 <Link href = \"/start\" data-ulika = \"home.hero.cta\" > 17 Get started 18 </Link> 19 </Button> 20 </section> 21 <Features /> 22 ); 23 } Problems Output Terminal $ npx ulika connect ✓ Connected · found 112 things to edit ✓ Preview verified $ main 0 files changed by Ulika Ln 9, Col 12 Spaces: 2 UTF-8 TypeScript React Developers Keep building with your AI tools. Ulika only takes care of the words and pictures — your code stays exactly as it is. Your code stays yours No rebuild needed Zero changes to your code design.studio / acme / landing Layers Page Navbar Code Hero Code Features Code Pricing Code Footer Code Acme Product Pricing Docs Get started Hero · 640 × 340 New in 2.0 Build faster with Acme The workspace where design and engineering ship together, without the handoff. Start free Book a demo 96 24 Fast Deploys in seconds. Secure SOC 2 compliant. Simple No setup required. Layout locked by code Hero Code Layout Auto layout Vertical Gap 24 Padding 96 / 48 Max width 1200 Defined in code — editors can't change layout Typography Font Geist Size / Line 56 / 60 Tracking -2% Designers Your design stays exactly as you made it. The team can update words and photos without breaking the layout. Your design stays protected Always on-brand No broken layouts app.ulika.com / acme / home Acme Home Draft saved Preview Publish Pages Home / About /about Services /services Blog /blog Contact /contact Acme Shop Lists About Shop now Headline Spring sale starts today Up to 40% off everything for the next seven days. Free shipping on orders over $50. Shop the sale Linen shirt $48 Canvas tote $32 Wool cap $26 4 changes ready to publish Content Hero Headline home.hero.headline Spring sale starts today Description home.hero.description Up to 40% off everything for the next seven days. Free shipping on orders over $50. CTA home.hero.ctaLabel Shop the sale Link home.hero.ctaHref /collections/spring Marketing Click any text or photo on your website, change it, and publish. No waiting for a developer. Click any text or photo to edit Publish in one click No waiting on developers app.ulika.com / studio-north / clients SN Studio North Clients 5 Clients A Acme N Northwind O Orbit L Lumen K Kestrel Clients 5 projects across 5 client sites Search clients New project Acme Spring sale starts today Up to 40% off everything. Shop now Acme Connected acme.com Last published 2h ago M J R Northwind Freight made simple Track every shipment live. Get a quote Northwind Connected northwind.co Last published 2h ago S L Orbit Plan launches that land One calendar for every team. Start free Orbit Connected orbit.app Last published 2h ago A K T Lumen Light for every room Smart lamps, made to last. Browse lamps Lumen Connected lumenlight.io Last published 2h ago D N Agencies Give each client an easy wa",
+      "website_status": "ok"
+    },
+    {
+      "rank": 10,
+      "daily_rank": 10,
+      "id": "1323666",
+      "name": "Mockreel",
+      "slug": "mockreel",
+      "tagline": "your screen recording, but in a 3D phone. free, no signup",
+      "description": "ok so every time I launch an app I need one of those 3D phone videos, and every tool wants a download or a subscription. nope. built my own. you drop in a screen recording (or a screenshot, I don't judge), it shows up inside a 3D iPhone / MacBook / iPad / browser window, you pick a look, add a camera move, slap a headline on it, export MP4 up to 4K. runs in a browser tab. no upload, no signup, no watermark, no catch. it's free. go make your app look expensive.",
+      "votes": 93,
+      "comments": 8,
+      "topics": [
+        "Design Tools",
+        "Marketing",
+        "Video"
+      ],
+      "website": "https://www.producthunt.com/r/JMDEOIWLDDDOHB",
+      "url": "https://www.producthunt.com/products/mockreel",
+      "maker_comments": [
+        "hey PH 👋 maker here tl;dr: screen recording goes in, fancy 3D device video comes out, nothing leaves your laptop. I ship small apps, and every launch I need the same thing, one decent clip of the app in a phone that I can post the same day. everything good was a desktop app or a subscription, so I got annoyed and built it in a browser tab instead. how it goes: drop in a recording or screenshot, pick a device (iPhone, Pixel, iPad, MacBook, a watch, a browser window, or bring your own 3D model), grab one of six looks or go full control freak on background, lighting and camera, add a headline, tap marks, zoom and music, export MP4 up to 4K in 16:9, 9:16, 4:5 or 1:1. the part I'm weirdly proud of: it renders on your machine, so your unreleased app never touches a server. no account, no watermark, free. works best in Chrome or Edge on a laptop. roast it, tell me what's missing, tell me what broke. I'll fix it."
+      ],
+      "website_resolved": "",
+      "website_text": "",
+      "website_status": "跳过：www.producthunt.com: HTTP 403"
+    }
+  ]
+}

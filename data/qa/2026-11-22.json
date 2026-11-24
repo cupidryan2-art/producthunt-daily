@@ -1,0 +1,640 @@
+{
+  "stats": {
+    "date": "2026-11-22",
+    "analyzed": 10,
+    "passed": 9,
+    "failed": 0,
+    "revised": 5,
+    "avg_score": 89.9,
+    "tokens": 200743,
+    "usd": 0.06251,
+    "seconds": 186.6,
+    "models": {
+      "analysis:deepseek-flash": {
+        "calls": 16,
+        "cache_hit": 28928,
+        "cache_miss": 34093,
+        "output": 30859,
+        "usd": 0.023716134000000003
+      },
+      "review:deepseek-flash": {
+        "calls": 16,
+        "cache_hit": 11904,
+        "cache_miss": 40477,
+        "output": 54482,
+        "usd": 0.038796462000000004
+      }
+    },
+    "incomplete": ""
+  },
+  "report_check": [],
+  "products": {
+    "Yoroll": {
+      "terms_autofixed": [],
+      "score": 74,
+      "must_fix": [
+        "③ 技术原理段写着「Yoroll Agent（能自己拆步骤、调用工具办事的 AI 助手）」。资料从未说明 Yoroll Agent 具备自主拆解步骤或调用工具的能力，只提到用户可以把前提、剧本或参考图交给 Yoroll Agent，然后自己梳理分支、检查分镜、挑选镜头。因此这是没有依据的技术细节断言，建议改为「Yoroll Agent 负责从故事到分镜再到视频的创作流程」，或者标注为 [推测]。"
+      ],
+      "unclear": [
+        "“用 Embedding（把文字变成一串数字，好比较意思是否相近） 算两两余弦相似度” → 只解释了 Embedding，却没有解释「余弦相似度」是什么、取值范围和「越接近1越相似」的含义，零基础读者无法读懂这个指标。",
+        "“这类数据适合做漏斗分析和路径分析” → 漏斗分析、路径分析两个术语没有一句话解释（例如「漏斗分析＝看用户从进入到完成各步的流失比例」），跳过了入门读者需要的说明。"
+      ],
+      "relabel": [
+        {
+          "quote": "行业趋势：AI 视频正从“生成一段给人看”走向“生成一段让人玩” （来自团队自述的定位）[已知]",
+          "reason": "这句话的内容在资料中有对应描述，但它出自评论区中以「They」指代 Yoroll 的第三方评论者（“Instead of generating clips that people just watch, it lets you turn them into interactive games”），并不是团队 maker 的自述。因此把来源写成「团队自述」属于出处标注错误，应改为「来自评论区评论者对产品的评价」。"
+        }
+      ],
+      "relabel_applied": 1,
+      "relabel_missed": [],
+      "review_error": "",
+      "checks": {
+        "structure": [],
+        "length": [],
+        "labels": [],
+        "fields": [],
+        "data": [],
+        "result_tense": [],
+        "data_source": [],
+        "links": [],
+        "terms": []
+      },
+      "issues": [],
+      "links": {
+        "https://huggingface.co/datasets/rajpurkar/squad": {
+          "status": "ok",
+          "code": 200
+        }
+      },
+      "dead_links": [],
+      "unexplained_terms": [],
+      "passed": false,
+      "revisions": 1,
+      "first_draft": {
+        "score": 66,
+        "issues": [
+          "A 部分没有给出具体数据集/API 的 URL（只有目录首页或没有链接），请选定一个确定存在的具体来源"
+        ],
+        "must_fix": [
+          "⑥ 的数据来源不现实：Hugging Face 上没有公认的公开数据集同时包含“故事节点—选项—选择分布”，更不会包含“节点流失率”（这是产品内部埋点数据，公开数据集不会有）。因此问题②（用选择集中度预测节点流失率）和 Result 里“均方误差比 baseline 降低 20%”的核心目标在两周内基本做不出来，现在这种“第一天再核实、不行就降级”的写法等于把整个项目建立在假设上。建议：(a) 在动手前先点名写出候选数据集，并确认字段；(b) 把主目标换成公开文本和分支结构能支持的题，例如分支结构统计、选项文本多样性、路径深度分布；(c) 如果一定要做“选择分布/流失”，就用自建小 demo 招募或模拟几十个玩家走一遍收集数据，并在报告里明确标注是模拟数据，不要当作真实用户行为。",
+          "⑥ 里“用回归的均方误差预测节点流失率”与“用卡方检验判断选择分布是否偏离均匀”之间，缺一个真实可测的流失定义：资料和分析都没说清“流失”按什么口径统计（中途退出？未走到结局？），两周内也无法从公开数据得到这个标签。建议先把“一次有效互动/流失”的定义和可获取的数据源写死，再谈模型指标。"
+        ],
+        "unclear": [
+          "先做探索分析（每个节点的选项分布、节点深度分布），再用卡方检验判断偏离均匀的节点 → “卡方检验”全文未解释，文中对逻辑回归、baseline、AUC 都做了通俗解释，唯独这一处跳步，零基础读者不知道它在检验什么、p<0.05 是什么意思。",
+          "某个分支点的“选择集中度”能否预测该节点的流失率 → “选择集中度”是全文自造的关键指标，从未定义（是最高选项占比？熵？），后面的第③问“给出选择集中度最高的前 10 个节点”因此无法执行。",
+          "展示用一个 Streamlit 页面 → Streamlit 未做任何说明，不属于通用常识工具名，读者不知道它是什么、要写代码还是拖拽。"
+        ],
+        "relabel": [
+          {
+            "quote": "产品设有 Black Friday 会员折扣，说明存在付费会员制 [已知]",
+            "reason": "资料原句是“members can save up to 60% on Claude Fable 5.2 in Yoroll Code”，只说明有会员可享折扣，并未说明会员是否付费、是否为订阅制；“付费会员制”是推断，应标 [推测]。"
+          },
+          {
+            "quote": "AI 模型或 API：接入 Tripo 3D 与 Seedance video 等第三方生成能力 [已知]",
+            "reason": "资料只把 Tripo 3D、Seedance video 列为工作区里可用的工具名称，没有说明它们是第三方接入还是自研，“第三方”属于额外推断。"
+          }
+        ]
+      },
+      "fields": {
+        "difficulty": 4,
+        "feasibility": 4,
+        "one_liner": "把一段故事或视频变成能点选分支、有不同结局的互动小游戏"
+      }
+    },
+    "Rankhog": {
+      "terms_autofixed": [],
+      "score": 90,
+      "must_fix": [],
+      "unclear": [],
+      "relabel": [
+        {
+          "quote": "产品形态：主要通过网页应用使用，也能在 Claude、ChatGPT、Cursor 等支持 MCP 的客户端里操作 [已知]",
+          "reason": "资料只写“Run it from the app”，未说明是网页应用还是桌面/移动端；官网未抓取到，产品形态不能作为 [已知]，应改为 [推测] 或只写“通过它的 app 使用”。"
+        },
+        {
+          "quote": "行业趋势：AI 工具正从“独立网页”走向“嵌进用户已有的 AI 客户端”，通过 MCP 这类统一插口被调用 [已知]",
+          "reason": "资料只说明 Rankhog 自己可在 Claude、ChatGPT、Cursor 等 MCP 客户端运行，并未提供任何关于整个 AI 工具行业走向的数据或论断，这属于分析者外推，应标 [推测]。"
+        }
+      ],
+      "relabel_applied": 2,
+      "relabel_missed": [],
+      "review_error": "",
+      "checks": {
+        "structure": [],
+        "length": [],
+        "labels": [],
+        "fields": [],
+        "data": [],
+        "result_tense": [],
+        "data_source": [],
+        "links": [],
+        "terms": []
+      },
+      "issues": [],
+      "links": {
+        "https://www.reddit.com/dev/api/": {
+          "status": "ok",
+          "code": 200
+        },
+        "https://modelcontextprotocol.io/": {
+          "status": "ok",
+          "code": 200
+        },
+        "https://huggingface.co/datasets/sealuzh/app_reviews": {
+          "status": "ok",
+          "code": 200
+        }
+      },
+      "dead_links": [],
+      "unexplained_terms": [],
+      "passed": true,
+      "revisions": 0,
+      "first_draft": null,
+      "fields": {
+        "difficulty": 4,
+        "feasibility": 4,
+        "one_liner": "帮小商家在 Reddit 上找到想买东西的人并自动回复"
+      }
+    },
+    "Resurf": {
+      "terms_autofixed": [],
+      "score": 97,
+      "must_fix": [],
+      "unclear": [
+        "清洗时去掉空答案和超长段落，把每篇文章切块——切块就是把长文章切成一段段大小适中的小片段，作为检索的基本单位 → 这里跳过了一步：SQuAD 的“答案”是标注在原始段落内的文字片段（span），把段落再切成更小的块后，没说怎么把答案对应到新的块（例如“答案落在哪个块里就算这个块相关”），也没说检索单位到底是“段落”还是“块”，与任务里“用问题去找段落”的定义矛盾；零基础读者照着做会卡住。建议补一句：先按段落检索，或用答案片段所在的块作为正例块。"
+      ],
+      "relabel": [],
+      "relabel_applied": 0,
+      "relabel_missed": [],
+      "review_error": "",
+      "checks": {
+        "structure": [],
+        "length": [],
+        "labels": [],
+        "fields": [],
+        "data": [],
+        "result_tense": [],
+        "data_source": [],
+        "links": [],
+        "terms": []
+      },
+      "issues": [],
+      "links": {
+        "https://ollama.com": {
+          "status": "ok",
+          "code": 200
+        },
+        "https://modelcontextprotocol.io": {
+          "status": "ok",
+          "code": 200
+        },
+        "https://huggingface.co/datasets/rajpurkar/squad": {
+          "status": "ok",
+          "code": 200
+        }
+      },
+      "dead_links": [],
+      "unexplained_terms": [],
+      "passed": true,
+      "revisions": 1,
+      "first_draft": {
+        "score": 86,
+        "issues": [
+          "① 有 32 字，应为 1–30 字"
+        ],
+        "must_fix": [],
+        "unclear": [
+          "语义方案用句向量做相似度匹配 → “句向量”未解释；前文虽用“Embedding（把文字变成一串数字）”做了类比，但“句向量”与“Embedding”的关系没有交代，零基础读者不知道句子是怎么变成向量的、又怎么算“相似”。建议补一句“把每个段落用模型编码成一个向量（即一串数字），再算两个向量的余弦相似度”。",
+          "评估用 F1 和召回率，并做配对显著性检验 → 只解释了 F1，没有解释“召回率”是什么，也没有解释“配对显著性检验”在做什么、为什么需要它；后文突然出现“p 小于 0.05”也没有铺垫。建议补一句“召回率＝该找到的段落里实际找到的比例；配对检验是在同一批问题上比较两种方法的差值，判断这个差值是否可能由随机波动造成，p<0.05 表示偶然造成的概率低于 5%”。",
+          "把每篇文章切块 → “切块”（chunking）是检索任务的关键设计，但未说明为什么要切、切多大、切块方式会影响什么，读者无法理解后文“两种方法用完全相同的切块”为何是控制变量。建议补一句说明切块是为了让检索单元适中，并说明块大小会直接影响召回效果。"
+        ],
+        "relabel": [
+          {
+            "quote": "同时“本地优先、数据归自己”正在成为一类卖点 [已知]",
+            "reason": "原始资料只说明 Resurf 自身“Fully local and private by default / in files you own”，属于该产品的定位与自述；资料中没有任何关于“本地优先正在成为行业卖点”这一市场趋势的证据，这是分析者的行业判断，应标为 [推测]。"
+          }
+        ]
+      },
+      "fields": {
+        "difficulty": 4,
+        "feasibility": 4,
+        "one_liner": "把散落的网页、截图和笔记收进本地仓库，随时翻出来喂给 AI"
+      }
+    },
+    "Daymaker": {
+      "terms_autofixed": [],
+      "score": 86,
+      "must_fix": [],
+      "unclear": [
+        "再换一个梯度提升模型对比 → 对零基础读者，“梯度提升”是未解释的术语，读者不知道它是什么、为什么要用它。建议加一句括号说明（例如：另一种更强的树模型，靠逐步修正错误来提升预测）。",
+        "用统计检验看不同标题特征组之间评论数差异是否显著 → “统计检验”“显著”都未解释，零基础读者不知道在做什么、结论怎么读。建议补一句说明（例如：用检验判断两组差异是真实存在还是随机波动，常用 p 值小于 0.05 作为门槛）。",
+        "同时输出 3 条带置信区间的特征结论 → “置信区间”未解释。建议改成“每条结论附一个误差范围（置信区间），说明这个数字有多稳”。"
+      ],
+      "relabel": [
+        {
+          "quote": "接着做“品牌重包装”，即把礼物装进带客户公司 logo 的包装里 [已知]",
+          "reason": "资料原文只有 “repackages it in your branding”（用你的品牌重新包装），没有提到 logo，也没有说明是“客户公司”的品牌；这只是对原文的过度具体化。建议改成“用你的品牌重新包装”，并把 logo 这类细节标为 [推测]。"
+        }
+      ],
+      "relabel_applied": 1,
+      "relabel_missed": [],
+      "review_error": "",
+      "checks": {
+        "structure": [],
+        "length": [],
+        "labels": [],
+        "fields": [],
+        "data": [],
+        "result_tense": [],
+        "data_source": [],
+        "links": [],
+        "terms": []
+      },
+      "issues": [],
+      "links": {
+        "https://hn.algolia.com/api": {
+          "status": "ok",
+          "code": 200
+        },
+        "https://info.arxiv.org/help/api/index.html": {
+          "status": "ok",
+          "code": 200
+        }
+      },
+      "dead_links": [],
+      "unexplained_terms": [],
+      "passed": true,
+      "revisions": 0,
+      "first_draft": null,
+      "fields": {
+        "difficulty": 3,
+        "feasibility": 4,
+        "one_liner": "给销售对象送一份合心意的礼物，换一次见面聊的机会"
+      }
+    },
+    "oovi": {
+      "terms_autofixed": [],
+      "score": 89,
+      "must_fix": [],
+      "unclear": [
+        "先跑单模型直接回答作为 baseline，再跑“先让模型从上下文里摘出相关句子、再据此作答、最后让另一个模型检查并修正”的三段流程，用 F1 对比两者，并做配对检验看差异是否显著 → “配对检验”“显著”是统计术语，零基础读者不知道它指什么、也不知道为什么这里要用它，需要一句话解释（同一批问题上两种方法一一配对比较，看差异是否只是运气）。",
+        "并报告置信区间 → “置信区间”未解释，读者不知道它和 5 个百分点提升的关系，建议补一句“用来说明真实提升大概落在什么范围”。"
+      ],
+      "relabel": [
+        {
+          "quote": "同时“自带密钥、本地存储”这种把选择权和数据留在用户手里的做法在变多 （产品有此定位）[已知]",
+          "reason": "资料只能支持“oovi 本身有这样的定位”，完全没有提到行业里这类做法“在变多”这一趋势判断，后半句被标 [已知] 属于过度外推，应改为 [推测]。"
+        }
+      ],
+      "relabel_applied": 1,
+      "relabel_missed": [],
+      "review_error": "",
+      "checks": {
+        "structure": [],
+        "length": [],
+        "labels": [],
+        "fields": [],
+        "data": [],
+        "result_tense": [],
+        "data_source": [],
+        "links": [],
+        "terms": []
+      },
+      "issues": [],
+      "links": {
+        "https://huggingface.co/datasets/rajpurkar/squad": {
+          "status": "ok",
+          "code": 200
+        }
+      },
+      "dead_links": [],
+      "unexplained_terms": [],
+      "passed": true,
+      "revisions": 0,
+      "first_draft": null,
+      "fields": {
+        "difficulty": 3,
+        "feasibility": 4,
+        "one_liner": "把一件事交给一组分工协作的 AI 小助手，你盯着它们干活并点头放行"
+      }
+    },
+    "Creavit Studio 4.0": {
+      "terms_autofixed": [],
+      "score": 94,
+      "must_fix": [],
+      "unclear": [
+        "处理阶段做的是……对滚动和打字过程做平滑重采样 → “重采样”是音视频专业术语，零基础读者无法从字面理解它在这里指时间上的平滑处理（如补帧、插值）；建议改成“对滚动和打字的画面做平滑处理，让动作不卡顿、不跳帧”。",
+        "再换一个预训练句向量模型做 Embedding（把文字变成一串数字，好比较意思是否相近）加分类器对比 → 括号只解释了 Embedding，没解释“预训练”“句向量模型”是什么，也没说明两者与“把整段评论变成向量”的关系，零基础读者会卡在这里；建议补一句“先用大量文本预先训练好的模型，直接把整条评论转成一个向量”。"
+      ],
+      "relabel": [],
+      "relabel_applied": 0,
+      "relabel_missed": [],
+      "review_error": "",
+      "checks": {
+        "structure": [],
+        "length": [],
+        "labels": [],
+        "fields": [],
+        "data": [],
+        "result_tense": [],
+        "data_source": [],
+        "links": [],
+        "terms": []
+      },
+      "issues": [],
+      "links": {
+        "https://ffmpeg.org/documentation.html": {
+          "status": "ok",
+          "code": 200
+        },
+        "https://github.com/obsproject/obs-studio": {
+          "status": "ok",
+          "code": 200,
+          "repo": "obsproject/obs-studio",
+          "stars": 80028,
+          "pushed_at": "2026-11-23",
+          "stale": false
+        },
+        "https://developer.apple.com/documentation/screencapturekit": {
+          "status": "ok",
+          "code": 200
+        },
+        "https://huggingface.co/datasets/sealuzh/app_reviews": {
+          "status": "ok",
+          "code": 200
+        }
+      },
+      "dead_links": [],
+      "unexplained_terms": [],
+      "passed": true,
+      "revisions": 1,
+      "first_draft": {
+        "score": 71,
+        "issues": [],
+        "must_fix": [
+          "原文写“从它是付费 Mac 应用、且已迭代到 4.0 来看”，但资料只说“Built for Mac”，并未说明是否收费，这个前提是编造的。建议改为：“资料未提及定价，从已迭代到 4.0 可推测有持续使用的用户基础 [推测]”。",
+          "R 中要求“产出至少 5 个 App 类别的高频诉求 Top 10 列表”，但该 Hugging Face 数据集主要含评论文本、评分和所属应用标识，未确认有“App 类别”字段；执行前应先核对字段。若没有类别字段，就改成“按 App 分组”，或自己整理一张 App→类别 的映射表并写入 Action，否则第 10–11 天的分类别统计会卡住。"
+        ],
+        "unclear": [
+          "“按评分构造弱标签（低分为抱怨、高分为正面）” → 零基础读者不知道“弱标签”是什么，建议补一句“用评分这种间接信号推出的标签，不是人工逐条标注的”。",
+          "项目名叫“App 演示视频的完播率预测器”，但实际任务是用评论做“功能诉求 / 体验抱怨”二分类，全程不涉及任何完播率数据 → 名称与任务不符，读者会以为要预测视频播放完成率。建议改名（如“应用评论诉求分类器”）或明确说明“用评论诉求作为注意力的代理指标”。",
+          "面试追问 2 的回答方向提到“数据泄漏” → 未解释，建议补一句“训练时不小心让测试集的信息漏进了训练过程”。"
+        ],
+        "relabel": []
+      },
+      "fields": {
+        "difficulty": 4,
+        "feasibility": 4,
+        "one_liner": "把 Mac 屏幕和 iPhone 拍到的画面，剪成有电影感的产品演示视频"
+      }
+    },
+    "Webless Agents": {
+      "terms_autofixed": [],
+      "score": 84,
+      "must_fix": [
+        "STAR 项目的实验设计有硬伤：SQuAD 每条问题自带其对应的原文段落，所谓「先检索相关段落再回答」若在自带段落内检索就等同于没有检索，若跨全库检索则属于开放域问答，F1 会远低于 60，A/B 对比和「从 60 提到 70」的目标都失去意义；同时现成预训练问答模型在 SQuAD 上 F1 通常在 85 以上，baseline 60 明显偏低。建议明确检索范围（例如把全部段落混在一起做段落检索，并同时报告抽取式上限作为参考），或改用 SQuAD 2.0（含不可回答题目），让「拒答率」指标有真实来源，并把目标改成「相对 baseline 的提升幅度」而不是固定分数。"
+      ],
+      "unclear": [
+        "AI 先自动产出草稿，人再逐条过一遍才放行，这个“人在环里”的设计能直接搬到很多 AI 产品上，降低出错风险 → “人在环里”（human-in-the-loop）是未解释的行话，零基础读者不知道它指什么",
+        "B：先检索相关段落再回答 → 没说明检索的是题目自带的原文段落还是整个语料库，读者无法判断这一步实际在做什么、为什么可能让结果变好或变差",
+        "再实现两个 baseline（直接回答、检索后回答），用一个现成问答模型对比 F1，并做简单的统计检验看差异是否显著 → “统计检验”具体检验什么、用什么方法未说明，且只有两种策略时检验是否有必要也没交代"
+      ],
+      "relabel": [],
+      "relabel_applied": 0,
+      "relabel_missed": [],
+      "review_error": "",
+      "checks": {
+        "structure": [],
+        "length": [],
+        "labels": [],
+        "fields": [],
+        "data": [],
+        "result_tense": [],
+        "data_source": [],
+        "links": [],
+        "terms": []
+      },
+      "issues": [],
+      "links": {
+        "https://python.langchain.com/": {
+          "status": "ok",
+          "code": 200
+        },
+        "https://huggingface.co/datasets/rajpurkar/squad": {
+          "status": "ok",
+          "code": 200
+        }
+      },
+      "dead_links": [],
+      "unexplained_terms": [],
+      "passed": true,
+      "revisions": 1,
+      "first_draft": {
+        "score": 84,
+        "issues": [
+          "① 有 33 字，应为 1–30 字"
+        ],
+        "must_fix": [],
+        "unclear": [
+          "第二步，Webless 根据你已发布的内容自动生成这个 agent（能自己拆步骤、调用工具办事的 AI 助手）的指令、技能、护栏、工具和结果定义。 → “护栏”（guardrails）是未解释的术语，零基础读者不知道它指“限制 AI 不乱说、不乱做的约束规则”，建议补一句括号解释。",
+          "可降低难度的现成资源：LangChain 的文档加载与检索组件 https://python.langchain.com/ → 没有说明 LangChain 是什么（开源框架、用来做什么），零基础读者拿到链接也不知道怎么用，建议一句话点明“一个开源的、帮你把文档切分并做检索的 Python 框架”。"
+        ],
+        "relabel": [
+          {
+            "quote": "一个潜在买家在官网看到产品，想问“你们这个方案能支持 60 人团队吗、大概多少钱、能不能约个会”。结果弹出来的聊天框只会让他“请选择 1、2 或 3”，选完就走进死胡同，买家直接关掉页面走了 [已知]",
+            "reason": "资料只概括说这类机器人是“lead gen forms in disguise”，用“请选择 1、2 或 3”把人堵死、最好的买家会流失；这里的具体买家、具体三个问题、60 人这个数字（其实来自资料里 Northwind 的例子，与这个场景无关）都是自行编出的示例，不能标 [已知]，应改为 [推测] 或写成“举例来说”的说明性文字。"
+          },
+          {
+            "quote": "资料说客户看到“5X conversions（转化率提升 5 倍）和 20% lower CAC（获客成本降低 20%）”，并把它做成按月订阅的 SaaS（按月付费、打开网页就能用的软件，像租房而非买房） 来卖，说明厂商认为企业愿意为此付费 [已知]",
+            "reason": "资料只提到“highest plan（最高档方案）免费三个月”，可以推断有分档方案，但从未说明按月计费；把“按月订阅”标 [已知] 属于超出资料的推断（“厂商认为企业愿意付费”同样是推断）。"
+          }
+        ]
+      },
+      "fields": {
+        "difficulty": 4,
+        "feasibility": 4,
+        "one_liner": "用网站内容自动生成能接待客户、回答问题并促成交易的客服助手"
+      }
+    },
+    "Omi CLI": {
+      "terms_autofixed": [
+        "API"
+      ],
+      "score": 91,
+      "must_fix": [],
+      "unclear": [
+        "预期目标：逻辑回归模型在留出集上的 AUC（衡量模型区分好坏样本能力的分数）从多数类 baseline 的 0.50 提升到 0.65 以上 → “留出集”（held-out set）未解释，零基础读者不知道它指“训练时不参与、只用于最后检验的那部分数据”",
+        "测量方式为固定随机种子、五折交叉验证。 → “五折交叉验证”未解释，读者不知道它指把数据分成五份、轮流留一份做验证的做法",
+        "并给出各组采纳率的点估计与置信区间 → “点估计”未解释，读者分不清它和“置信区间”的区别（一个是单个估计值，一个是波动范围）"
+      ],
+      "relabel": [],
+      "relabel_applied": 0,
+      "relabel_missed": [],
+      "review_error": "",
+      "checks": {
+        "structure": [],
+        "length": [],
+        "labels": [],
+        "fields": [],
+        "data": [],
+        "result_tense": [],
+        "data_source": [],
+        "links": [],
+        "terms": []
+      },
+      "issues": [],
+      "links": {
+        "https://git-scm.com/docs/git-worktree": {
+          "status": "ok",
+          "code": 200
+        },
+        "https://playwright.dev/": {
+          "status": "ok",
+          "code": 200
+        },
+        "https://www.npmjs.com/": {
+          "status": "blocked",
+          "code": 403
+        },
+        "https://archive.org/details/stackexchange": {
+          "status": "ok",
+          "code": 200
+        }
+      },
+      "dead_links": [],
+      "unexplained_terms": [],
+      "passed": true,
+      "revisions": 0,
+      "first_draft": null,
+      "fields": {
+        "difficulty": 4,
+        "feasibility": 4,
+        "one_liner": "在终端里给 AI 派编程任务，它自己改代码、跑测试、修到通过"
+      }
+    },
+    "Ulika": {
+      "terms_autofixed": [
+        "Baseline"
+      ],
+      "score": 97,
+      "must_fix": [],
+      "unclear": [
+        "用混淆矩阵和分类占比展示 → “混淆矩阵”是未解释的术语，零基础读者不知道它是什么、能说明什么，建议加一句白话解释（比如“一张表，列出每个类别被正确/错误分类的条数”）；同句的“留出测试集”也建议说明是“预先留出、不参与训练的那部分数据”"
+      ],
+      "relabel": [],
+      "relabel_applied": 0,
+      "relabel_missed": [],
+      "review_error": "",
+      "checks": {
+        "structure": [],
+        "length": [],
+        "labels": [],
+        "fields": [],
+        "data": [],
+        "result_tense": [],
+        "data_source": [],
+        "links": [],
+        "terms": []
+      },
+      "issues": [],
+      "links": {
+        "https://docs.github.com/en/rest": {
+          "status": "ok",
+          "code": 200
+        },
+        "https://vercel.com/docs/rest-api": {
+          "status": "ok",
+          "code": 200
+        },
+        "https://huggingface.co/datasets/sealuzh/app_reviews": {
+          "status": "ok",
+          "code": 200
+        }
+      },
+      "dead_links": [],
+      "unexplained_terms": [],
+      "passed": true,
+      "revisions": 0,
+      "first_draft": null,
+      "fields": {
+        "difficulty": 4,
+        "feasibility": 4,
+        "one_liner": "让不懂代码的同事直接在网页上改文字和图片并发布"
+      }
+    },
+    "Mockreel": {
+      "terms_autofixed": [],
+      "score": 97,
+      "must_fix": [],
+      "unclear": [
+        "学生做出 MVP 需要：前端基础、一点三维渲染知识、视频编码常识 [推测]。 → “MVP”是未解释的缩写，零基础读者不知道它指“最小可行产品”，建议第一次出现时加一句中文说明。"
+      ],
+      "relabel": [],
+      "relabel_applied": 0,
+      "relabel_missed": [],
+      "review_error": "",
+      "checks": {
+        "structure": [],
+        "length": [],
+        "labels": [],
+        "fields": [],
+        "data": [],
+        "result_tense": [],
+        "data_source": [],
+        "links": [],
+        "terms": []
+      },
+      "issues": [],
+      "links": {
+        "https://threejs.org/": {
+          "status": "ok",
+          "code": 200
+        },
+        "https://github.com/ffmpegwasm/ffmpeg.wasm": {
+          "status": "ok",
+          "code": 200,
+          "repo": "ffmpegwasm/ffmpeg.wasm",
+          "stars": 17985,
+          "pushed_at": "2026-09-29",
+          "stale": false
+        },
+        "https://huggingface.co/datasets/sealuzh/app_reviews": {
+          "status": "ok",
+          "code": 200
+        }
+      },
+      "dead_links": [],
+      "unexplained_terms": [],
+      "passed": true,
+      "revisions": 1,
+      "first_draft": {
+        "score": 81,
+        "issues": [
+          "③ 技术栈缺少标注：- AI 模型或 API：资料未提及"
+        ],
+        "must_fix": [],
+        "unclear": [
+          "第 10 天，人工抽查不超过 60 条验证标签质量；第 11–12 天，做误差分析 → “误差分析”未解释，零基础读者不知道具体要做什么（如看混淆矩阵、看错分样本的评论特征）。",
+          "并在报告中给出前 10 个高关联功能词及其与评分的相关系数 → “相关系数”未解释，也没说清是皮尔逊还是别的、取值范围与含义。",
+          "回答方向：不能，只能说明关联，可能存在混淆因素，需要说明局限 → “混淆因素”是术语，未举例（如 App 版本、设备、用户群体），零基础读者无法理解。",
+          "第三步，加标题、点击标记、缩放和音乐 → “点击标记”（tap marks）没有解释，读者不知道是屏幕上模拟手指点击的动画还是别的。"
+        ],
+        "relabel": [
+          {
+            "quote": "后端：基本没有后端，文件不上传 [已知]",
+            "reason": "资料只说渲染在本地、文件不上传，从未提到有无后端。录制/预设/导出逻辑之外仍可能有轻量后端，“基本没有后端”是推断，应标 [推测]。"
+          },
+          {
+            "quote": "关键点是渲染在用户自己的电脑上完成，maker 说“it renders on your machine, so your unreleased app never touches a server”，也就是文件不上传，隐私性好、也省了服务器成本 [已知]",
+            "reason": "引文只支持“本地渲染、文件不上传”；“省了服务器成本”是关于作者成本的推断，资料未提及，应改为 [推测] 或删去。"
+          }
+        ]
+      },
+      "fields": {
+        "difficulty": 3,
+        "feasibility": 4,
+        "one_liner": "把手机录屏放进 3D 设备模型里，做成宣传视频"
+      }
+    }
+  }
+}
