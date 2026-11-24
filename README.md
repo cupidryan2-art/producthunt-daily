@@ -18,7 +18,7 @@ copy .env.example .env
 | `PH_TOKEN` | Product Hunt → API Dashboard → 你的应用 → Developer Token |
 | `DEEPSEEK_API_KEY` | platform.deepseek.com → API keys（账户需有余额） |
 
-参数：`--date YYYY-MM-DD` 补跑某天；`--dry-run` 只抓数据；`--skip-review` 跳过 LLM 审稿。
+参数：`--limit N` 只试跑前 N 个并打印费用；`--date YYYY-MM-DD` 补跑某天；`--dry-run` 只抓数据；`--skip-review` 跳过 LLM 审稿。
 测试：`.venv\Scripts\python -m pytest`
 
 ## GitHub Actions
@@ -32,6 +32,7 @@ copy .env.example .env
 
 ## 修改
 
+- 费用上限：`config.yaml` 的 `max_usd_per_run`，超过就停。2026-11-25 平价时段实测每次约 $0.04（¥0.3）。
 - prompt：直接改 `prompts/*.md`。`{xxx}` 占位符要保留；六个二级标题如要改，同步改 `qa.py` 的 `SECTIONS`。
 - 质检阈值、模型、并发、重试、价格：`config.yaml`。
 - 术语表：`glossary.txt`，每行 `术语 | 解释`。
@@ -51,7 +52,7 @@ copy .env.example .env
 
 - API 返回的官网链接是 producthunt.com 的跳转链接，同样有人机验证，程序不绕过。只有当 maker 评论或描述里出现与产品名吻合的域名时才能抓到官网正文，其余跳过并在报告里注明。
 - 质检失败的链接分两类：404/5xx/超时算失效；401/403/429 表示网站拒绝程序访问，只提示“请自行确认”，不算失效，以免误判。
-- 审稿模型开 thinking 时，DeepSeek 会忽略 `temperature`（仍按 ≤ 0.5 传）。设 `review_thinking: false` 可让它生效，但核查质量明显下降。
+- 审稿用 flash + thinking（省钱；换回 pro 改 `review_model`）。开 thinking 时，DeepSeek 会忽略 `temperature`（仍按 ≤ 0.5 传）。设 `review_thinking: false` 可让它生效，但核查质量明显下降。
 - 术语若仍未解释，程序会用 `glossary.txt` 的解释补在首次出现处，次数列在质检摘要的“自动补解释”。
 - RSS 兜底没有票数、评论和最终排名，报告会标注数据不完整。
 

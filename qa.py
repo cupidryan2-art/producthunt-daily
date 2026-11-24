@@ -138,6 +138,17 @@ def check_result_tense(text):
     return []
 
 
+CATALOG_RE = re.compile(r"https?://(?:www[.])?(?:huggingface[.]co(?:/datasets)?|kaggle[.]com(?:/datasets)?|archive[.]ics[.]uci[.]edu(?:/datasets)?|github[.]com|zenodo[.]org)/?$")
+
+
+def check_data_source(text):
+    part = star_part(text, "A")
+    urls = extract_urls(part)
+    if not [u for u in urls if not CATALOG_RE.match(u)]:
+        return ["A 部分没有给出具体数据集/API 的 URL（只有目录首页或没有链接），请选定一个确定存在的具体来源"]
+    return []
+
+
 def load_glossary():
     rows = []
     for line in (ROOT / "glossary.txt").read_text(encoding="utf-8").splitlines():
@@ -151,7 +162,9 @@ def _find_term(term, body):
     if re.search(r"[A-Za-z]", term):
         flags = 0 if term.isupper() else re.I
         return re.search(rf"(?<![A-Za-z0-9-]){re.escape(term)}s?(?![A-Za-z0-9])", body, flags)
-    return re.search(re.escape(term), body)
+    # “逻辑回归”是另一个词条，不能套用“回归”的解释
+    prefix = "(?<!逻辑)" if term == "回归" else ""
+    return re.search(prefix + re.escape(term), body)
 
 
 def unexplained_terms(text, product_name="", window=50, glossary=None):
@@ -302,6 +315,7 @@ def program_check(text, product, cfg, checker):
         "structure": check_structure(text), "length": check_length(text, cfg),
         "labels": check_labels(text), "fields": check_fields(text),
         "data": check_data(text, product), "result_tense": check_result_tense(text),
+        "data_source": check_data_source(text),
         "links": [f"链接失效（{links[u]['code']}）：{u}" for u in dead],
         "terms": [f"术语首次出现时未解释：{t}" for t in terms]}
     return {"checks": checks, "issues": [i for v in checks.values() for i in v],

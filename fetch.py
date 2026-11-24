@@ -116,7 +116,11 @@ def fetch_site(url, cfg):
         raise RuntimeError(f"HTTP {r.status_code}")
     if "html" not in r.headers.get("content-type", ""):
         raise RuntimeError("不是 HTML 页面")
-    r.encoding = r.apparent_encoding or r.encoding
+    try:                         # 自动猜编码会把 UTF-8 猜错，先按 UTF-8 试
+        r.content.decode("utf-8")
+        r.encoding = "utf-8"
+    except UnicodeDecodeError:
+        r.encoding = r.apparent_encoding
     soup = BeautifulSoup(r.text, "html.parser")
     for t in soup(["script", "style", "noscript", "svg"]):
         t.decompose()

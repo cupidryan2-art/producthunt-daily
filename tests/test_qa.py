@@ -274,6 +274,16 @@ def test_no_retry_when_out_of_balance():
     assert len(calls) == 1 and llm.fatal and calls[0]["temperature"] <= 0.5
 
 
+def test_budget_cap_stops_calls():
+    from llm import LLM, BudgetExceeded
+    cfg = common.load_config()
+    llm = LLM(cfg["llm"], cfg["pricing"], client=object())
+    llm.usage["x"]["usd"] = 99
+    with pytest.raises(BudgetExceeded):
+        llm.call("x")
+    assert llm.fatal
+
+
 def test_normalize_labels():
     t = qa.normalize("```\n## ①\na [已知：官网] b [已知能实现，实现方式推测] c 【推测】\n```")
     assert "（官网）[已知]" in t and t.count("[推测]") == 2
@@ -285,3 +295,13 @@ def test_star_without_bold_is_accepted():
 
 def test_relabel_skips_already_guess():
     assert qa.apply_relabel("甲乙丙丁 [推测]", [{"quote": "甲乙丙丁 [推测]"}]) == ("甲乙丙丁 [推测]", 0, [])
+
+
+def test_logistic_regression_is_its_own_term():
+    assert qa.unexplained_terms("用逻辑回归（估计概率的方法）") == []
+    assert qa.unexplained_terms("用逻辑回归做") == ["逻辑回归"]
+
+
+def test_catalog_homepage_is_not_a_data_source():
+    assert run(GOOD.replace("https://example.com/data", "https://huggingface.co/datasets"))["checks"]["data_source"]
+    assert run(GOOD)["checks"]["data_source"] == []

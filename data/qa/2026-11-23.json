@@ -1,0 +1,548 @@
+{
+  "stats": {
+    "date": "2026-11-23",
+    "analyzed": 10,
+    "passed": 10,
+    "failed": 0,
+    "revised": 1,
+    "avg_score": 89.4,
+    "tokens": 133294,
+    "usd": 0.04042,
+    "seconds": 112.1,
+    "models": {
+      "analysis:deepseek-flash": {
+        "calls": 12,
+        "cache_hit": 19328,
+        "cache_miss": 22726,
+        "output": 22633,
+        "usd": 0.017046684
+      },
+      "review:deepseek-flash": {
+        "calls": 11,
+        "cache_hit": 12032,
+        "cache_miss": 23582,
+        "output": 32993,
+        "usd": 0.023369196
+      }
+    },
+    "incomplete": ""
+  },
+  "report_check": [],
+  "products": {
+    "Letter Visitors": {
+      "terms_autofixed": [
+        "聚类"
+      ],
+      "score": 94,
+      "must_fix": [],
+      "unclear": [
+        "“对想做 DA / DS 的学生” → DA（数据分析）、DS（数据科学）是岗位缩写，零基础读者不一定知道，建议首次出现时写出中文全称",
+        "“并做统计检验比较不同主题在低评分评论中的占比差异” → 没有解释统计检验是什么、看什么指标（p 值或显著性），零基础读者无法判断这一步的结论怎么得出来，建议补一句说明"
+      ],
+      "relabel": [],
+      "relabel_applied": 0,
+      "relabel_missed": [],
+      "review_error": "",
+      "checks": {
+        "structure": [],
+        "length": [],
+        "labels": [],
+        "fields": [],
+        "data": [],
+        "result_tense": [],
+        "data_source": [],
+        "links": [],
+        "terms": []
+      },
+      "issues": [],
+      "links": {
+        "https://github.com/rrweb-io/rrweb": {
+          "status": "ok",
+          "code": 200,
+          "repo": "rrweb-io/rrweb",
+          "stars": 20501,
+          "pushed_at": "2026-11-24",
+          "stale": false
+        },
+        "https://dev.maxmind.com/geoip/": {
+          "status": "ok",
+          "code": 200
+        },
+        "https://huggingface.co/datasets/sealuzh/app_reviews": {
+          "status": "ok",
+          "code": 200
+        }
+      },
+      "dead_links": [],
+      "unexplained_terms": [],
+      "passed": true,
+      "revisions": 0,
+      "first_draft": null,
+      "fields": {
+        "difficulty": 3,
+        "feasibility": 4,
+        "one_liner": "在你自己网站上直接看到访客是谁、来自哪家公司"
+      }
+    },
+    "Motionflare": {
+      "terms_autofixed": [],
+      "score": 86,
+      "must_fix": [],
+      "unclear": [
+        "用评分字段辅助构造弱标签 [推测] → “弱标签”是专业术语，零基础读者不知道它指什么（用不完美的代理标签训练模型），需要一句话解释。",
+        "同时产出“视频类诉求占比”的点估计和 95% 置信区间 → “点估计”“95% 置信区间”均未解释，对没有统计背景的读者是空话；应补一句“点估计=用样本算出的一个具体数值，置信区间=考虑抽样波动后该数值的合理范围”。",
+        "说明做了消融对比，固定数据看模型差异、固定模型看清洗前后差异，用统计检验支撑结论。 → “消融对比”未解释；虽然后半句给了做法暗示，但读者第一眼看到这个词会卡住，应直接说“拆开分别看每个改动带来多少提升”。"
+      ],
+      "relabel": [
+        {
+          "quote": "**谁在用**：刚把产品做出来、准备对外发布的创业公司创始人，以及每周都要出宣传素材的市场团队成员 [已知]。",
+          "reason": "资料只提到“founders”因发布视频（launch video）而受挫、以及“Marketing teams hit the same wall every week”，并未说明这些创始人是“刚把产品做出来”或公司处于早期阶段；“刚把产品做出来”属于额外添加的限定，应降级为 [推测] 或删去该限定。"
+        }
+      ],
+      "relabel_applied": 1,
+      "relabel_missed": [],
+      "review_error": "",
+      "checks": {
+        "structure": [],
+        "length": [],
+        "labels": [],
+        "fields": [],
+        "data": [],
+        "result_tense": [],
+        "data_source": [],
+        "links": [],
+        "terms": []
+      },
+      "issues": [],
+      "links": {
+        "https://huggingface.co/datasets/sealuzh/app_reviews": {
+          "status": "ok",
+          "code": 200
+        }
+      },
+      "dead_links": [],
+      "unexplained_terms": [],
+      "passed": true,
+      "revisions": 0,
+      "first_draft": null,
+      "fields": {
+        "difficulty": 4,
+        "feasibility": 4,
+        "one_liner": "把网址贴进去，几分钟生成一条能直接发的品牌宣传视频"
+      }
+    },
+    "Gauth Personal Study Agent": {
+      "terms_autofixed": [],
+      "score": 89,
+      "must_fix": [],
+      "unclear": [
+        "若比例差异的 p 值小于 0.05 则视为显著 → 零基础读者不知道 p 值是什么、为什么小就是「显著」，全文没有解释。",
+        "承认存在发言者偏差 → 这是统计术语，没有解释它指「只有愿意主动评论的人被统计到，不代表全体用户」，零基础读者会卡住。"
+      ],
+      "relabel": [
+        {
+          "quote": "前端：iOS 与 Android 原生 App，具体框架资料未提及 [已知]",
+          "reason": "资料只说它内置在 Gauth 的 App 里、iOS 和 Android 都能用，从未说明是「原生」开发；React Native、Flutter 或 WebView 套壳也能做到，这一技术细节没有依据却标了 [已知]。"
+        }
+      ],
+      "relabel_applied": 1,
+      "relabel_missed": [],
+      "review_error": "",
+      "checks": {
+        "structure": [],
+        "length": [],
+        "labels": [],
+        "fields": [],
+        "data": [],
+        "result_tense": [],
+        "data_source": [],
+        "links": [],
+        "terms": []
+      },
+      "issues": [],
+      "links": {
+        "https://huggingface.co/datasets/rajpurkar/squad": {
+          "status": "ok",
+          "code": 200
+        },
+        "https://huggingface.co/datasets/sealuzh/app_reviews": {
+          "status": "ok",
+          "code": 200
+        }
+      },
+      "dead_links": [],
+      "unexplained_terms": [],
+      "passed": true,
+      "revisions": 0,
+      "first_draft": null,
+      "fields": {
+        "difficulty": 4,
+        "feasibility": 4,
+        "one_liner": "一个记住你哪里薄弱、每天给你排学习计划的 AI 学习助手"
+      }
+    },
+    "Dog Translator SuperTranslator": {
+      "terms_autofixed": [],
+      "score": 76,
+      "must_fix": [
+        "数据量不成立：ESC-50 的狗叫类只有 40 条音频，无法支撑三分类、5 折交叉验证，更无法做“60 条人工抽查样本”的验证（分析里 ⑥ 的 T/R 都写了 60 条）。建议把目标改为二分类，或明确补充其他公开音频来源（并说明许可），并把抽查样本量降到实际可得范围（如 20–30 条）。",
+        "标签来源描述与数据不符：ESC-50 只标注“狗”这一个类别，不含情绪标签，因此 ⑥ 的 A 里“补充该数据集自带的类别标签做对照”不成立。应改为说明情绪三分类标签是由自己按规则人工标注（写明标注规则、每条音频由谁标、是否双人复核），否则三分类目标无法落地。",
+        "验证集设计自相矛盾：R 里“5 折交叉验证加 60 条人工抽查一致率”，但 60 条若由自己标注，就不能同时充当独立验证集，容易把训练样本当成测试样本。建议明确划分训练/验证集，并说明验证集标签的产生方式。"
+      ],
+      "unclear": [
+        "“构建声学特征（时长、基频、能量等）”→“基频”是专业术语，零基础读者不知道它指什么、为什么和情绪有关，应补一句白话解释（如“声音的高低，即音高”）。",
+        "“用交叉验证评估”／“5 折交叉验证”→“交叉验证”“5 折”首次出现未解释，读者不知道它在做什么、为什么比单次划分更可信，建议加一句“把数据切成 5 份轮流当测试集、其余当训练集，取平均分”。",
+        "“再训练逻辑回归与一个简单树模型对比”→“树模型”未解释，应说明是“按特征逐层切分做判断的一类模型（如决策树/随机森林）”。"
+      ],
+      "relabel": [],
+      "relabel_applied": 0,
+      "relabel_missed": [],
+      "review_error": "",
+      "checks": {
+        "structure": [],
+        "length": [],
+        "labels": [],
+        "fields": [],
+        "data": [],
+        "result_tense": [],
+        "data_source": [],
+        "links": [],
+        "terms": []
+      },
+      "issues": [],
+      "links": {
+        "https://github.com/karolpiczak/ESC-50": {
+          "status": "ok",
+          "code": 200,
+          "repo": "karolpiczak/ESC-50",
+          "stars": 1911,
+          "pushed_at": "2024-03-20",
+          "stale": true
+        },
+        "https://huggingface.co/datasets": {
+          "status": "ok",
+          "code": 200
+        }
+      },
+      "dead_links": [],
+      "unexplained_terms": [],
+      "passed": true,
+      "revisions": 0,
+      "first_draft": null,
+      "fields": {
+        "difficulty": 4,
+        "feasibility": 3,
+        "one_liner": "把狗的动作和叫声用 AI 翻译成英文，帮主人猜狗在想什么"
+      }
+    },
+    "Modem": {
+      "terms_autofixed": [
+        "API",
+        "聚类"
+      ],
+      "score": 94,
+      "must_fix": [],
+      "unclear": [
+        "面试问题 1 的回答方向：\"说明主题数是超参数\" → \"超参数\"是未解释的术语，零基础读者不懂；建议改为\"主题数是我们人为设定的参数（超参数）\"并一句话说明含义",
+        "面试问题 2 的回答方向：\"存在多标签评论\" → \"多标签\"未解释，读者不知道指一条评论同时属于多个主题；应补一句说明"
+      ],
+      "relabel": [],
+      "relabel_applied": 0,
+      "relabel_missed": [],
+      "review_error": "",
+      "checks": {
+        "structure": [],
+        "length": [],
+        "labels": [],
+        "fields": [],
+        "data": [],
+        "result_tense": [],
+        "data_source": [],
+        "links": [],
+        "terms": []
+      },
+      "issues": [],
+      "links": {
+        "https://huggingface.co/datasets/sealuzh/app_reviews": {
+          "status": "ok",
+          "code": 200
+        },
+        "https://huggingface.co/datasets/rajpurkar/squad": {
+          "status": "ok",
+          "code": 200
+        }
+      },
+      "dead_links": [],
+      "unexplained_terms": [],
+      "passed": true,
+      "revisions": 0,
+      "first_draft": null,
+      "fields": {
+        "difficulty": 4,
+        "feasibility": 4,
+        "one_liner": "把散在各处的客户抱怨自动收集起来，提醒人处理并跟进到底"
+      }
+    },
+    "Inkling 2 Mini": {
+      "terms_autofixed": [],
+      "score": 94,
+      "must_fix": [],
+      "unclear": [
+        "行业趋势：开放权重模型正在往“能在个人电脑上跑”这个方向卷 → 全篇没有解释“开放权重”（即模型训练好的参数可以自由下载，区别于只提供 API 的闭源模型），零基础读者会把它与“开源软件”混为一谈。",
+        "复现难度：★★★★☆ (4/5)。理由是：跑起来不难，装 Ollama 拉模型即可 [已知]；但要复现“中间层循环三次”这个训练配方，需要重训模型 → 同一句里“复现”既指“把模型跑起来”，又指“重新训练出同样的结构”，两个难度差得很远，读者会误以为跑起来也难。建议拆成“上手使用难度”和“复刻训练方法难度”两句分别打分。"
+      ],
+      "relabel": [],
+      "relabel_applied": 0,
+      "relabel_missed": [],
+      "review_error": "",
+      "checks": {
+        "structure": [],
+        "length": [],
+        "labels": [],
+        "fields": [],
+        "data": [],
+        "result_tense": [],
+        "data_source": [],
+        "links": [],
+        "terms": []
+      },
+      "issues": [],
+      "links": {
+        "https://ollama.com": {
+          "status": "ok",
+          "code": 200
+        },
+        "https://huggingface.co": {
+          "status": "ok",
+          "code": 200
+        },
+        "https://huggingface.co/datasets/rajpurkar/squad": {
+          "status": "ok",
+          "code": 200
+        },
+        "https://ollama.com/library": {
+          "status": "ok",
+          "code": 200
+        }
+      },
+      "dead_links": [],
+      "unexplained_terms": [],
+      "passed": true,
+      "revisions": 1,
+      "first_draft": {
+        "score": 71,
+        "issues": [],
+        "must_fix": [
+          "⑥ 的 STAR 项目需要用本地 26B 模型处理完整的 SQuAD 数据集作为数据源。由于本地运行需要约 20GB 显存/内存，并需要配备 32GB 内存的 Mac，而许多学生没有这样的硬件；而且在本地运行 26B 模型处理完整 SQuAD 数据集，第 3–4 天“跑出 F1”并不现实。建议改为使用一个 3B–8B 的可商用小模型（例如通过 Ollama 可拉取的小模型），或明确只抽取 200–500 条样本运行，并在计划中写清所用模型的规格与运行时长估算。",
+          "项目名和一句话描述写的是“用公开代码问答数据”，但 S (Situation) 和 A (Action) 实际使用的是 SQuAD（基于维基百科的通用阅读理解数据集，不是代码问答）。这会导致“代码助手”这一卖点无法成立，面试时容易被质疑。建议要么改用代码问答数据集（如 CodeQA、CoSQA 一类公开代码问答集），要么把项目名与实际数据统一改为“通用问答”表述。"
+        ],
+        "unclear": [
+          "“用 F1 对比两组，并做配对检验看差异是否显著” → 零基础读者不明白“配对检验”是什么、为什么同一批问题上的两组结果要用配对检验而不是普通的比较；需要一句话解释它是“同一批样本上两两相减后检验均值是否为 0”。",
+          "“提出可做的消融对比” → “消融（ablation）”未解释；读者不知道它指的是“把检索、改写、重排等某个部件拿掉，看分数变化”这类做法。",
+          "“模型是一个 26.4B 参数的 transformer……而不是靠增加参数数量” → 没有解释“参数”“B（十亿）”是什么，也没有说明为什么参数越多通常越吃内存；后面直接接“约 20GB 内存占用”，缺少从参数量到内存占用的说明。"
+        ],
+        "relabel": []
+      },
+      "fields": {
+        "difficulty": 4,
+        "feasibility": 4,
+        "one_liner": "一个能装在自己笔记本电脑里、帮你写代码和跑多步任务的 AI 模型"
+      }
+    },
+    "Polylane Swarms": {
+      "terms_autofixed": [
+        "SDK"
+      ],
+      "score": 97,
+      "must_fix": [],
+      "unclear": [
+        "用五折交叉验证测量，并报告各特征的系数方向与业务解释 → 零基础读者不知道“五折交叉验证”是什么；前文虽然解释了很多术语，唯独漏掉这个关键的建模评估方法，也没有说明为什么它比单次切分更可信"
+      ],
+      "relabel": [],
+      "relabel_applied": 0,
+      "relabel_missed": [],
+      "review_error": "",
+      "checks": {
+        "structure": [],
+        "length": [],
+        "labels": [],
+        "fields": [],
+        "data": [],
+        "result_tense": [],
+        "data_source": [],
+        "links": [],
+        "terms": []
+      },
+      "issues": [],
+      "links": {
+        "https://langchain-ai.github.io/langgraph/": {
+          "status": "ok",
+          "code": 200
+        },
+        "https://openai.github.io/openai-agents-python/": {
+          "status": "ok",
+          "code": 200
+        },
+        "https://archive.org/details/stackexchange": {
+          "status": "ok",
+          "code": 200
+        }
+      },
+      "dead_links": [],
+      "unexplained_terms": [],
+      "passed": true,
+      "revisions": 0,
+      "first_draft": null,
+      "fields": {
+        "difficulty": 4,
+        "feasibility": 4,
+        "one_liner": "派一群 AI 助手同时排查线上故障，最后给你一份带证据的结论"
+      }
+    },
+    "Chat with Work": {
+      "terms_autofixed": [],
+      "score": 92,
+      "must_fix": [],
+      "unclear": [
+        "最后按标签输出混淆情况和错误样例 → “混淆情况”（混淆矩阵）没有解释，零基础读者不知道它指按真实类别×预测类别交叉统计的结果，建议补一句说明。"
+      ],
+      "relabel": [
+        {
+          "quote": "作者同时开源了 RubyLLM 框架，说明底层能力并非完全封闭 [已知]",
+          "reason": "资料（maker_comments）只说 RubyLLM 是「Chat with Work 所基于的 Ruby AI 框架」，没有说它开源；文中提到的「my open source projects」指的是创始人的开源项目，不等于 RubyLLM，因此「开源」这一属性在资料中无依据，由此推出的「底层能力并非完全封闭」也一并失去支撑。建议改为「作者同时开发了 RubyLLM 框架（资料未说明其是否开源）[推测]」。"
+        }
+      ],
+      "relabel_applied": 1,
+      "relabel_missed": [],
+      "review_error": "",
+      "checks": {
+        "structure": [],
+        "length": [],
+        "labels": [],
+        "fields": [],
+        "data": [],
+        "result_tense": [],
+        "data_source": [],
+        "links": [],
+        "terms": []
+      },
+      "issues": [],
+      "links": {
+        "https://platform.openai.com/docs": {
+          "status": "ok",
+          "code": 200
+        },
+        "https://www.gharchive.org/": {
+          "status": "ok",
+          "code": 200
+        }
+      },
+      "dead_links": [],
+      "unexplained_terms": [],
+      "passed": true,
+      "revisions": 0,
+      "first_draft": null,
+      "fields": {
+        "difficulty": 4,
+        "feasibility": 4,
+        "one_liner": "用一句话描述任务，就能得到一个自动帮你干活的机器人"
+      }
+    },
+    "Hydrilla": {
+      "terms_autofixed": [],
+      "score": 83,
+      "must_fix": [
+        "⑥ 项目的标签体系自相矛盾：Task 说“人工抽查 60 条标注四类（质量/兼容/价格/易用）并训练分类模型、把 F1 从 0.55 提到 0.70”，但面试问答里又说“标注只用于抽查、不用于训练，训练标签来自数据自带字段”——该数据集自带的只有星级评分和评论文本，并没有这四类标签；如果 60 条标注既当分类标准又只有 60 条，就无法划分训练集和测试集，F1 也无从测量。修改建议：把任务改为“用星级评分（如 ≤2 星）作为情感标签”，四类细分只做人工定性分析；或者明确标注 300+ 条（分层抽样）并划分训练集、验证集和测试集，再谈 F1。",
+        "⑥ 数据可得性与相关性同时存疑：sealuzh/app_reviews 是通用 App 评论集，用“3D”“model”“export”这类关键词过滤后，真正涉及 3D 建模/生成工具的评论很可能极少（并且“model”会大量命中无关内容），可能导致子集规模不足以训练或评估。建议在 1–2 天内先做可行性切片统计（确认相关评论数量），不够就改为抓取指定 App（如 Blender、Meshy、Spline 等）的商店评论，并在方案里写清抓取方式与条数上限。"
+      ],
+      "unclear": [
+        "“用准确率、F1 评估，并做混淆矩阵看哪类最容易混” → 混淆矩阵未作任何解释，零基础读者不知道它是什么、为什么能看出“哪类容易混”。",
+        "“后端：提供 REST 接口的生成服务与账户/额度系统” → REST 是术语，未解释（可加一句“一种标准的网页接口风格，不同程序按固定格式互传数据”）。"
+      ],
+      "relabel": [],
+      "relabel_applied": 0,
+      "relabel_missed": [],
+      "review_error": "",
+      "checks": {
+        "structure": [],
+        "length": [],
+        "labels": [],
+        "fields": [],
+        "data": [],
+        "result_tense": [],
+        "data_source": [],
+        "links": [],
+        "terms": []
+      },
+      "issues": [],
+      "links": {
+        "https://huggingface.co/datasets/sealuzh/app_reviews": {
+          "status": "ok",
+          "code": 200
+        }
+      },
+      "dead_links": [],
+      "unexplained_terms": [],
+      "passed": true,
+      "revisions": 0,
+      "first_draft": null,
+      "fields": {
+        "difficulty": 5,
+        "feasibility": 4,
+        "one_liner": "用一句话或一张图，几分钟生成能直接进游戏和动画的 3D 模型"
+      }
+    },
+    "Journalistic Tech": {
+      "terms_autofixed": [
+        "SEO"
+      ],
+      "score": 89,
+      "must_fix": [],
+      "unclear": [
+        "并建立一个简单 baseline（用来对比的基准成绩，这里指用帖子字数预测热度的线性回归），目标把预测评论数的误差（以平均绝对误差衡量）比 baseline 降低 15% → baseline 与“线性回归”的关系说明中，“平均绝对误差”只给了名称和用途，没有解释它怎么算、数值大小意味着什么，零基础读者无法判断“降低 15%”是好还是坏；建议补一句“平均绝对误差 = 预测评论数与真实评论数差值的平均大小，越小越好”。",
+        "目标是用统计检验回答：带“如何做/经验教训”类措辞的帖子，其评论数是否显著高于纯新闻类帖子 → “统计检验”“显著”都是未解释的统计术语，也没有说明用哪种检验、显著性阈值取多少，零基础读者不知道这一步在做什么、结论怎么下。"
+      ],
+      "relabel": [
+        {
+          "quote": "以前怎么凑合：自己写博客或发社交媒体，费时且没人看；或者去求媒体报道，要 pitch（向记者推销选题），还不一定被理 [已知]。",
+          "reason": "资料里只提到“No pitching a reporter”（不用向记者推销选题）和传统采访与异步采访的对比表，从未描述“自己写博客或发社交媒体、费时且没人看”或“求媒体报道被拒”这两种旧做法。这半句是分析者补充的常见背景，不是资料内容。"
+        }
+      ],
+      "relabel_applied": 1,
+      "relabel_missed": [],
+      "review_error": "",
+      "checks": {
+        "structure": [],
+        "length": [],
+        "labels": [],
+        "fields": [],
+        "data": [],
+        "result_tense": [],
+        "data_source": [],
+        "links": [],
+        "terms": []
+      },
+      "issues": [],
+      "links": {
+        "https://streamlit.io": {
+          "status": "ok",
+          "code": 200
+        },
+        "https://hn.algolia.com/api": {
+          "status": "ok",
+          "code": 200
+        }
+      },
+      "dead_links": [],
+      "unexplained_terms": [],
+      "passed": true,
+      "revisions": 0,
+      "first_draft": null,
+      "fields": {
+        "difficulty": 2,
+        "feasibility": 4,
+        "one_liner": "对着手机回答编辑写好的问题，就能署名发表一篇科技访谈"
+      }
+    }
+  }
+}

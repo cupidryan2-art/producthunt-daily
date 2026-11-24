@@ -21,6 +21,7 @@ def main():
     ap.add_argument("--date", type=date.fromisoformat, help="补跑某天（洛杉矶日期）")
     ap.add_argument("--dry-run", action="store_true", help="只抓数据，不调 LLM")
     ap.add_argument("--skip-review", action="store_true", help="跳过 LLM 审稿（调试用）")
+    ap.add_argument("--limit", type=int, help="只试跑前 N 个产品，打印费用，不写任何文件")
     args = ap.parse_args()
     load_dotenv(ROOT / ".env")
     setup_logging()
@@ -38,6 +39,8 @@ def main():
     if args.dry_run:
         return 0
 
+    if args.limit:
+        day["products"] = day["products"][:args.limit]
     llm, checker = LLM(cfg["llm"], cfg["pricing"]), qa.LinkChecker(cfg["qa"])
     seen_path = ROOT / "data" / "seen.json"
     seen = read_json(seen_path, {})
@@ -56,6 +59,11 @@ def main():
     with ThreadPoolExecutor(min(3, cfg["llm"]["concurrency"])) as pool:
         results = dict(pool.map(work, day["products"]))
 
+    if args.limit:
+        for r in results.values():
+            log.info("%s", r.get("error") or {k: r["qa"][k] for k in ("score", "issues", "must_fix", "relabel")})
+        log.info("试跑费用 $%.4f %s", llm.spent(), dict(llm.usage))
+        return 0
     over = analyze.overview(llm, day, results)
     done = [r for r in results.values() if r.get("text")]
     scores = [r["qa"]["score"] for r in done if r["qa"]["score"] is not None]

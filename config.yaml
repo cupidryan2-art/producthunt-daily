@@ -13,13 +13,14 @@ llm:
   base_url: https://api.deepseek.com
   # 2026-11-25 核对 https://api-docs.deepseek.com/quick_start/pricing
   analysis_model: deepseek-flash
-  review_model: deepseek-v4-pro
+  review_model: deepseek-flash   # 为省钱用 flash + thinking；换回 deepseek-v4-pro 约贵 3 倍
   temperature: 0.4            # 必须 <= 0.5
   review_temperature: 0.1
   # thinking 模式下 temperature 不生效，所以分析关闭
   analysis_thinking: false
   review_thinking: true       # 审稿要逐条比对，实测开 thinking 明显更准；此时 temperature 会被服务端忽略
-  review_reasoning_effort: low  # low | high | max；high 实测一次运行审稿输出约 15 万 token，太贵
+  review_reasoning_effort: low  # low | high | max；high 更仔细但输出 token 多得多
+  max_usd_per_run: 0.20       # 单次运行费用上限，超过就停止继续调用
   max_tokens: 24000
   timeout: 400
   concurrency: 3              # 上限 3

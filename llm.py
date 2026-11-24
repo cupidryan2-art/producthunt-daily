@@ -11,6 +11,10 @@ from openai import OpenAI
 from common import log, redact
 
 
+class BudgetExceeded(RuntimeError):
+    pass
+
+
 class LLM:
     def __init__(self, cfg, pricing, client=None):
         key = os.environ.get("DEEPSEEK_API_KEY", "").strip()
@@ -25,7 +29,11 @@ class LLM:
         self.usage = defaultdict(lambda: {"calls": 0, "cache_hit": 0, "cache_miss": 0,
                                           "output": 0, "usd": 0.0})
 
-    def _record(self, model, u):
+    def spent(self):
+        with self.lock:
+            return sum(s["usd"] for s in self.usage.values())
+
+    def _record(self, role, model, u):
         hit = getattr(u, "prompt_cache_hit_tokens", None)
         if hit is None:
             hit = getattr(getattr(u, "prompt_tokens_details", None), "cached_tokens", 0) or 0
@@ -34,7 +42,7 @@ class LLM:
         peak = now.weekday() < 5 and any(a <= now.hour < b for a, b in self.pricing["peak_hours_utc"])
         price = self.pricing["models"].get(model, {}).get("peak" if peak else "offpeak")
         with self.lock:
-            s = self.usage[model]
+            s = self.usage[f"{role}:{model}"]
             s["calls"] += 1
             s["cache_hit"] += hit
             s["cache_miss"] += miss
@@ -57,12 +65,14 @@ class LLM:
         for attempt in range(c["retries"] + 1):
             try:
                 with self.sem:
+                    if self.spent() >= c["max_usd_per_run"]:
+                        raise BudgetExceeded("已达到单次费用上限")
                     r = self.client.chat.completions.create(
                         model=model, temperature=min(0.5, temp), max_tokens=c["max_tokens"],
                         messages=[{"role": "user", "content": prompt}],
                         extra_body=body, **extra)
                 if r.usage:
-                    self._record(model, r.usage)
+                    self._record(role, model, r.usage)
                 if r.choices[0].finish_reason == "length":
                     raise ValueError("输出被截断")
                 text = (r.choices[0].message.content or "").strip()
@@ -72,6 +82,9 @@ class LLM:
                 if check:
                     check(result)
                 return result
+            except BudgetExceeded:
+                self.fatal = "达到单次费用上限"
+                raise
             except Exception as e:
                 if getattr(e, "status_code", None) in (401, 402):
                     self.fatal = "余额不足" if e.status_code == 402 else "密钥无效"
